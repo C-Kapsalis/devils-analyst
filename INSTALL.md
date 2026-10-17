@@ -24,7 +24,7 @@ with what happened, working or not.
 
 | Agent | Adapter | Status |
 |---|---|---|
-| Claude Code (CLI, Desktop Code tab) | `.claude-plugin/`, `skills/`, `hooks/` | Tested: `claude plugin validate`; the full benchmark run is pending |
+| Claude Code (CLI, Desktop Code tab) | `.claude-plugin/`, `skills/`, `hooks/` | Tested: `claude plugin validate`; first benchmark run: benchmarks/results/2026-10-17-breadth.md |
 | Claude (web and Desktop chat) | `dist/devils-analyst-plugin.zip`, skill zips | Zip structure checked locally; upload untested |
 | ChatGPT | `adapters/chatgpt/` | Untested |
 | Codex | `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | Untested |
