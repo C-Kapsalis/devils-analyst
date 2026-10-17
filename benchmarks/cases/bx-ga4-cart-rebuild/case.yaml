@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: bx-ga4-cart-rebuild
+runs: 3
+context:
+  scaffold_script: scaffold.sh

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "devils-analyst",
+  "description": "Devil's Analyst: the devil's advocate on your marketing team.",
+  "owner": {
+    "name": "Christoforos Kapsalis",
+    "url": "https://c-kapsalis.github.io/"
+  },
+  "plugins": [
+    {
+      "name": "devils-analyst",
+      "description": "Argues with your marketing data before you act on it: checks, an adversary for every move, and routing to the data you have.",
+      "source": "./",
+      "category": "data"
+    }
+  ]
+}

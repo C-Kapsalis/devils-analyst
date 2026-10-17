@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: brand-extension-permission
+runs: 3
+context:
+  scaffold_script: scaffold.sh

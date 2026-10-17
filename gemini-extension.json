@@ -1,0 +1,6 @@
+{
+  "name": "devils-analyst",
+  "version": "0.1.0",
+  "description": "Devil's Analyst: the devil's advocate on your marketing team. Argues with the marketing data your agent pulls before you act on it.",
+  "contextFileName": "AGENTS.md"
+}

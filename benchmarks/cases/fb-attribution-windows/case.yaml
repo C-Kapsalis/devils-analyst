@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: fb-attribution-windows
+runs: 3
+context:
+  scaffold_script: scaffold.sh

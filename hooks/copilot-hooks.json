@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "cat \"$PLUGIN_ROOT/hooks/core.md\" || exit 0",
+        "powershell": "Get-Content -Raw \"$env:PLUGIN_ROOT/hooks/core.md\"",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}

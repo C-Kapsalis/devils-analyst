@@ -1,0 +1,21 @@
+{
+  "name": "devils-analyst",
+  "interface": {
+    "displayName": "Devil's Analyst"
+  },
+  "plugins": [
+    {
+      "name": "devils-analyst",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/C-Kapsalis/devils-analyst.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Data"
+    }
+  ]
+}

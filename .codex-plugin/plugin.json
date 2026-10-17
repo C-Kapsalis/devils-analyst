@@ -1,0 +1,47 @@
+{
+  "name": "devils-analyst",
+  "version": "0.1.0",
+  "description": "Devil's Analyst: the devil's advocate on your marketing team. It argues with the marketing data your agent pulls through its connectors (GA4, Google Ads, Meta, Search Console, email platforms, CRMs, Shopify, warehouses, Power BI) before you act on it: numbered checks for each area, an adversary for every move, and routing that reshapes the question to the data available. The model can do the maths; this makes it ask the questions.",
+  "author": {
+    "name": "Christoforos Kapsalis",
+    "url": "https://c-kapsalis.github.io/"
+  },
+  "homepage": "https://github.com/C-Kapsalis/devils-analyst",
+  "repository": "https://github.com/C-Kapsalis/devils-analyst",
+  "license": "MIT",
+  "keywords": [
+    "marketing-analytics",
+    "analytics",
+    "ga4",
+    "google-ads",
+    "meta-ads",
+    "search-console",
+    "email-marketing",
+    "crm",
+    "shopify",
+    "power-bi",
+    "attribution",
+    "experiments",
+    "data-quality",
+    "metrics"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/claude-hooks.json",
+  "interface": {
+    "displayName": "Devil's Analyst",
+    "shortDescription": "The devil's advocate on your marketing team",
+    "longDescription": "Argues with the marketing data your agent pulls (GA4, ads platforms, Search Console, email, CRM, Shopify, warehouses, Power BI) before you act on it. It routes the question to the data you have, defines every number, and runs an adversary against every claim.",
+    "developerName": "Christoforos Kapsalis",
+    "category": "Data",
+    "capabilities": [
+      "Instructions",
+      "Lifecycle hooks"
+    ],
+    "websiteURL": "https://github.com/C-Kapsalis/devils-analyst",
+    "defaultPrompt": [
+      "How did paid search do last month, and what should we change?",
+      "Our analyst says September was a record month. Is it?",
+      "Audit our GA4 setup and tell me what to fix first."
+    ]
+  }
+}

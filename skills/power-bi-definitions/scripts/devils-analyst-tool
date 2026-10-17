@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Run one of the Devil's Analyst Power BI tools, pinned to a released tag.
+#
+#   devils-analyst-tool <pbip-forge|tmdl-preflight|drift-doctor|pbi-plot-styler> [args...]
+#
+# Resolution order:
+#   1. DEVILS_ANALYST_USE_LOCAL=1 and the command is on PATH -> run the local install
+#      (useful when you are hacking on the tools themselves).
+#   2. uvx is available -> run the pinned GitHub tag in an ephemeral env.
+#   3. The command is on PATH -> run it, whatever version it is.
+# Override the tag with DEVILS_ANALYST_TOOLS_VERSION (default below).
+set -euo pipefail
+
+TOOLS_VERSION="${DEVILS_ANALYST_TOOLS_VERSION:-v1.1.0}"
+GH_OWNER="C-Kapsalis"
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: devils-analyst-tool <pbip-forge|tmdl-preflight|drift-doctor|pbi-plot-styler> [args...]" >&2
+  exit 2
+fi
+
+tool="$1"; shift
+case "$tool" in
+  pbip-forge)      repo="pbip-model-forge" ;;
+  tmdl-preflight)  repo="tmdl-preflight" ;;
+  drift-doctor)    repo="tmdl-drift-doctor" ;;
+  pbi-plot-styler) repo="pbi-plot-styler" ;;
+  *) echo "devils-analyst-tool: unknown tool '$tool'" >&2; exit 2 ;;
+esac
+
+if [[ "${DEVILS_ANALYST_USE_LOCAL:-0}" == "1" ]] && command -v "$tool" >/dev/null 2>&1; then
+  exec "$tool" "$@"
+fi
+
+if command -v uvx >/dev/null 2>&1; then
+  exec uvx --quiet --python ">=3.10" \
+    --from "git+https://github.com/${GH_OWNER}/${repo}@${TOOLS_VERSION}" "$tool" "$@"
+fi
+
+if command -v "$tool" >/dev/null 2>&1; then
+  exec "$tool" "$@"
+fi
+
+cat >&2 <<MSG
+devils-analyst-tool: cannot run '$tool'. Install uv (recommended):
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+or install the tool directly (Python >= 3.10):
+  pip install "git+https://github.com/${GH_OWNER}/${repo}@${TOOLS_VERSION}"
+MSG
+exit 127

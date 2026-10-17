@@ -1,0 +1,23 @@
+# Release assets, built by scripts/package.sh and attached to GitHub Releases
+dist/
+
+# claude plugin eval output (raw runs, HTML reports); the summary goes in
+# benchmarks/results/. Keep the log of a published run, benchmarks/eval.log.
+benchmarks/cases/results/
+*.log
+!benchmarks/eval.log
+# --keep-temp run folders, if copied into the repo
+e-*/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS and editor
+.DS_Store
+.vscode/
+.idea/
+
+# Claude Code local settings
+.claude/settings.local.json
+!benchmarks/eval-breadth.log
