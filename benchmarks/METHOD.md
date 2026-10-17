@@ -5,8 +5,23 @@ you find a case where the answer key is wrong, or a planted problem that is
 not really a problem, please open an issue: that is the most useful feedback
 this project can get.
 
-No results are published yet. The README holds `{{DA_*}}` placeholders that
-`report.py` fills from the first full run.
+## Results so far
+
+One group has been run: the 36 breadth cases, 3 runs per case per arm, 216
+runs, on 2026-10-17. Log: [eval-breadth.log](eval-breadth.log). Per-case
+table: [results/2026-10-17-breadth.md](results/2026-10-17-breadth.md).
+
+| Share of runs that pass | With | Without |
+|---|--:|--:|
+| `subtle-recall` | 100% (108/108) | 99% (107/108) |
+| `decision` | 97% (105/108) | 95% (103/108) |
+| `no-false-alarms` | 80% (86/108) | 81% (88/108) |
+| Every grader passed | 77% (83/108) | 78% (84/108) |
+| Mean score | 0.94 | 0.93 |
+
+Mean difference per case: +0.01, which is within noise at three runs per
+arm. A Devil's Analyst skill fired in 107 of 108 with-plugin runs. The 62
+focused cases and the 12 audits and reviews have not been run yet.
 
 ## The question
 
@@ -32,8 +47,9 @@ anyone moves budget:
   `resources/`. The model writes `report.md`; the graders read that file.
   Tools: Read, Glob, Grep, Skill, Write; at most 40 turns.
 - **Runs:** 3 per case per arm.
-- **Judge:** the `claude plugin eval` default, three votes per LLM grader;
-  a grader passes on a majority.
+- **Judge:** the `claude plugin eval` default judge model, which is Claude
+  Haiku (`--judge-model`, default `haiku`), three votes per LLM grader; a
+  grader passes on a majority.
 
 ## The cases
 
@@ -102,8 +118,9 @@ python3 benchmarks/builder/build_all.py
 # 2. Run both arms and keep the log.
 claude plugin eval . --eval-dir benchmarks/cases --scaffold --allow-tools Write Bash --model haiku -j 6 --runs 3 --trust-plugin --no-publish | tee benchmarks/eval.log
 
-# 3. Write benchmarks/results/<date>.md, the chart in assets/, and the
-#    numbers in README.md.
+# 3. Write benchmarks/results/<date>.md and the chart in assets/.
+#    (The README has no placeholders for report.py to fill; I update its
+#    numbers by hand from the results file.)
 python3 benchmarks/report.py benchmarks/eval.log
 ```
 
@@ -124,7 +141,9 @@ I would rather you know these before you quote a number.
   without the plugin already avoided most single-number traps when the
   export was clean and the question pointed at the trap. The breadth group
   exists because that is not how data arrives: the trap sits next to four
-  others and two decoys, inside a draft someone else wrote.
+  others and two decoys, inside a draft someone else wrote. On the breadth
+  run the model without the plugin still found the planted problems in 107
+  of 108 runs, so these cases do not separate the two arms either.
 - **Three runs per arm.** One run moves a case's pass rate by 33 points.
   Read differences of a few points as noise.
 - **An LLM judge.** The graders carry the computed answer, which helps, but
