@@ -50,4 +50,4 @@ worked examples.
 | Repeat rate rises with size | MR/Switching Behavior.md; MR/Brand Loyalty Metrics.md |
 | Behavioural vs attitudinal loyalty | MR/Brand Loyalty Metrics.md |
 | Reach, frequency, GRP; channel reaches overlap | MR/Media Habits.md |
-| Judging test results handed to evidence-check | plugins/swiftbi/skills/evidence-check/SKILL.md (scope) |
+| Judging test results handed to evidence-check | skills/evidence-check/SKILL.md (scope) |
