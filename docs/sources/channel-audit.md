@@ -51,4 +51,4 @@ newly generated.
 | CRO levers; page tweak not proven until tested | DMK/conversion-optimization.md |
 | Channel blend by funnel stage | DMK/web-analytics-metrics.md |
 | Paid / owned / earned measurement | DMB (media buckets) |
-| Test basics delegated to evidence-check (SRM, power, novelty, A/A, OEC) | DMK/Online Experiments & AB Testing.md and linked stat notes; already covered in plugins/swiftbi/skills/evidence-check |
+| Test basics delegated to evidence-check (SRM, power, novelty, A/A, OEC) | DMK/Online Experiments & AB Testing.md and linked stat notes; already covered in skills/evidence-check |
