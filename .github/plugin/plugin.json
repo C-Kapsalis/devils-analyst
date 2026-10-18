@@ -1,6 +1,6 @@
 {
   "name": "devils-analyst",
-  "description": "Devil's Analyst: the devil's advocate on your marketing team. It argues with the marketing data your agent pulls through its connectors (GA4, Google Ads, Meta, Search Console, email platforms, CRMs, Shopify, warehouses, Power BI) before you act on it: numbered checks for each area, an adversary for every move, and routing that reshapes the question to the data available. The model can do the maths; this makes it ask the questions.",
+  "description": "Devil's Analyst: the devil's advocate on your marketing team. It argues with the marketing data your agent pulls through its connectors (GA4, Google Ads, Meta, Search Console, email platforms, CRMs, Shopify, warehouses, Power BI) before you act on it: numbered checks for each area, an adversary for every move, and routing that reshapes the question to the data available. The model knows the questions; this makes it ask all of them, every time.",
   "version": "0.1.0",
   "author": {
     "name": "Christoforos Kapsalis",
