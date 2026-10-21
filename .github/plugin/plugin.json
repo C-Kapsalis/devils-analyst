@@ -25,7 +25,9 @@
     "data-quality",
     "metrics"
   ],
-  "commands": "commands/",
-  "skills": "skills/",
-  "hooks": "hooks/copilot-hooks.json"
+  "commands": [
+    "./commands/"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/copilot-hooks.json"
 }
