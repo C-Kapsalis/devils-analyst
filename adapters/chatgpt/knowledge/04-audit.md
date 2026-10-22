@@ -102,11 +102,14 @@ No number and no concrete case: no finding.
 
 ## 4. Rank: fix this first
 
-Order findings by tier, then by money at stake within a tier.
+Order findings by tier, then, within a tier, by dependency and then by
+money at stake. Each check row in the area references carries its default
+tier in the last column; use it, and raise or lower it only with a reason
+from the data.
 
 | Tier | What | Examples | Group |
 |---|---|---|---|
-| 1. Measurement integrity | anything that makes later numbers fiction | conversion action mixes sign-ups with sales; GA4 data-driven model silently on last click; retention at 2 months; UTM keys split; stacked platform revenue; email delivery under 95% or failing authentication; averaged rates or summed snapshots in the model everyone reads | Must fix |
+| 1. Measurement integrity | anything that makes later numbers fiction, or stops the channel reaching anyone | the action the account optimises on is not the one that means money; a model or setting that silently does something other than what its label says; history that is being deleted or broken at a change date; one entity counted under several names, or one sale counted by several sources; a sender-reputation line crossed (authentication, delivery, complaints); a governed measure that averages a rate or sums a snapshot | Must fix |
 | 2. Hygiene | leaks that waste money every day | brand and generic leakage; search-term waste; dormant contacts in main sends; retargeting buyers; cannibalising pages | Must fix if large, else Should fix |
 | 3. Money left on the table | profitable lines starved | budget-capped campaign beating target; snippet rewrites at positions you hold; starved winner pages | Should fix |
 | 4. Fine-tuning | adjustments on a setup that is already right | device, schedule, geo modifiers; creative refresh cadence | Nice to have |
@@ -116,6 +119,23 @@ A tier-1 finding outranks a bigger tier-3 finding: fixing growth on a broken
 measurement optimises toward the wrong number. Do not judge performance on a
 metric that a tier-1 finding has broken; recompute it on the corrected
 definition first, or say the read waits for the fix.
+
+**Within a tier, upstream first.** When two findings share a tier, the one
+every other number depends on goes first: whether mail is delivered at all
+before any rate measured on delivered mail; whether the conversion is the
+sale before any CPA or ROAS; whether tracking captures the visit before any
+channel split. A finding that corrupts one decision (a forecast behind
+one budget ask, a dashboard tile) comes after one that corrupts every later
+reading, even when its money figure is larger. Money at stake breaks ties
+after that.
+
+**A leak that is already doing damage takes the damage's tier.** A hygiene
+finding (tier 2) that has already pushed a rate the whole channel depends on
+past a threshold in the area's checks, or far outside the account's own
+normal range (a send's bounces or complaints several times the other
+sends', a tag that stopped firing, a delivery rate that fell), is ranked as
+tier 1: it is now the cause of a reputation or measurement failure, not
+only a waste. Say which rate it moved, and by how much against the norm.
 
 ## 5. Write the audit
 
@@ -161,7 +181,7 @@ and act on a failure before moving on.
 | Keep a finding | "Is this normal for this channel (a decoy)?" | the decoy list and the channel's benchmark band | drop it |
 | Size the money | "Would a CFO accept this figure, or is it inflated?" | the formula and its inputs shown; upper bounds labelled | shrink it, or say what it corrupts instead |
 | Claim a cause | "Is this credit, or proven incremental?" | a holdout or test exists | write it as "test this" |
-| Rank | "Does any performance finding sit on a number a tier-1 finding breaks?" | each tier 2-4 finding uses a corrected metric | recompute or move it after the tier-1 fix |
+| Rank | "Does any performance finding sit on a number a tier-1 finding breaks, and within a tier, does anything listed first depend on something listed later?" | each tier 2-4 finding uses a corrected metric; within each tier, upstream findings come first | recompute, or reorder |
 | Say "Fix N first" | "If the owner did only this, would the account be better off next month?" | the first fix unblocks or protects the most money | pick another |
 
 **Score and probe before handing over.** First the gate: every check in the

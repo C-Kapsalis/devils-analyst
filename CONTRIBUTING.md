@@ -29,7 +29,8 @@ teams money belongs in the shipped checks. To propose one:
    costs money, the fix, the source, and you as owner. Write the red flag so
    two analysts would agree whether it fired. Name the area's reference file
    in `skills/audit/references/` (or `skills/review/references/` for a
-   report check) where it would go, and the id it would take there.
+   report check) where it would go, and the id it would take there (review
+   ids carry the RV- prefix, for example RV-C8).
 2. **Give it a source.** A platform's documentation, a published study, a
    regulation, or an incident you can describe without naming a client or an
    employer. "Everyone knows" is not a source.

@@ -58,6 +58,18 @@ Each state lists signals in four kinds: *observed*, *diagnostic*, *outcome*,
 - **unchecked**: the data to check it is not connected. Say which source would
   check it ("needs Search Console branded queries").
 
+**Market or us, before any cause on our side.** For any acquisition or
+volume drop, first ask whether the market moved: competitors' estimates,
+category or non-brand search volume, impressions at unchanged position and
+click-through, the same weeks last year. If the comparison set fell by about
+the same share and your share of it held, the leading hypothesis is lower
+demand in the category (seasonal or market-wide), not a fault in your SEO,
+ads or site. Say so first, and verify it with the same period last year or
+a category demand source. Check tracking and site changes first only when
+your series moved and the comparison set did not; when both moved together,
+a measurement fault on your side cannot explain the competitors' drop, so it
+is a secondary check, not the lead.
+
 A diagnosis with only unchecked signals is a hypothesis list, and must be
 labelled so. Pull the data for the cheapest unchecked signals before writing
 the diagnosis, when a connector for them is available.
@@ -115,7 +127,7 @@ Every move above has a challenger. Run the attack, settle it with the check, and
 | Move | Adversary asks | Check that settles it | If it fails |
 |---|---|---|---|
 | Start from a movement | "Did this movement survive the noise screen and have a driver?" | whats-changed output with a driver | go back and decompose first |
-| Place it on the funnel | "Could the same pattern sit in another journey (a tracking change looks like an activation drop)?" | check tagging and data changes for the period | rule out measurement before behaviour |
+| Place it on the funnel | "Could the same pattern sit in another journey (a tracking change looks like an activation drop), or outside the business (the whole category moved)?" | check tagging and data changes for the period; compare with competitors, category demand and last year | rule out measurement before behaviour when only your series moved; lead with demand when the market moved with you |
 | Name the cause | "What rival cause produces the same pattern?" | for each rival, the data that rules it out | keep the survivors, labelled hypotheses |
 | Recommend | "What does it cost if this is wrong, and what would the CFO ask?" | downside sized; a test or metric that verifies | add a test, or shrink the action |
 | Rank findings | "Is the top finding the one with the most money at stake?" | findings ordered by value at stake | reorder |
