@@ -63,12 +63,19 @@ Write by the `marketing-dashboard` skill's `references/writing.md`: answer first
 One finding per sentence. Number first, driver second, interpretation last, and
 label interpretation as a hypothesis when the data cannot prove it.
 
-> CTR rose 0.64 points to 4.6%, but 0.59 of those points are mix: the new VIP
-> segment (18% CTR) entered the send. Within segments, only Active customers
-> improved (+1.3 points, beyond noise). Newsletter CTR dipped 0.4 points, which
-> is within noise at this volume.
+> Account CTR rose 0.64 points to 4.6%, but 0.59 of those points are mix: a
+> brand campaign (22% CTR) took a larger share of impressions. Within
+> campaigns, only Shopping improved (+1.3 points, beyond noise). Generic search
+> CTR dipped 0.4 points, which is within noise at this volume.
 
-Not: "CTR improved thanks to better content." Content was not measured.
+Not: "CTR improved thanks to better ads." Ad copy was not measured.
+
+**Opens are a weak driver.** Privacy features and image prefetching fire
+opens nobody made, so an open rate can move with no change in people. When a
+driver tree or a cause runs through opens, say so beside the number ("opens,
+inflated by privacy proxies, directional only"), prefer clicks per delivered
+as the engagement step, and never make an open rate the metric an action is
+verified on: verify on clicks, orders or revenue.
 
 **A written report shows the arithmetic, not only the story.** Before the
 findings, include the decomposition as a small table whose rows add up to the

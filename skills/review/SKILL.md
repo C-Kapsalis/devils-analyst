@@ -95,6 +95,18 @@ the arithmetic". Before keeping any finding:
 
 No number, no finding. No "consider", no "might want to", no vague worry.
 
+**A doubt the data cannot settle is not a finding.** "If the CRM count
+includes test accounts, the rate is off", "if revenue is net of returns, the
+margin is wrong", "the plan this target comes from is not attached": when
+the data neither shows the problem nor rules it out, and the report's own
+figures recompute, write the doubt as a one-line question under "Not
+checked" for the owner to answer.
+It does not get a group, a fix or an "If you skip it", and it does not
+change the verdict. The same holds for a stated benchmark or threshold the
+files cannot confirm: if the report labels it as its own rule of thumb and
+nothing in the data contradicts it, it is fine; at most ask for its source
+under "Not checked".
+
 ## 4. Rank
 
 | Group | Put here when | Examples |

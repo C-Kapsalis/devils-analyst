@@ -3,12 +3,14 @@
   python3 scripts/count.py
 
 Numbered checks: rows of the check tables whose first cell is an id such as
-GA1, U4 or PS12, in the audit references (one file per area) and in the
-review checklist. Benchmark cases: folders in benchmarks/cases/ with a
+GA1, U4 or PS12, in the audit references (one file per area), and such as
+RV-A1 in the review checklist (prefixed so review ids never clash with the
+audit area letters). Benchmark cases: folders in benchmarks/cases/ with a
 case.yaml; "generated" have a script in benchmarks/builder/cases/.
 
 It also checks every skill's frontmatter description against the Agent Skills
-limit of 1,024 characters and exits 1 if one is longer.
+limit of 1,024 characters, and that every review check id carries the RV-
+prefix, and exits 1 if either fails.
 Stdlib only.
 """
 
@@ -17,7 +19,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
-ROW = re.compile(r"^\| ?[A-Z]{1,5}[0-9]{1,3}[a-z]? ?\|", re.M)
+ROW = re.compile(r"^\| ?(?:RV-)?[A-Z]{1,5}[0-9]{1,3}[a-z]? ?\|", re.M)
+UNPREFIXED = re.compile(r"^\| ?([A-Z]{1,5}[0-9]{1,3}[a-z]?) ?\|", re.M)
 DESC_LIMIT = 1024  # Agent Skills: description, at most 1,024 characters
 
 
@@ -54,7 +57,9 @@ def rows(path: Path) -> int:
 def main() -> int:
     skills = sorted(p.parent.name for p in (REPO / "skills").glob("*/SKILL.md"))
     audit = {p.stem: rows(p) for p in sorted((REPO / "skills/audit/references").glob("*.md"))}
-    review = rows(REPO / "skills/review/references/review-checklist.md")
+    checklist = REPO / "skills/review/references/review-checklist.md"
+    review = rows(checklist)
+    bare = UNPREFIXED.findall(checklist.read_text(encoding='utf-8'))
     playbooks = list((REPO / "skills/diagnose/references/playbooks").rglob("*.md"))
     cases = sorted(p.parent.name for p in (REPO / "benchmarks/cases").glob("*/case.yaml"))
     scripts = {p.stem for p in (REPO / "benchmarks/builder/cases").glob("*.py")}
@@ -80,7 +85,10 @@ def main() -> int:
     over = {k: v for k, v in lengths.items() if v > DESC_LIMIT}
     for name, n in over.items():
         print(f"too long: skills/{name}/SKILL.md description is {n} characters (limit {DESC_LIMIT})")
-    return 1 if over else 0
+    for cid in bare:
+        print(f"unprefixed review id: {cid} in skills/review/references/review-checklist.md "
+              f"(write RV-{cid}; bare letters clash with the audit areas)")
+    return 1 if over or bare else 0
 
 
 if __name__ == "__main__":
