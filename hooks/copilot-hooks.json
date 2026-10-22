@@ -5,7 +5,7 @@
       {
         "type": "command",
         "bash": "cat \"$PLUGIN_ROOT/hooks/core.md\" || exit 0",
-        "powershell": "Get-Content -Raw \"$env:PLUGIN_ROOT/hooks/core.md\"",
+        "powershell": "$f = \"$env:PLUGIN_ROOT/hooks/core.md\"; if (Test-Path -LiteralPath $f) { Get-Content -Raw -LiteralPath $f -ErrorAction SilentlyContinue }; exit 0",
         "timeoutSec": 5
       }
     ]
