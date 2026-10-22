@@ -17,9 +17,9 @@
         "google-ads",
         "power-bi"
       ],
-      "commands": "commands/",
-      "skills": "skills/",
-      "hooks": "hooks/copilot-hooks.json"
+      "commands": ["./commands/"],
+      "skills": "./skills/",
+      "hooks": "./hooks/copilot-hooks.json"
     }
   ]
 }

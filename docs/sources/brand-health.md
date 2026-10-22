@@ -13,7 +13,7 @@ Paths are relative to ~/Documents/tost/. "BB" = Brain Knowledge/Brand Brain Know
 | Direct traffic includes bookmarks and app | DM/website-analytics.md |
 | §3 buckets and dashboard (awareness, preference, trial/repeat, satisfaction, premium, loyalty, valuation) | BB/55, BB/34 (consumer and market-based metrics) |
 | Awareness = potential, loyalty = realised | BB/34, BB/36, BB/37, BB/55 |
-| Funnel / pyramid bottleneck | BB/34 (Keller CBBE sequential), BB/74 (brand funnel), plugins/swiftbi/skills/diagnose/references/brand-diagnostic.md (Keller pyramid audit: where is the drop-off) |
+| Funnel / pyramid bottleneck | BB/34 (Keller CBBE sequential), BB/74 (brand funnel), skills/diagnose/references/brand-diagnostic.md (Keller pyramid audit: where is the drop-off) |
 | Repeat without promotion; promo share >40%; branded search and direct traffic "seeking you or the category"; 5-10% price test; CAC vs CLV | BB/74 (Small Brand Long-Term Health Check) |
 | Share of voice formula; untagged/misspelled mentions; sentiment over time; topic tags; brand vs category via benchmark | DM/social-media-analytics.md, DM/social-listening.md |
 | Share of search = SOV formula applied to brand-term volumes (application, stated as such) | DM/social-media-analytics.md (SOV formula) + BB/74 (branded search) |
@@ -25,19 +25,19 @@ Paths are relative to ~/Documents/tost/. "BB" = Brain Knowledge/Brand Brain Know
 | Brand ad effects lag; don't judge on short window | BB/74 (advertising effects over years, ~60% long-term bonus) |
 | Short-term dip after cutting promotions | BB/74 (Clorox case) |
 | Triangle equity / share / profit | BB/74 |
-| Post-promo weeks separated (pull-forward) | plugins/swiftbi/skills/evidence-check/SKILL.md §4 (repo skill) |
+| Post-promo weeks separated (pull-forward) | skills/evidence-check/SKILL.md §4 (repo skill) |
 | §5 flaw of averages; per-customer measurement; roll up at end | BB/78, BB/79 directive 7, BB/76, BB/00-T (flaw of averages) |
 | Value weighting by CLV | BB/77 (best customers, CLV varies), BB/78 step 3 |
 | Behaviour over attitude | BB/51, BB/57 |
 | Relative rankings, not absolute scale | BB/51 (individual calibration problem) |
 | Which equity drives choice (value/brand/relationship) by category | BB/78 |
-| Composition check at common mix | plugins/swiftbi/skills/evidence-check/SKILL.md §3 (repo skill) |
+| Composition check at common mix | skills/evidence-check/SKILL.md §3 (repo skill) |
 | §6 frame, POPs, PODs (three questions) | BB/14 (Keller, Sternthal & Tybout enrichment), BB/12, BB/13 |
 | POP rating 1-10, <7 risk zone | BB/14 (development process step 2) |
 | POD relevant/distinctive/believable/deliverable; "only" not "best" | BB/14, BB/18, BB/17, BB/22, BB/23, BB/19 |
 | Content scored on Aaker dimension and archetype; SEO off-brand dilution | DM/content-marketing-strategy.md §3, §4, §9.2, §19 |
 | §7 extension on customer similarity, four-cell matrix | BB/79 directive 4, BB/76 (Honda/Acura, Oldsmobile) |
-| Core permission below 6/10 = limited | plugins/swiftbi/skills/diagnose/references/brand-diagnostic.md (Brand Permission Survey) |
+| Core permission below 6/10 = limited | skills/diagnose/references/brand-diagnostic.md (Brand Permission Survey) |
 | Line vs category extension risks; cannibalization | BB/63, BB/65, BB/30, BB/61 (success metrics) |
 | Reposition trigger severity table | BB/69 |
 | Latitude of acceptance; incremental steps; identity brands via sub-brand | BB/53, BB/54, BB/70, BB/71, BB/Case 02 |
@@ -45,7 +45,7 @@ Paths are relative to ~/Documents/tost/. "BB" = Brain Knowledge/Brand Brain Know
 | Brand health x market health matrix; don't milk too early | BB/62 |
 | Valuation sensitivity | BB/56 |
 | §8 adversary table and §9 score-and-probe gate (clarity, relevance, depth, insightfulness; threshold 80; probe and retry) | DM/ai-human-hybrid-marketing-research.md (validation checks with retry; Pattern 3 self-scoring on clarity, relevance, depth, insightfulness, 0-100, threshold 80, probe); coordinator contract |
-| "Recompute total two ways", "what else produces the pattern", "CFO question" adversary rows | contract examples; plugins/swiftbi/skills/metric-definitions/SKILL.md §4 |
+| "Recompute total two ways", "what else produces the pattern", "CFO question" adversary rows | contract examples; skills/metric-definitions/SKILL.md §4 |
 
 ## references/health-metrics.md
 
