@@ -20,8 +20,24 @@ table: [results/2026-10-17-breadth.md](results/2026-10-17-breadth.md).
 | Mean score | 0.94 | 0.93 |
 
 Mean difference per case: +0.01, which is within noise at three runs per
-arm. A Devil's Analyst skill fired in 107 of 108 with-plugin runs. The 62
-focused cases and the 12 audits and reviews have not been run yet.
+arm. A Devil's Analyst skill fired in 107 of 108 with-plugin runs.
+
+A spot check followed on 2026-10-22, by a different and weaker method: 13
+of the 62 focused cases and 4 of the 12 audits and reviews, one run per
+arm, Claude Haiku as a subagent that read the matching skill files (or did
+not), graded by me against each case's graders. It did not use `claude
+plugin eval`, the plugin hook or an LLM judge. Page:
+[results/2026-10-22-spot-check/](results/2026-10-22-spot-check/README.md).
+
+| Graders passed, first runs | With the skill | Without |
+|---|--:|--:|
+| Focused (13 cases, 36 graders) | 34 | 30 |
+| Audits and reviews (4 cases, 12 graders) | 10 | 5 |
+| All (17 cases, 48 graders) | 44 | 35 |
+| Cases where every grader passed | 13 of 17 | 10 of 17 |
+
+One run per arm and an author-judge make this a hint, not a measurement.
+The remaining 49 focused cases and 8 audits and reviews have not been run.
 
 ## The question
 

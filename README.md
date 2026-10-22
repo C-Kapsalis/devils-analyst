@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
   <img src="https://img.shields.io/badge/checks-229%20numbered-111111?style=flat-square" alt="229 numbered checks">
-  <img src="https://img.shields.io/badge/benchmark-110%20cases%2C%2036%20run-111111?style=flat-square" alt="110 benchmark cases, 36 run">
+  <img src="https://img.shields.io/badge/benchmark-110%20cases%2C%2036%20run%2C%2017%20spot--checked-111111?style=flat-square" alt="110 benchmark cases, 36 run, 17 spot-checked">
 </p>
 
 Teams now act on numbers their agents pull through connectors: GA4, Google
@@ -160,10 +160,23 @@ right call in most of them with or without Devil's Analyst: mean score 0.94
 with it and 0.93 without, a difference of +0.01 that is within noise at
 three runs per arm. So the benchmark does not yet show that the plugin
 improves the answers. What it shows is that a Devil's Analyst skill fired
-in 107 of 108 with-plugin runs. The 62 focused cases and the 12 audits and
-reviews have not been run yet. Results per case:
-[benchmarks/results/](benchmarks/results/2026-10-17-breadth.md). How each
-grader works and how to run it yourself:
+in 107 of 108 with-plugin runs. Results per case:
+[benchmarks/results/](benchmarks/results/2026-10-17-breadth.md).
+
+A smaller spot check followed on 2026-10-22: 13 of the focused cases (at
+least one per skill) and 4 of the audits and reviews, one run per arm, on
+Claude Haiku reading the matching skill or not, graded by me against each
+case's graders. Before any skill change, the arm with the skill passed 44
+of 48 graders and the arm without passed 35; every grader passed in 13 of
+17 cases with the skill and 10 without. Most of the gap is in the audits
+and reviews (10 of 12 against 5 of 12): ranking what to fix first, and
+leaving correct things alone, including calling the clean report clean. On
+the focused traps it was 34 of 36 against 30 of 36. Seventeen cases, one
+run each and the author as judge make this a hint, not a measured gain.
+Each grader the skill arm failed pointed at a gap in a skill; I fixed the
+general rule and re-ran those cases once. Details:
+[benchmarks/results/2026-10-22-spot-check/](benchmarks/results/2026-10-22-spot-check/README.md).
+How each grader works and how to run the full benchmark yourself:
 [benchmarks/METHOD.md](benchmarks/METHOD.md).
 
 ## House rules
@@ -237,13 +250,17 @@ tag.
 - **Synthetic data.** Every export was simulated with problems planted on
   purpose. Real exports are messier, and the hardest questions (is this the
   right goal? the right margin?) cannot be planted.
-- **One run so far, no measured gain.** 36 of the 110 cases, with a mean
-  score difference of +0.01 (noise). The focused, audit and review cases
-  are not run yet. Details in
-  [benchmarks/results/](benchmarks/results/2026-10-17-breadth.md).
-- **An LLM judge.** The graders carry the computed answer, but a judge can
-  still pass a vague report or fail a correct one. I have not measured
-  agreement with a human grader.
+- **No measured gain yet.** The full run covers 36 of the 110 cases, with
+  a mean score difference of +0.01 (noise). A spot check of 17 more, one
+  run per arm and graded by me, leaned toward the skills (44 of 48 graders
+  against 35), mostly on audits and reviews; that is too small to call a
+  gain. 57 cases have not been run. Details in
+  [benchmarks/results/](benchmarks/results/2026-10-17-breadth.md) and
+  [the spot check](benchmarks/results/2026-10-22-spot-check/README.md).
+- **An LLM judge, or me.** The graders carry the computed answer, but a
+  judge can still pass a vague report or fail a correct one. The full run
+  used an LLM judge; the spot check used me, knowing which arm was which.
+  I have not measured agreement between the two, or with another person.
 - **It checks what it can see.** It can tell you a session timeout changed
   in the settings export; it cannot tell you about a change nobody
   exported. A check without the data it needs is reported as "not
