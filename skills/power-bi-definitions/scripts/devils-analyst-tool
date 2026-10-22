@@ -11,7 +11,7 @@
 # Override the tag with DEVILS_ANALYST_TOOLS_VERSION (default below).
 set -euo pipefail
 
-TOOLS_VERSION="${DEVILS_ANALYST_TOOLS_VERSION:-v1.1.0}"
+TOOLS_VERSION="${DEVILS_ANALYST_TOOLS_VERSION:-v1.2.0}"
 GH_OWNER="C-Kapsalis"
 
 if [[ $# -lt 1 ]]; then
@@ -44,6 +44,7 @@ fi
 cat >&2 <<MSG
 devils-analyst-tool: cannot run '$tool'. Install uv (recommended):
   curl -LsSf https://astral.sh/uv/install.sh | sh
+  (Windows PowerShell: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex")
 or install the tool directly (Python >= 3.10):
   pip install "git+https://github.com/${GH_OWNER}/${repo}@${TOOLS_VERSION}"
 MSG

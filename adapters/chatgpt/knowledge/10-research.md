@@ -3,22 +3,18 @@
 ---
 name: research-design
 description: >-
-  Use this skill when a marketer plans, reads or relies on research about customers or a
-  market: "should we run a survey or focus groups", "write or review our questionnaire",
-  "is this question biased", "how many people do we need to survey", "how many responses
-  for a ±3% margin", "can I trust these survey results", "only 10% answered our survey",
-  "our survey was sent to our Instagram followers / newsletter list", "what share of
-  customers would buy or sign up", "would people pay for this", "how aware are people of
-  our brand", "measure brand awareness before and after the campaign", "is this above our
-  break-even", "is the difference between these groups real", "who competes with whom",
-  "which brand has the most loyal buyers", "what features matter most to customers",
-  "conjoint", "which concept will win share", "how big is the market", "what is our market
-  share". Chooses the design (exploratory, descriptive, causal; cross-sectional or panel),
-  the instrument (question forms, scales, attitude and conjoint), the sample (method, size,
-  allocation) and the inference (confidence intervals, tests against a break-even, bias
-  correction for non-response and non-coverage), and says what the data can and cannot
-  support. Judging whether a test or change worked: use evidence-check. Fitting models to
-  the data: use marketing-models.
+  Use this skill when a marketer plans, reads or relies on research about customers or
+  a market: "should we run a survey or focus groups", "write or review our
+  questionnaire", "is this question biased", "how many people do we need to survey",
+  "how many responses for a ±3% margin", "can I trust these survey results", "only 10%
+  answered our survey", "our survey went to our followers / newsletter list", "what
+  share of customers would buy", "would people pay for this", "how aware are people of
+  our brand", "measure awareness before and after the campaign", "is this above our
+  break-even", "is the difference between these groups real", "which brand has the
+  most loyal buyers", "what features matter most", "conjoint", "what is our market
+  share". Chooses the design, the instrument, the sample and the inference, and says
+  what the data can and cannot support. Whether a test or change worked: use
+  evidence-check. Fitting models: use marketing-models.
 ---
 
 # research-design
@@ -51,14 +47,14 @@ proposes, the user disposes. Ask, do not assume:
 
 | The user wants | Go to | Reference |
 |---|---|---|
-| To know what to ask, or why something happens, questions still vague | Exploratory design | [design.md](references/design.md) |
-| How big, how many, who, what share: a snapshot | Descriptive, cross-sectional | [design.md](references/design.md) |
-| Change over time, who switches to whom | Descriptive, longitudinal; fixed panel for switching | [design.md](references/design.md) |
-| Proof that X causes Y | Causal design: plan here, judge results in evidence-check | [design.md](references/design.md) |
-| A questionnaire written or reviewed | Construction, error audit, coding | [questionnaire.md](references/questionnaire.md) |
-| A sample planned, sized or allocated | Sampling method and size | [sampling.md](references/sampling.md) |
-| Survey results turned into a population number | CI, bias correction, test vs break-even | [sampling.md](references/sampling.md) |
-| Awareness, attitude, feature importance, intent, share, loyalty | Measures and their traps | [measures.md](references/measures.md) |
+| To know what to ask, or why something happens, questions still vague | Exploratory design | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| How big, how many, who, what share: a snapshot | Descriptive, cross-sectional | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| Change over time, who switches to whom | Descriptive, longitudinal; fixed panel for switching | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| Proof that X causes Y | Causal design: plan here, judge results in evidence-check | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| A questionnaire written or reviewed | Construction, error audit, coding | questionnaire.md (section "File: research-design/references/questionnaire.md" in 10-research.md) |
+| A sample planned, sized or allocated | Sampling method and size | sampling.md (section "File: research-design/references/sampling.md" in 10-research.md) |
+| Survey results turned into a population number | CI, bias correction, test vs break-even | sampling.md (section "File: research-design/references/sampling.md" in 10-research.md) |
+| Awareness, attitude, feature importance, intent, share, loyalty | Measures and their traps | measures.md (section "File: research-design/references/measures.md" in 10-research.md) |
 
 ## 2. Check the data or plan
 
@@ -556,20 +552,18 @@ groups (weights belong to estimating one population).
 ---
 name: hybrid-research
 description: >-
-  Use this skill when a marketer wants to run research with an AI in the loop: "can we use
-  AI respondents / synthetic personas / a synthetic panel instead of a survey", "simulate
-  how customers would answer", "test our concepts with ChatGPT personas", "draft a survey
-  or questionnaire", "write an interview or discussion guide", "pilot our survey before we
-  field it", "how many respondents do we need", "does our synthetic data match the real
-  survey", "is this AI panel good enough", "run AI interviews", "summarise these interview
-  transcripts into themes", or any request to use LLM-generated answers as evidence for a
-  launch, price, positioning or budget decision. It decides when synthetic respondents are
-  and are not acceptable, reviews the instrument (double-barrelled, leading, binary,
-  ranking items), builds the persona matrix and prompts, generates responses with
-  validation and retry, runs the backward pilot, scores recovery against a human benchmark
-  (mean, variance, correlation, distribution) and the self-moderation probe loop, and keeps
-  the question and the decision with the human. Synthetic data informs; it never replaces
-  real evidence for high-stakes decisions.
+  Use this skill when a marketer wants to run research with an AI in the loop: "can we
+  use AI respondents / synthetic personas / a synthetic panel instead of a survey",
+  "simulate how customers would answer", "test our concepts with ChatGPT personas",
+  "draft a survey or questionnaire", "write an interview or discussion guide", "pilot
+  our survey before we field it", "how many respondents do we need", "does our
+  synthetic data match the real survey", "is this AI panel good enough", "run AI
+  interviews", "summarise these interview transcripts into themes", or any use of
+  LLM-generated answers as evidence for a launch, price, positioning or budget
+  decision. It decides when synthetic respondents are acceptable, reviews the
+  instrument, builds personas and prompts, runs the backward pilot, scores recovery
+  against a human benchmark, and keeps the question and the decision with the human.
+  Synthetic data informs; it never replaces real evidence for high-stakes decisions.
 ---
 
 # hybrid-research
@@ -619,7 +613,7 @@ Configuration by available context (quant):
 
 Response history is non-negotiable for any survey run. Qual: start with
 Hybrid 3 (human guide and sample, LLM respondent and moderator); see
-[references/qual-interviews.md](references/qual-interviews.md).
+section "File: hybrid-research/references/qual-interviews.md" in 10-research.md.
 
 ## 3. Co-design the instrument
 
@@ -638,7 +632,7 @@ run every item through this table:
 | Construct | item does not measure what the brief needs (face validity) | rewrite or add the missing item |
 | Flow (A/B surveys) | anything between stimulus and outcome items; outcome items differ by arm | warm-up, stimulus, outcomes, characteristics, demographics; identical outcomes |
 
-Item rules, the A/B flow and outcome items: [references/instrument.md](references/instrument.md).
+Item rules, the A/B flow and outcome items: section "File: hybrid-research/references/instrument.md" in 10-research.md.
 
 ## 4. Build the persona matrix
 
@@ -669,7 +663,7 @@ Matrix checks:
 ## 5. Prompt, generate, validate, retry
 
 Prompt = context + system role (persona) + user role (question and format).
-Never skip the context. Templates: [references/quant-synthetic.md](references/quant-synthetic.md).
+Never skip the context. Templates: section "File: hybrid-research/references/quant-synthetic.md" in 10-research.md.
 
 Generation loop per persona, per question:
 
@@ -703,7 +697,7 @@ instrument, not to answer the business question.
 ## 7. Recovery against a human benchmark
 
 Compute on the same items, the same scale, and a demographically matched
-sample. Formulas and code: [references/recovery-metrics.md](references/recovery-metrics.md).
+sample. Formulas and code: section "File: hybrid-research/references/recovery-metrics.md" in 10-research.md.
 
 | Metric | Formula | Pass |
 |---|---|---|
@@ -739,7 +733,7 @@ validation repository.
   LLM-only themes are expansion hypotheses to test, not findings.
 - Similarity of LLM to human answers: embedding cosine >= .5 is high.
 
-Detail: [references/qual-interviews.md](references/qual-interviews.md).
+Detail: section "File: hybrid-research/references/qual-interviews.md" in 10-research.md.
 
 ## 9. Report
 
@@ -818,8 +812,9 @@ is generic.
 Leading or loaded wording (an item that presumes or praises: "our improved",
 "how much did you enjoy") is screened together with scale balance: the
 question must not tell the respondent which answer is expected. (See
-SOURCES.md: this rule is standard survey practice requested for this skill,
-not stated in the notes beyond scale balance.)
+[docs/sources/hybrid-research.md](https://github.com/C-Kapsalis/devils-analyst/blob/main/docs/sources/hybrid-research.md):
+this rule is standard survey practice requested for this skill, not stated
+in the notes beyond scale balance.)
 
 Spotting a double-barrelled item: it contains "and" or "or" joining two
 attributes, or two adjectives that can diverge (attention-grabbing and

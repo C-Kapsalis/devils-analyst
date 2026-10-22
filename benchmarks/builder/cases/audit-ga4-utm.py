@@ -63,6 +63,17 @@ for i in range(28):
 rate_before = sum(e for _, e in before) / sum(s for s, _ in before)
 rate_after = sum(e for _, e in after) / sum(s for s, _ in after)
 
+# Daily sessions before display traffic, from the exported days and then on to
+# 2026-09-27 (a second generator, so the exported files keep their draws). The
+# weekly totals below are sums of these days, so the two exports agree.
+import datetime as dt
+daily_sessions = {r[0]: r[1] for r in eng_rows}
+rng_days = random.Random(55130)
+day = dt.date(2026, 8, 26)
+while day <= dt.date(2026, 9, 27):
+    daily_sessions[day.isoformat()] = int(rng_days.gauss(3900, 260))
+    day += dt.timedelta(days=1)
+
 # ---------- traffic acquisition, September ----------
 def row(src, med, camp, sessions, rpv):
     return [src, med, camp, sessions, round(sessions * rpv * rng.uniform(0.9, 1.1), 2)]
@@ -104,8 +115,10 @@ for w in range(8):
     on = w >= 4
     spend = round(rng.uniform(2100, 2500), 2) if on else 0
     disp = rng.randint(6, 14) if on else 0
-    direct = int(rng.gauss(4150, 120) + (rng.uniform(1500, 1800) if on else 0))
-    total = int(rng.gauss(27500, 500) + (direct - 4150))
+    lift = int(rng.uniform(1500, 1800)) if on else 0
+    direct = int(rng.gauss(4150, 120)) + lift
+    week = [(dt.date.fromisoformat(start) + dt.timedelta(days=i)).isoformat() for i in range(7)]
+    total = sum(daily_sessions[d] for d in week) + lift  # untagged display lands in Direct
     wk_rows.append([start, spend, disp, direct, total])
 d_before = sum(r[3] for r in wk_rows[:4]) / 4
 d_after = sum(r[3] for r in wk_rows[4:]) / 4
@@ -122,6 +135,10 @@ assert disp_spend > 8000 and disp_sess < 60 and d_after / d_before > 1.3
 assert notset_share < 0.01, notset_share
 assert 0.92 < gcpc_sessions / gads_clicks < 0.96
 assert 0.1 < direct_share_before < 0.2, direct_share_before
+for r in wk_rows:  # weekly totals match the daily export wherever it covers the week
+    week = [(dt.date.fromisoformat(r[0]) + dt.timedelta(days=i)).isoformat() for i in range(7)]
+    if all(any(e[0] == d for e in eng_rows) for d in week):
+        assert r[4] == sum(e[1] for e in eng_rows if e[0] in week), r
 
 usd = lambda x: f"${x:,.0f}"
 pc = lambda x, d=1: f"{100 * x:.{d}f}%"

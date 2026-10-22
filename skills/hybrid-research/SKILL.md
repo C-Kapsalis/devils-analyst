@@ -1,20 +1,18 @@
 ---
 name: hybrid-research
 description: >-
-  Use this skill when a marketer wants to run research with an AI in the loop: "can we use
-  AI respondents / synthetic personas / a synthetic panel instead of a survey", "simulate
-  how customers would answer", "test our concepts with ChatGPT personas", "draft a survey
-  or questionnaire", "write an interview or discussion guide", "pilot our survey before we
-  field it", "how many respondents do we need", "does our synthetic data match the real
-  survey", "is this AI panel good enough", "run AI interviews", "summarise these interview
-  transcripts into themes", or any request to use LLM-generated answers as evidence for a
-  launch, price, positioning or budget decision. It decides when synthetic respondents are
-  and are not acceptable, reviews the instrument (double-barrelled, leading, binary,
-  ranking items), builds the persona matrix and prompts, generates responses with
-  validation and retry, runs the backward pilot, scores recovery against a human benchmark
-  (mean, variance, correlation, distribution) and the self-moderation probe loop, and keeps
-  the question and the decision with the human. Synthetic data informs; it never replaces
-  real evidence for high-stakes decisions.
+  Use this skill when a marketer wants to run research with an AI in the loop: "can we
+  use AI respondents / synthetic personas / a synthetic panel instead of a survey",
+  "simulate how customers would answer", "test our concepts with ChatGPT personas",
+  "draft a survey or questionnaire", "write an interview or discussion guide", "pilot
+  our survey before we field it", "how many respondents do we need", "does our
+  synthetic data match the real survey", "is this AI panel good enough", "run AI
+  interviews", "summarise these interview transcripts into themes", or any use of
+  LLM-generated answers as evidence for a launch, price, positioning or budget
+  decision. It decides when synthetic respondents are acceptable, reviews the
+  instrument, builds personas and prompts, runs the backward pilot, scores recovery
+  against a human benchmark, and keeps the question and the decision with the human.
+  Synthetic data informs; it never replaces real evidence for high-stakes decisions.
 ---
 
 # hybrid-research

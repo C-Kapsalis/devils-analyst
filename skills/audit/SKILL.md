@@ -1,20 +1,18 @@
 ---
 name: audit
 description: >-
-  Use this skill when someone wants a whole marketing setup or account checked,
-  not one report: "audit our Google Ads account", "audit my GA4 setup", "audit our
+  Use this skill when someone wants a whole marketing setup or account checked, not
+  one report: "audit our Google Ads account", "audit my GA4 setup", "audit our
   tracking", "health check our email program", "what's broken in our setup", "where
-  are we wasting money", "we just took over this account, what should we fix
-  first", "is our Meta / Performance Max set up right", "check our UTMs", "audit our
-  Search Console", "audit our CRM or lifecycle program", "check our Power BI model",
-  "review this TMDL / semantic model", or an account export, settings export or
-  model file with "what's wrong with it". It maps the setup first (sources, spend,
-  goals), runs the checks for each area present (paid search, Performance Max, Meta,
-  GA4 and UTMs, Search Console, email, CRM lifecycle, e-commerce revenue,
-  experiments, attribution, dashboards, Power BI models), estimates the money at
-  stake, ranks findings Must fix, Should fix, Nice to have in fix-this-first order
-  and ends "Fix N first". Reviewing one report or deck: use review. Deciding whether
-  a single channel pays: use channel-audit.
+  are we wasting money", "we just took over this account, what should we fix first",
+  "is our Meta / Performance Max set up right", "check our UTMs", "audit our Search
+  Console", "audit our CRM or lifecycle program", "check our Power BI model", "review
+  this TMDL / semantic model", or an account, settings or model export with "what's
+  wrong with it". It maps the setup, runs the checks for each area present (paid
+  search, Performance Max, Meta, GA4 and UTMs, Search Console, email, CRM, revenue,
+  experiments, attribution, dashboards, Power BI), estimates the money at stake, ranks
+  findings Must fix, Should fix, Nice to have and ends "Fix N first". One report or
+  deck: use review. Whether a single channel pays: use channel-audit.
 ---
 
 # audit

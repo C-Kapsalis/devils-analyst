@@ -3,20 +3,18 @@
 ---
 name: review
 description: >-
-  Use this skill when someone hands over a marketing report, deck, dashboard,
-  analysis or agency write-up that someone else made and wants it checked:
-  "review this report", "review this dashboard", "review this deck", "can you check
-  this before I send it to my boss", "is this right", "check my numbers", "sanity
-  check this", "does this hold up", "what's wrong with this analysis", "would you
-  sign off on this", "the agency sent us this, is it fair". Works on markdown, HTML,
-  a pasted deck, a screenshot description or a spreadsheet, with or without the
-  data behind it. It recomputes every number it can, checks definitions, charts,
-  comparisons, causal claims and recommendations, leaves correct things alone, and
-  returns a verdict plus findings ranked Must fix, Should fix, Nice to have, each
-  with what it says, what is wrong (with the recomputation), the fix and what it
-  costs to skip. Auditing a whole account or setup export: use audit. Building a
-  new report: use marketing-dashboard. Email copy itself (subject, body,
-  CTA) is out of scope.
+  Use this skill when someone hands over a marketing report, deck, dashboard, analysis
+  or agency write-up that someone else made and wants it checked: "review this
+  report", "review this dashboard", "review this deck", "can you check this before I
+  send it to my boss", "is this right", "check my numbers", "sanity check this", "does
+  this hold up", "what's wrong with this analysis", "would you sign off on this", "the
+  agency sent us this, is it fair". Works on markdown, HTML, a pasted deck, a
+  screenshot description or a spreadsheet, with or without the data behind it. It
+  recomputes every number it can, checks definitions, charts, comparisons, causal
+  claims and recommendations, leaves correct things alone, and returns a verdict plus
+  findings ranked Must fix, Should fix, Nice to have. Auditing a whole account or
+  setup: use audit. Building a new report: use marketing-dashboard. Email copy itself
+  is out of scope.
 ---
 
 # review
@@ -56,7 +54,7 @@ their parts, text that contradicts a table) and say so under "Not checked".
 ## 2. Run the checks, in this order
 
 Stop on each claim at the first check that fails. Details and detection rules
-for every item: [references/review-checklist.md](references/review-checklist.md).
+for every item: section "File: review/references/review-checklist.md" in 05-review.md.
 
 | Order | Check | Fails when | Typical recomputation |
 |---|---|---|---|
@@ -66,7 +64,7 @@ for every item: [references/review-checklist.md](references/review-checklist.md)
 | 4 | **Double counting** | channel claims sum above the store total; query-page impressions summed as demand | compare the sum with the single source of truth |
 | 5 | **Comparison** | no comparator; unequal periods or ages; last 2-3 days of a lagging source read as a drop; a filtered "% of total" | same-length prior period, same window last year, same accrual age |
 | 6 | **Blend** | one rate across groups that behave differently (brand and generic, mobile and desktop, one giant send and small ones) | split rows; compare within each group |
-| 7 | **Chart** | the visual implies something the numbers do not | see [references/chart-checks.md](references/chart-checks.md) |
+| 7 | **Chart** | the visual implies something the numbers do not | see section "File: review/references/chart-checks.md" in 05-review.md |
 | 8 | **Cause** | drove, caused, thanks to, because, with no control, holdout or test | name the rival explanation the data cannot rule out |
 | 9 | **Significance** | "significant" with no test or n; a costed change tested against zero instead of its break-even; a segment winner from a pivot table | compute it, or call it a hypothesis |
 | 10 | **Action** | the recommendation does not follow from the corrected numbers, or has no number to watch and no way to verify | redo the decision on the corrected numbers |
@@ -86,7 +84,7 @@ the arithmetic". Before keeping any finding:
    data, in one line ("CTR printed 6.1% is the mean of row CTRs; 4,210 clicks
    / 118,400 impressions = 3.6%").
 2. **Check the decoy list.** Many things look wrong and are fine:
-   [references/decoys.md](references/decoys.md). Examples: Search Console clicks
+   section "File: review/references/decoys.md" in 05-review.md. Examples: Search Console clicks
    above GA4 sessions, display CTR near 0.4%, brand campaigns with 30-50% CTR,
    sessions slightly under email clicks on every row, rounding gaps under 1%,
    a median that differs from the mean when the report says which it uses.
@@ -150,7 +148,7 @@ Not checked: [one line: what you could not test and why]
   only if it is real. Do not invent problems to look thorough.
 
 A worked example of one finding, and of a clean verdict:
-[references/finding-examples.md](references/finding-examples.md).
+section "File: review/references/finding-examples.md" in 05-review.md.
 
 ## Adversary pass
 

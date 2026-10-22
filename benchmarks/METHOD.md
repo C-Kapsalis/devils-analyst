@@ -45,7 +45,10 @@ anyone moves budget:
 - **Prompt:** each case is a request a marketer would send ("Which version
   should we go with?", "Is there anything I'm missing?"), with exports in
   `resources/`. The model writes `report.md`; the graders read that file.
-  Tools: Read, Glob, Grep, Skill, Write; at most 40 turns.
+  Tools: Read, Glob, Grep, Skill, Write, set by `allowed_tools` in each
+  case's `prompt.md`; at most 40 turns. Write is the one gated tool in that
+  list, so the run grants it with `--allow-tools Write`. No case allows
+  Bash, and no run in the 2026-10-17 log called it.
 - **Runs:** 3 per case per arm.
 - **Judge:** the `claude plugin eval` default judge model, which is Claude
   Haiku (`--judge-model`, default `haiku`), three votes per LLM grader; a
@@ -116,19 +119,38 @@ the scripts (stdlib only). From the repo root:
 python3 benchmarks/builder/build_all.py
 
 # 2. Run both arms and keep the log.
-claude plugin eval . --eval-dir benchmarks/cases --scaffold --allow-tools Write Bash --model haiku -j 6 --runs 3 --trust-plugin --no-publish | tee benchmarks/eval.log
+claude plugin eval . --eval-dir benchmarks/cases --scaffold --allow-tools Write --model haiku -j 6 --runs 3 --trust-plugin --no-publish | tee benchmarks/eval.log
 
-# 3. Write benchmarks/results/<date>.md and the chart in assets/.
-#    (The README has no placeholders for report.py to fill; I update its
-#    numbers by hand from the results file.)
-python3 benchmarks/report.py benchmarks/eval.log
+# 3. Write benchmarks/results/<date>.md and the charts
+#    assets/benchmark-groups-light.svg and assets/benchmark-groups-dark.svg.
+python3 benchmarks/report.py benchmarks/eval.log --no-readme
+```
+
+The same in PowerShell (the scaffolds are bash scripts, so `claude plugin
+eval --scaffold` needs bash on the path, for example from Git for Windows):
+
+```powershell
+python benchmarks/builder/build_all.py
+claude plugin eval . --eval-dir benchmarks/cases --scaffold --allow-tools Write --model haiku -j 6 --runs 3 --trust-plugin --no-publish | Tee-Object benchmarks/eval.log
+python benchmarks/report.py benchmarks/eval.log --no-readme
 ```
 
 `--scaffold` runs each case's `scaffold.sh`, which only writes the fixture
 files into the run's workspace; read one before you run it. The log prints
-the API cost of every run and the total at the end. To run one group, pass
-the cases you want with your shell (for example a copy of
-`benchmarks/cases/bx-*`).
+the API cost of every run and the total at the end; the raw runs and an HTML
+report go to `benchmarks/cases/results/` (ignored by git). To run one group,
+filter by name: `--case 'bx-*'` is the breadth group, the one run so far.
+
+`report.py` can also fill `{{DA_*}}` placeholders in the README. The README
+has none: I update its numbers by hand from the results page, so pass
+`--no-readme`.
+
+The page for the 2026-10-17 run was not written by `report.py`: it is
+`results/2026-10-17-breadth.md`, not the `results/2026-10-17.md` the script
+would write, and no chart was committed for it. Running
+`report.py` on `eval-breadth.log` reproduces that page's overall numbers
+(mean score 0.94 with, 0.93 without; every grader passed in 83 of 108 runs
+with and 84 of 108 without).
 
 ## Limits
 

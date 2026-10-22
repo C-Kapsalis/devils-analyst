@@ -1,22 +1,19 @@
 ---
 name: marketing-models
 description: >-
-  Use this skill when a marketer asks a question that needs a model, not just a metric:
-  "what price should we charge", "are we underpriced", "should we raise prices if demand is
-  elastic", "what will sales be next month or next quarter", "is the business really
-  growing under the seasonality", "how fast will unit cost fall as we scale", "what drives
-  sales", "which model or regression should we trust", "does the effect differ by group",
-  "who should get the retention offer", "which customers will churn or convert", "is the
-  churn model any good", "which brand will each segment pick", "segment our customers",
-  "what do our survey ratings boil down to", "are these two things related" (cross-tabs),
-  "is this investment or campaign worth it", "how much can we pay to acquire a customer",
-  "what retention do we need". Picks the method (NPV/IRR/CLV, elasticity and optimal
-  price, moving average, exponential and power/experience-curve models, linear regression
-  with dummies and interactions, chi-square, binary and multinomial logit with cost-based
-  classification and lift, factor and cluster analysis), runs it with exact formulas,
-  checks it, and turns the numbers into a decision. Did a change or test cause a result:
-  use evidence-check. Defining a metric: use metric-definitions. Survey and sample design:
-  use research-design.
+  Use this skill when a marketer asks a question that needs a model, not just a
+  metric: "what price should we charge", "are we underpriced", "what will sales be
+  next month or next quarter", "is the business really growing under the seasonality",
+  "how fast will unit cost fall as we scale", "what drives sales", "which regression
+  should we trust", "does the effect differ by group", "who should get the retention
+  offer", "which customers will churn or convert", "is the churn model any good",
+  "segment our customers", "what do our survey ratings boil down to", "are these two
+  things related", "is this investment worth it", "how much can we pay to acquire a
+  customer". Picks the method (NPV and CLV, elasticity, forecasting, regression,
+  chi-square, logit, factor and cluster analysis), runs it with exact formulas, checks
+  it, and turns the numbers into a decision. Did a change cause a result: use
+  evidence-check. Defining a metric: metric-definitions. Survey design:
+  research-design.
 ---
 
 # marketing-models

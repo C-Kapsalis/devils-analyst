@@ -43,7 +43,7 @@ A wrong comparison makes every insight after it wrong.
 
 Most good answers use two: a driver tree for the headline number, then mix vs
 rate or contribution on the driver that moved most. Formulas, edge cases and a
-fully worked example are in [references/decomposition.md](references/decomposition.md).
+fully worked example are in section "File: whats-changed/references/decomposition.md" in 02-whats-changed-and-evidence.md.
 Read it before computing; the formulas there are exact (the parts add up to the
 change) and the naive alternatives are not.
 
@@ -307,13 +307,25 @@ Run these in order; stop at the first that fails.
    p-value. Investigate before shipping.
 2. **Significance.** Two-proportion z-test on conversions per user:
    `p = (x1 + x2) / (n1 + n2)`, `se = sqrt(p(1-p)(1/n1 + 1/n2))`,
-   `z = (p2 - p1) / se`, two-sided p-value `= erfc(|z| / sqrt(2))`. Report the
-   lift with its p-value, not the lift alone.
-3. **Power.** Minimum detectable effect at 80% power, 5% two-sided:
-   `mde ≈ 2.8 * sqrt(2 p (1-p) / n)` per arm (absolute). Users needed per arm to
-   detect an absolute lift `d`: `n ≈ 16 p (1-p) / d^2`. If the observed lift is
-   below the MDE, the test is inconclusive: do not project revenue from it,
-   and say how many users a real answer needs.
+   `z = (p2 - p1) / se`, two-sided p-value `= erfc(|z| / sqrt(2))`. 95%
+   confidence interval for the difference: `(p2 - p1) ± 1.96 *
+   sqrt(p1(1-p1)/n1 + p2(1-p2)/n2)`. Report the lift with its p-value and its
+   interval, not the lift alone. Judge a finished test on these two numbers:
+   - **Significant** (p below the planned alpha, interval excludes zero): the
+     effect is real at that confidence. If it is smaller than the MDE the test
+     was planned for, it is still significant, but a small test that only
+     just cleared the bar tends to overstate the effect (the winner's curse).
+     Report it with its interval and project revenue from the low end, not
+     the point estimate.
+   - **Not significant**: inconclusive, unless the interval is narrow enough
+     to rule out every effect that would matter to the business; then say
+     "no effect large enough to matter". Never say "no effect" on its own.
+3. **Power (planning).** The minimum detectable effect (MDE) is set before
+   the test, to size it; it is not a pass mark for the result. At 80% power,
+   5% two-sided: `mde ≈ 2.8 * sqrt(2 p (1-p) / n)` per arm (absolute). Users
+   needed per arm to detect an absolute lift `d`: `n ≈ 16 p (1-p) / d^2`. Use
+   it to say whether the test was big enough to find the effect that matters,
+   and, for an inconclusive test, how many users a real answer needs.
 4. **Novelty.** Split the lift by week, and by new vs returning users. If the
    lift is concentrated in the first week(s) and in returning users and fades
    later, judge on the last stable weeks only.
@@ -399,7 +411,7 @@ Every move above has a challenger. Run the attack, settle it with the check, and
 
 | Move | Adversary asks | Check that settles it | If it fails |
 |---|---|---|---|
-| Call a test | "Is the split what was planned, and is the lift beyond chance and beyond the MDE?" | SRM, p-value and power computed | verdict inconclusive or untrustworthy |
+| Call a test | "Is the split what was planned, is the lift beyond chance, and what does the interval rule out?" | SRM, p-value and confidence interval computed; MDE checked against the planned size | verdict inconclusive or untrustworthy; a significant lift below the planned MDE is reported with its interval and a caution |
 | Credit a change | "What would have happened anyway?" | a control group, last year, or untouched equally extreme units | difference in differences, or no claim |
 | Pick a winner | "Does it win inside each segment and at a common mix?" | per-segment and standardised rates | report the within-segment result |
 | Credit spend | "Would these buyers have bought anyway?" | holdout, pause test or baseline | report incremental, not attributed |

@@ -10,12 +10,11 @@ description: >-
   "should we offer a premium version", "our scoring matrix says A, is that right",
   "how big is the market", "TAM SAM SOM", "is the business case positive", "NPV",
   "break-even", "should we keep funding this product", "we already spent a lot on it",
-  "go or no-go", "which idea should we invest in", "can we test the concept with AI
-  respondents". It reads purchase-intent surveys correctly (paired tests, top-box
-  calibration, intent-to-trial gap), turns conjoint part-worths into willingness to pay
-  per segment, checks scoring-matrix robustness, sizes markets both ways, and runs NPV
-  and break-even against a realistic share of the market before recommending go,
-  conditional go or no-go with kill conditions.
+  "go or no-go", "can we test the concept with AI respondents". It calibrates purchase
+  intent, turns conjoint part-worths into willingness to pay per segment, checks
+  scoring-matrix robustness, sizes markets both ways, and runs NPV and break-even on a
+  realistic share before recommending go, conditional go or no-go with kill
+  conditions.
 ---
 
 # product-decisions
@@ -35,12 +34,12 @@ recommend; they decide.
 
 | The user asks | Do | Reference |
 |---|---|---|
-| Which concept wins, is there demand | Concept test read (section 2) | [concept-test.md](references/concept-test.md) |
-| How many will we sell | Q = N x A x P forecast (section 3) | [concept-test.md](references/concept-test.md) |
-| Which features, what price, premium version | Conjoint to WTP by segment (section 4) | [conjoint-wtp.md](references/conjoint-wtp.md) |
-| Our scoring or screening matrix picked X | Weights and sensitivity (section 5) | [concept-selection.md](references/concept-selection.md) |
-| Market size, NPV, break-even, keep funding, go/no-go | Business case (section 6) | [business-case.md](references/business-case.md) |
-| Which opportunity to pursue, will people adopt it, AI respondents, usability or pilot test | Screening and adoption | [opportunity-and-adoption.md](references/opportunity-and-adoption.md) |
+| Which concept wins, is there demand | Concept test read (section 2) | concept-test.md (section "File: product-decisions/references/concept-test.md" in 09-product-and-models.md) |
+| How many will we sell | Q = N x A x P forecast (section 3) | concept-test.md (section "File: product-decisions/references/concept-test.md" in 09-product-and-models.md) |
+| Which features, what price, premium version | Conjoint to WTP by segment (section 4) | conjoint-wtp.md (section "File: product-decisions/references/conjoint-wtp.md" in 09-product-and-models.md) |
+| Our scoring or screening matrix picked X | Weights and sensitivity (section 5) | concept-selection.md (section "File: product-decisions/references/concept-selection.md" in 09-product-and-models.md) |
+| Market size, NPV, break-even, keep funding, go/no-go | Business case (section 6) | business-case.md (section "File: product-decisions/references/business-case.md" in 09-product-and-models.md) |
+| Which opportunity to pursue, will people adopt it, AI respondents, usability or pilot test | Screening and adoption | opportunity-and-adoption.md (section "File: product-decisions/references/opportunity-and-adoption.md" in 09-product-and-models.md) |
 
 The data must contain: one row per respondent (survey), or one row per
 respondent x part-worth (conjoint), or a dated cash-flow plan (business case).
@@ -649,22 +648,19 @@ populations. The research question and the design stay human.
 ---
 name: marketing-models
 description: >-
-  Use this skill when a marketer asks a question that needs a model, not just a metric:
-  "what price should we charge", "are we underpriced", "should we raise prices if demand is
-  elastic", "what will sales be next month or next quarter", "is the business really
-  growing under the seasonality", "how fast will unit cost fall as we scale", "what drives
-  sales", "which model or regression should we trust", "does the effect differ by group",
-  "who should get the retention offer", "which customers will churn or convert", "is the
-  churn model any good", "which brand will each segment pick", "segment our customers",
-  "what do our survey ratings boil down to", "are these two things related" (cross-tabs),
-  "is this investment or campaign worth it", "how much can we pay to acquire a customer",
-  "what retention do we need". Picks the method (NPV/IRR/CLV, elasticity and optimal
-  price, moving average, exponential and power/experience-curve models, linear regression
-  with dummies and interactions, chi-square, binary and multinomial logit with cost-based
-  classification and lift, factor and cluster analysis), runs it with exact formulas,
-  checks it, and turns the numbers into a decision. Did a change or test cause a result:
-  use evidence-check. Defining a metric: use metric-definitions. Survey and sample design:
-  use research-design.
+  Use this skill when a marketer asks a question that needs a model, not just a
+  metric: "what price should we charge", "are we underpriced", "what will sales be
+  next month or next quarter", "is the business really growing under the seasonality",
+  "how fast will unit cost fall as we scale", "what drives sales", "which regression
+  should we trust", "does the effect differ by group", "who should get the retention
+  offer", "which customers will churn or convert", "is the churn model any good",
+  "segment our customers", "what do our survey ratings boil down to", "are these two
+  things related", "is this investment worth it", "how much can we pay to acquire a
+  customer". Picks the method (NPV and CLV, elasticity, forecasting, regression,
+  chi-square, logit, factor and cluster analysis), runs it with exact formulas, checks
+  it, and turns the numbers into a decision. Did a change cause a result: use
+  evidence-check. Defining a metric: metric-definitions. Survey design:
+  research-design.
 ---
 
 # marketing-models
@@ -701,16 +697,16 @@ answer changes if it is wrong.
 
 | The question | Dependent variable / data | Method | Reference |
 |---|---|---|---|
-| Is this investment worth it? Max acquisition cost? Minimum retention? | Cash flows over time | NPV, IRR, CLV | [valuing.md](references/valuing.md) |
-| Is the price too high or too low? Best price? | Price, quantity, unit cost | Elasticity, PV ratio, P* | the `pricing-promotions` skill owns price and promotion decisions (promo controls, stock-up around price changes, test steps); use [pricing.md](references/pricing.md) only for the model fit itself |
-| Next period's sales; trend under seasonality | Time series | Moving average of order = cycle | [forecasting.md](references/forecasting.md) |
-| Constant % growth or decay (new product revenue, awareness after ads stop) | Series over time | Exponential, ln Y on t | [forecasting.md](references/forecasting.md) |
-| Unit cost vs cumulative volume; constant elasticity demand | Two variables, % to % | Power model, ln Y on ln X | [forecasting.md](references/forecasting.md) |
-| What drives a quantity? Does the effect differ by group? | Continuous Y | Linear regression, dummies, interactions, partial F | [regression.md](references/regression.md) |
-| Are two categorical variables related? Equal rates across groups? | Cross-tab of counts | Chi-square | [regression.md](references/regression.md) |
-| Will this case be 1 or 0, and what do we do? | Binary Y | Binary logit + cost-based classification + lift | [logit.md](references/logit.md) |
-| Which of 3+ options will each segment choose? | Choice among >2 | Multinomial logit | [logit.md](references/logit.md) |
-| Many correlated ratings; who belongs together | Ratings or part-worths per respondent | Factor analysis, then K-means on factor scores | [segmenting.md](references/segmenting.md) |
+| Is this investment worth it? Max acquisition cost? Minimum retention? | Cash flows over time | NPV, IRR, CLV | valuing.md (section "File: marketing-models/references/valuing.md" in 09-product-and-models.md) |
+| Is the price too high or too low? Best price? | Price, quantity, unit cost | Elasticity, PV ratio, P* | the `pricing-promotions` skill owns price and promotion decisions (promo controls, stock-up around price changes, test steps); use pricing.md (section "File: marketing-models/references/pricing.md" in 09-product-and-models.md) only for the model fit itself |
+| Next period's sales; trend under seasonality | Time series | Moving average of order = cycle | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| Constant % growth or decay (new product revenue, awareness after ads stop) | Series over time | Exponential, ln Y on t | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| Unit cost vs cumulative volume; constant elasticity demand | Two variables, % to % | Power model, ln Y on ln X | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| What drives a quantity? Does the effect differ by group? | Continuous Y | Linear regression, dummies, interactions, partial F | regression.md (section "File: marketing-models/references/regression.md" in 09-product-and-models.md) |
+| Are two categorical variables related? Equal rates across groups? | Cross-tab of counts | Chi-square | regression.md (section "File: marketing-models/references/regression.md" in 09-product-and-models.md) |
+| Will this case be 1 or 0, and what do we do? | Binary Y | Binary logit + cost-based classification + lift | logit.md (section "File: marketing-models/references/logit.md" in 09-product-and-models.md) |
+| Which of 3+ options will each segment choose? | Choice among >2 | Multinomial logit | logit.md (section "File: marketing-models/references/logit.md" in 09-product-and-models.md) |
+| Many correlated ratings; who belongs together | Ratings or part-worths per respondent | Factor analysis, then K-means on factor scores | segmenting.md (section "File: marketing-models/references/segmenting.md" in 09-product-and-models.md) |
 | Did B beat A? Did the change work? | Experiment or before/after | Not here: **evidence-check** | |
 
 Several categorical predictors at once: logit, not a stack of chi-square

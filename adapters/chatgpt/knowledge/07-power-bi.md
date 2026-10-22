@@ -87,7 +87,7 @@ in Sources. Only if no such connector exists, translate to warehouse SQL:
 
 ## 5. Otherwise, translate the measures to SQL, faithfully
 
-Follow [references/dax-to-sql.md](references/dax-to-sql.md). The rules that
+Follow section "File: power-bi-definitions/references/dax-to-sql.md" in 07-power-bi.md. The rules that
 break most translations: `CALCULATE` filters *replace* a slicer on the same
 column, ratios are computed from summed parts at the displayed grain, two fact
 tables are aggregated separately before they are joined, and BLANK is not zero.
@@ -115,12 +115,23 @@ definitions. Power BI stays the source of truth: if the user wants a metric the
 model lacks, propose the DAX (name, format, description) so it can be added to
 the model, rather than defining it only in the dashboard.
 
+## 8. Audit the measures you reuse
+
+Before you reuse a measure, run it past
+section "File: power-bi-definitions/references/power-bi-audit.md" in 07-power-bi.md: averaged rates,
+summed snapshots, toggle defaults, stacked platform revenue, duplicate KPIs.
+Compare each measure with the formula, source and grain the
+`metric-definitions` skill gives for that metric (and with any house rule
+that overrides it), not with the measure's name. A wrong measure reused
+faithfully is still wrong: flag it, propose the corrected DAX, and let the
+model owner decide.
+
 ## Power BI developers in Claude Code
 
 If the user also maintains the model as PBIP in git, the companion command-line
 tools (model linting, building sample models from a spec, keeping client copies
 in sync, styling report charts) are described in
-[references/power-bi-tools.md](references/power-bi-tools.md). They need a local
+section "File: power-bi-definitions/references/power-bi-tools.md" in 07-power-bi.md. They need a local
 shell and `uv`; they do not run in claude.ai.
 
 ## Adversary pass
@@ -274,6 +285,69 @@ FROM DAILY_SPEND s JOIN ORDERS o ON o.order_date = s.date ...
 
 ---
 
+## File: power-bi-definitions/references/power-bi-audit.md
+
+# Power BI models (TMDL, PBIP, a list of DAX measures)
+
+Read every measure the reports use, the disconnected tables (toggles and
+selectors) and the relationships. Evaluate suspicious measures at two grains
+(a day and a month, a campaign and the total); a correct ratio gives the same
+answer as a DIVIDE of sums at each grain. The agreed formula, source and
+grain for each metric come from the `metric-definitions` skill or the
+team's house rules: compare each measure with that, not with its name. The
+same checks, with the same ids, are the Power BI area of the `audit` skill
+(its `references/power-bi.md`).
+
+## Measure checks
+
+| # | Look at | Red flag | Why it costs money | Fix | Tier |
+|---|---|---|---|---|---|
+| P1 | Ratio measures | `AVERAGE(Fact[ctr])`, `AVERAGEX(..., [rate])` or an average of a precomputed rate column | A day with 20 impressions weighs like a day with 20,000; the total is true of nothing | `DIVIDE(SUM(Fact[clicks]), SUM(Fact[impressions]))` | 1 |
+| P2 | Snapshot measures (list size, subscribers, open pipeline, stock, followers) | `SUM` over a daily or monthly snapshot column | A month shows 30 times the list | Closing value: `CALCULATE(SUM(...), LASTDATE('Date'[Date]))`, or `LASTNONBLANKVALUE` over dates, or an average if that is the definition | 1 |
+| P3 | Distinct counts | `SUM(Fact[active_users])` from a daily table used for monthly users | Users who visit on many days counted many times | Distinct count from user-level data, or a source monthly figure; label otherwise | 1 |
+| P4 | Toggles and selectors: disconnected tables read with `SELECTEDVALUE(Table[Col], <default>)` | The default (no selection) differs from the agreed definition (gross instead of net revenue; 28-day click instead of 7-day; all channels instead of paid) | Every card nobody filtered shows the wrong version; exports and subscriptions too | Default to the agreed value; or make the slicer single-select with a required default; state the default in the description | 1 |
+| P5 | Platform revenue measures | Google and Meta claimed revenue added into one "Paid Revenue" and divided by spend | Stacked ROAS | ROAS on store or analytics revenue; platform claims as separate, labelled measures | 1 |
+| P6 | Duplicate business metrics | Two CAC (or ROAS) measures with different filters or exclusions | Two numbers for one KPI across pages | One canonical measure; retire or rename the other | 2 |
+| P7 | `CALCULATE` filters | A filter on a column the user also slices on, which silently replaces the slicer | Cards ignore the page filter | `KEEPFILTERS`, or document the override | 2 |
+| P8 | BLANK vs zero | `+ 0` or `IF(ISBLANK(...), 0)` on every measure | Rows appear for every combination; averages fall | Keep BLANK unless zero is meant | 4 |
+| P9 | Measure descriptions and formats | No description on measures the reports use | Meaning is a guess | Description with numerator, denominator, grain, filters | 4 |
+| P10 | Template vs client copies | The template changed a definition; client copies still carry the old one | "The same KPI" differs by client | Detect drift per copy; fix with an allowlist for intended differences | 2 |
+
+## Model and process checks
+
+| # | Look at | Red flag | Fix | Tier |
+|---|---|---|---|---|
+| P11 | Text-model structure | Broken table references; duplicate lineage tags | Run a read-only lint; apply only mechanical fixes; re-check | 2 |
+| P12 | Versioning | Model only as .pbix, no checks before deploy | PBIP/TMDL in git with a linter in CI | 4 |
+| P13 | Openability | Validated on paper only | Open in Desktop and record the result | 4 |
+| P14 | Auto-fix boundary | A business definition "fixed" by a tool | Mechanical fixes only; judgement items stay open for a human | 2 |
+
+## How to prove each finding
+
+- Averaged rate: compute the measure as written and as DIVIDE of sums on the
+  sample data or on two made-up rows (20 impressions at 10% and 20,000 at 2%:
+  average 6%, true 2.01%).
+- Summed snapshot: compare the measure for a month with the last day's list
+  size.
+- Toggle default: write what a card shows with no slicer selection, and what
+  the description or the business says it should show.
+
+## Decoys
+
+`DIVIDE(SUM(...), SUM(...))` ratios; `REMOVEFILTERS` in a share-of-total
+measure that is labelled as such; a disconnected table whose default matches
+the stated definition; `SUMX` over a fact table of additive amounts.
+
+## Tools for models kept as PBIP
+
+P10 is what `tmdl-drift-doctor` checks across client copies. P11 and P14 are
+`tmdl-preflight`: a read-only lint, mechanical fixes only, then a re-check
+from disk. Both are in section "File: power-bi-definitions/references/power-bi-tools.md" in 07-power-bi.md and need a
+local shell. P13 stays a human step: the tools prove the files pass their
+validators, not that Power BI Desktop opened them.
+
+---
+
 ## File: power-bi-definitions/references/power-bi-tools.md
 
 # Power BI developer tools (Claude Code only)
@@ -285,11 +359,28 @@ installed globally):
 
 ```
 T="${CLAUDE_SKILL_DIR}/scripts/devils-analyst-tool"
-$T tmdl-preflight --version        # prints 1.1.0 when ready; exit 127 = install uv first
+$T tmdl-preflight --version        # prints "tmdl-preflight 1.2.0" when ready; exit 127 = install uv first
 ```
 
-`DEVILS_ANALYST_TOOLS_VERSION=v1.1.0` pins another tag; `DEVILS_ANALYST_USE_LOCAL=1` prefers
-tools already on PATH.
+The wrapper pins tag `v1.2.0`. To pin another tag, set
+`DEVILS_ANALYST_TOOLS_VERSION` (for example `DEVILS_ANALYST_TOOLS_VERSION=v1.1.0 $T ...`);
+`DEVILS_ANALYST_USE_LOCAL=1` prefers tools already on PATH.
+
+The wrapper is a bash script. On Windows without Git Bash or WSL, run a tool
+through `uvx` directly in PowerShell, with the same arguments:
+
+```powershell
+uvx --from git+https://github.com/C-Kapsalis/tmdl-preflight@v1.2.0 tmdl-preflight --version
+uvx --from git+https://github.com/C-Kapsalis/pbip-model-forge@v1.2.0 pbip-forge --version
+uvx --from git+https://github.com/C-Kapsalis/tmdl-drift-doctor@v1.2.0 drift-doctor --version
+uvx --from git+https://github.com/C-Kapsalis/pbi-plot-styler@v1.2.0 pbi-plot-styler --version
+```
+
+At `v1.2.0`, each tool's own listing gives: `tmdl-preflight rules --json`
+119 rules, 25 of them auto-fixable; `pbip-forge --help` 8 commands and
+`pbip-forge rules` 22 spec rules; `drift-doctor --help` 20 commands;
+`pbi-plot-styler --help` 6 commands. Quote the counts the build you run
+prints, not these.
 
 Rules for all four: never hand-write TMDL a tool can generate or fix; never
 claim a model opens in Power BI Desktop beyond what `tmdl-preflight check`
@@ -301,20 +392,20 @@ instead of describing them.
 ```
 $T tmdl-preflight check <path> --format json   # 0 clean, 1 violations, 2 usage error
 $T tmdl-preflight fix <path>                   # auto-fixes, then re-checks from disk
-$T tmdl-preflight rules                        # 37 rules: M model, D DAX, R relationships, F field params, B report, S style
+$T tmdl-preflight rules --json                 # the catalog: id, severity, fixable, options (119 rules at v1.2.0)
 ```
 
 `fix` edits files: if the folder is not under git, ask first or copy it. CI:
 `baseline <path>` then `check --baseline <path>/.tmdl-preflight-baseline.json`;
 `--format github` or `--format sarif`; pre-commit hook id `tmdl-preflight` from
-`https://github.com/c-kapsalis/tmdl-preflight`, rev `v1.1.0`.
+`https://github.com/c-kapsalis/tmdl-preflight`, rev `v1.2.0`.
 
 ## pbip-model-forge: a model from a spec
 
 Turns a spec (a Python file with a module-level `SPEC` dict: tables, rows,
 calendar, measures, relationships) into an openable PBIP with sample data and a
 `handoff/SPEC.md` (data dictionary and Mermaid diagram) for data engineers.
-[../assets/email_campaigns_forge_spec.py](../assets/email_campaigns_forge_spec.py)
+[../assets/email_campaigns_forge_spec.py](https://github.com/C-Kapsalis/devils-analyst/blob/main/skills/power-bi-definitions/assets/email_campaigns_forge_spec.py)
 is a complete, passing example for email campaigns; copy it into the user's
 project before editing.
 

@@ -15,8 +15,11 @@ change.
    claude plugin validate --strict .claude-plugin/marketplace.json
    ```
 3. Check the rules copies are current: `python3 scripts/sync-adapters.py --check`.
-4. Build the release assets and attach them to a GitHub Release:
-   `sh scripts/package.sh` (writes `dist/`).
+4. Build the release assets and attach them to a GitHub Release: push a
+   `v*` tag and `.github/workflows/release.yml` runs `sh scripts/package.sh`
+   and `gh release create` with the zips in `dist/`. To check the zips
+   locally first: `sh scripts/package.sh` (PowerShell: `wsl sh
+   scripts/package.sh`).
 5. The benchmark cases rebuild byte for byte:
    `python3 benchmarks/builder/build_all.py`, then `git status --short
    benchmarks/cases` shows nothing.

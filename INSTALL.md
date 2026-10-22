@@ -66,14 +66,38 @@ the versions I have seen), or skills will not run. Then pick one of three routes
 enter `C-Kapsalis/devils-analyst`, then install `devils-analyst`.
 
 **b. Upload the plugin.** Download `devils-analyst-plugin.zip` from the
-[latest release](https://github.com/C-Kapsalis/devils-analyst/releases) (or
-build it: `sh scripts/package.sh`) and upload it in Customize > Plugins.
+[latest release](https://github.com/C-Kapsalis/devils-analyst/releases/latest) and upload it in Customize > Plugins. The release
+zips are built by [.github/workflows/release.yml](.github/workflows/release.yml)
+from `scripts/package.sh` each time a `v*` tag is pushed. Until a release
+exists, or to build from your own copy, run the script yourself; it writes
+`dist/` and needs `sh` and `zip`:
+
+```bash
+sh scripts/package.sh
+```
+```powershell
+# Windows: run it under WSL, from the repository folder
+wsl sh scripts/package.sh
+```
 
 **c. Upload single skills.** `devils-analyst-skills.zip` holds one zip per
 skill (`devils-analyst-route-question.zip`, `devils-analyst-audit.zip` and so
 on). Upload the ones you need in Customize > Skills; start with
 `route-question` and `metric-definitions`. Each zip holds one folder with its
 `SKILL.md` and `references/`.
+
+Skills hand over to each other by name, and one reads another's files, so
+upload these together:
+
+| If you upload | Also upload | Why |
+|---|---|---|
+| any skill | `route-question`, `metric-definitions` | every analysis starts with routing and definitions |
+| `audit` | `review` | audit's dashboard checks use review's `references/chart-checks.md` |
+| `power-bi-definitions` | `marketing-dashboard` | it hands the translated metrics to marketing-dashboard to build |
+
+Each single-skill zip is renamed `devils-analyst-<skill>`, so the relative
+links between skills that work in the plugin do not resolve there; the skill
+names do. If you want every cross-reference to work, use route a or b.
 
 The session hook does not run in chat. A skill loads when your message
 matches its description, so name the job: "Audit our Google Ads export",
@@ -95,8 +119,8 @@ tested any of them.
 
 **Plugin or skills (main route).**
 
-1. Build the assets: `sh scripts/package.sh`, or download them from the
-   latest release.
+1. Download the assets from the [latest release](https://github.com/C-Kapsalis/devils-analyst/releases/latest), or build them
+   with `sh scripts/package.sh` (PowerShell: `wsl sh scripts/package.sh`).
 2. To add Devil's Analyst as skills: in ChatGPT, open Plugins in the
    sidebar, then the Skills tab (earlier versions: Skills > Create), and
    upload the single-skill zips from `devils-analyst-skills.zip`, starting
@@ -157,7 +181,10 @@ copilot plugin marketplace add C-Kapsalis/devils-analyst
 copilot plugin install devils-analyst@devils-analyst
 ```
 
-The command is namespaced by plugin: `/devils-analyst:devils-analyst`.
+The plugin loads the skills and the session hook. It has no slash command
+for Copilot CLI: GitHub's plugin reference does not document the format of
+a plugin command file, so I have not shipped one. Name the job in your
+message instead ("audit our GA4 setup").
 
 ## GitHub Copilot Chat (VS Code, JetBrains, Visual Studio)
 

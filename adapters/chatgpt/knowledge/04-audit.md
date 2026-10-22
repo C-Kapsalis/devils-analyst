@@ -3,20 +3,18 @@
 ---
 name: audit
 description: >-
-  Use this skill when someone wants a whole marketing setup or account checked,
-  not one report: "audit our Google Ads account", "audit my GA4 setup", "audit our
+  Use this skill when someone wants a whole marketing setup or account checked, not
+  one report: "audit our Google Ads account", "audit my GA4 setup", "audit our
   tracking", "health check our email program", "what's broken in our setup", "where
-  are we wasting money", "we just took over this account, what should we fix
-  first", "is our Meta / Performance Max set up right", "check our UTMs", "audit our
-  Search Console", "audit our CRM or lifecycle program", "check our Power BI model",
-  "review this TMDL / semantic model", or an account export, settings export or
-  model file with "what's wrong with it". It maps the setup first (sources, spend,
-  goals), runs the checks for each area present (paid search, Performance Max, Meta,
-  GA4 and UTMs, Search Console, email, CRM lifecycle, e-commerce revenue,
-  experiments, attribution, dashboards, Power BI models), estimates the money at
-  stake, ranks findings Must fix, Should fix, Nice to have in fix-this-first order
-  and ends "Fix N first". Reviewing one report or deck: use review. Deciding whether
-  a single channel pays: use channel-audit.
+  are we wasting money", "we just took over this account, what should we fix first",
+  "is our Meta / Performance Max set up right", "check our UTMs", "audit our Search
+  Console", "audit our CRM or lifecycle program", "check our Power BI model", "review
+  this TMDL / semantic model", or an account, settings or model export with "what's
+  wrong with it". It maps the setup, runs the checks for each area present (paid
+  search, Performance Max, Meta, GA4 and UTMs, Search Console, email, CRM, revenue,
+  experiments, attribution, dashboards, Power BI), estimates the money at stake, ranks
+  findings Must fix, Should fix, Nice to have and ends "Fix N first". One report or
+  deck: use review. Whether a single channel pays: use channel-audit.
 ---
 
 # audit
@@ -55,18 +53,18 @@ at / Red flag / Why it costs money / Fix.
 
 | Area present | Reference |
 |---|---|
-| Google Ads or Microsoft Ads search | [paid-search.md](references/paid-search.md) |
-| Performance Max, Demand Gen, display, video | [pmax.md](references/pmax.md) |
-| Meta and other paid social | [meta.md](references/meta.md) |
-| GA4 settings, key events, traffic, UTMs | [ga4-utm.md](references/ga4-utm.md) |
-| Search Console and SEO | [search-console.md](references/search-console.md) |
-| Email platform, deliverability, list | [email.md](references/email.md) |
-| CRM lifecycle, retention, CLV | [crm-lifecycle.md](references/crm-lifecycle.md) |
-| Store or backend revenue against platforms | [ecommerce-revenue.md](references/ecommerce-revenue.md) |
-| A/B tests and lift studies | [experiments.md](references/experiments.md) |
-| Attribution models and settings | [attribution.md](references/attribution.md) |
-| Dashboards and reports in use | [dashboards.md](references/dashboards.md) |
-| Power BI model (TMDL, PBIP, DAX list) | [power-bi.md](references/power-bi.md) |
+| Google Ads or Microsoft Ads search | paid-search.md (section "File: audit/references/paid-search.md" in 04-audit.md) |
+| Performance Max, Demand Gen, display, video | pmax.md (section "File: audit/references/pmax.md" in 04-audit.md) |
+| Meta and other paid social | meta.md (section "File: audit/references/meta.md" in 04-audit.md) |
+| GA4 settings, key events, traffic, UTMs | ga4-utm.md (section "File: audit/references/ga4-utm.md" in 04-audit.md) |
+| Search Console and SEO | search-console.md (section "File: audit/references/search-console.md" in 04-audit.md) |
+| Email platform, deliverability, list | email.md (section "File: audit/references/email.md" in 04-audit.md) |
+| CRM lifecycle, retention, CLV | crm-lifecycle.md (section "File: audit/references/crm-lifecycle.md" in 04-audit.md) |
+| Store or backend revenue against platforms | ecommerce-revenue.md (section "File: audit/references/ecommerce-revenue.md" in 04-audit.md) |
+| A/B tests and lift studies | experiments.md (section "File: audit/references/experiments.md" in 04-audit.md) |
+| Attribution models and settings | attribution.md (section "File: audit/references/attribution.md" in 04-audit.md) |
+| Dashboards and reports in use | dashboards.md (section "File: audit/references/dashboards.md" in 04-audit.md) |
+| Power BI model (TMDL, PBIP, DAX list) | power-bi.md (section "File: audit/references/power-bi.md" in 04-audit.md) |
 
 Formulas and platform quirks: `metric-definitions`. Break-even maths per
 campaign or creator: `channel-audit`. Whether a test or change caused a
@@ -97,7 +95,7 @@ If you cannot size it, say what it corrupts. Do not invent a figure.
    GSC clicks above GA4 sessions, phrase match with the highest CPC,
    retargeting ROAS above prospecting, stable direct traffic around 10-25%:
    all normal. The review skill's decoy list
-   ([../review/references/decoys.md](../review/references/decoys.md)) applies
+   (section "File: review/references/decoys.md" in 05-review.md) applies
    here too. Flag a pattern only when it costs money or corrupts a decision.
 
 No number and no concrete case: no finding.
@@ -249,9 +247,10 @@ market share; switching to rivals in proportion to their size.
 
 For a single report or deck, use the `review` skill. This list is what an
 audit of the reporting setup looks for (the dashboards a team relies on
-every week). The chart checks in
-[../review/references/chart-checks.md](../review/references/chart-checks.md)
-apply to each page.
+every week). The chart checks of the `review` skill
+(section "File: review/references/chart-checks.md" in 05-review.md,
+or `references/chart-checks.md` in the installed review skill) apply to each
+page.
 
 | # | Look at | Red flag | Why it costs money | Fix | Tier |
 |---|---|---|---|---|---|
