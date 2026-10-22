@@ -812,8 +812,9 @@ is generic.
 Leading or loaded wording (an item that presumes or praises: "our improved",
 "how much did you enjoy") is screened together with scale balance: the
 question must not tell the respondent which answer is expected. (See
-SOURCES.md: this rule is standard survey practice requested for this skill,
-not stated in the notes beyond scale balance.)
+[docs/sources/hybrid-research.md](https://github.com/C-Kapsalis/devils-analyst/blob/main/docs/sources/hybrid-research.md):
+this rule is standard survey practice requested for this skill, not stated
+in the notes beyond scale balance.)
 
 Spotting a double-barrelled item: it contains "and" or "or" joining two
 attributes, or two adjectives that can diverge (attention-grabbing and

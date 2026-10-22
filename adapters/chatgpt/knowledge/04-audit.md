@@ -248,7 +248,7 @@ market share; switching to rivals in proportion to their size.
 For a single report or deck, use the `review` skill. This list is what an
 audit of the reporting setup looks for (the dashboards a team relies on
 every week). The chart checks in
-[../review/references/chart-checks.md](../review/references/chart-checks.md)
+[../../review/references/chart-checks.md](../../review/references/chart-checks.md)
 apply to each page.
 
 | # | Look at | Red flag | Why it costs money | Fix | Tier |
