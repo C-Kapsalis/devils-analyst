@@ -207,7 +207,8 @@ Claude Desktop app works the same way.
 **Claude (web and Desktop chat):** add the marketplace
 `C-Kapsalis/devils-analyst` under Customize > Plugins, upload
 `devils-analyst-plugin.zip` there, or upload single skills from
-`devils-analyst-skills.zip` under Customize > Skills. Code execution must
+`devils-analyst-skills.zip` under Customize > Skills. Both zips are on the
+[latest release](https://github.com/C-Kapsalis/devils-analyst/releases/latest). Code execution must
 be on. There is no session hook in chat, so name the job ("audit our GA4
 setup", "is this report right?"). House rules go in the project's knowledge
 or in the message.
@@ -219,7 +220,9 @@ instructions and the ten knowledge files in
 **Codex, Copilot, Gemini CLI, OpenCode, Cursor, Windsurf, Cline, Kiro,
 OpenClaw** and anything that reads `AGENTS.md`: step by step in
 **[INSTALL.md](INSTALL.md)**, with what I have and have not tested. The
-release zips are built by `sh scripts/package.sh`.
+release zips are built by `sh scripts/package.sh` (on Windows, `wsl sh
+scripts/package.sh` in PowerShell), which a workflow runs on every `v*`
+tag.
 
 ## Limits
 

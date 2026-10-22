@@ -66,8 +66,19 @@ the versions I have seen), or skills will not run. Then pick one of three routes
 enter `C-Kapsalis/devils-analyst`, then install `devils-analyst`.
 
 **b. Upload the plugin.** Download `devils-analyst-plugin.zip` from the
-[latest release](https://github.com/C-Kapsalis/devils-analyst/releases) (or
-build it: `sh scripts/package.sh`) and upload it in Customize > Plugins.
+[latest release](https://github.com/C-Kapsalis/devils-analyst/releases/latest) and upload it in Customize > Plugins. The release
+zips are built by [.github/workflows/release.yml](.github/workflows/release.yml)
+from `scripts/package.sh` each time a `v*` tag is pushed. Until a release
+exists, or to build from your own copy, run the script yourself; it writes
+`dist/` and needs `sh` and `zip`:
+
+```bash
+sh scripts/package.sh
+```
+```powershell
+# Windows: run it under WSL, from the repository folder
+wsl sh scripts/package.sh
+```
 
 **c. Upload single skills.** `devils-analyst-skills.zip` holds one zip per
 skill (`devils-analyst-route-question.zip`, `devils-analyst-audit.zip` and so
@@ -108,8 +119,8 @@ tested any of them.
 
 **Plugin or skills (main route).**
 
-1. Build the assets: `sh scripts/package.sh`, or download them from the
-   latest release.
+1. Download the assets from the [latest release](https://github.com/C-Kapsalis/devils-analyst/releases/latest), or build them
+   with `sh scripts/package.sh` (PowerShell: `wsl sh scripts/package.sh`).
 2. To add Devil's Analyst as skills: in ChatGPT, open Plugins in the
    sidebar, then the Skills tab (earlier versions: Skills > Create), and
    upload the single-skill zips from `devils-analyst-skills.zip`, starting
