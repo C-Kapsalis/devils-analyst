@@ -256,7 +256,7 @@ def charts(t: dict, assets: Path) -> None:
         for lab, a, b in rows) + "."
     assets.mkdir(parents=True, exist_ok=True)
     for theme in THEMES:
-        (assets / f"benchmark-groups-{theme}.svg").write_text(
+        (assets / f"benchmark-groups-{theme}.svg").write_text(encoding='utf-8', data=
             bar_chart(rows, "Mean score per case group (0 to 1)", desc, theme))
 
 
@@ -264,7 +264,7 @@ def charts(t: dict, assets: Path) -> None:
 
 def fill_readme(path: Path, values: dict) -> list:
     """Replace {{NAME}} (first run) or <!--NAME-->old<!--/NAME--> (later runs)."""
-    text = path.read_text()
+    text = path.read_text(encoding='utf-8')
     filled = []
     for name, value in values.items():
         wrapped = f"<!--{name}-->{value}<!--/{name}-->"
@@ -274,7 +274,7 @@ def fill_readme(path: Path, values: dict) -> list:
         text, m = re.subn(rf"<!--{name}-->.*?<!--/{name}-->", lambda _: wrapped, text, flags=re.S)
         if n or m:
             filled.append(name)
-    path.write_text(text)
+    path.write_text(encoding='utf-8', data=text)
     return filled
 
 
@@ -319,7 +319,7 @@ def main(argv=None) -> int:
     ap.add_argument("--no-readme", action="store_true", help="do not touch README.md")
     args = ap.parse_args(argv)
 
-    text = args.log.read_text(encoding="utf-8", errors="replace")
+    text = args.log.read_text(encoding='utf-8', errors="replace")
     parsed = parse(text)
     runs = parsed["runs"]
     if not runs:
@@ -330,13 +330,13 @@ def main(argv=None) -> int:
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     out = args.out_dir / f"{date}.md"
-    out.write_text(results_markdown(t, runs, args.log, date, args.model))
+    out.write_text(encoding='utf-8', data=results_markdown(t, runs, args.log, date, args.model))
     charts(t, args.assets_dir)
     print(f"wrote {out}")
     print(f"wrote {args.assets_dir}/benchmark-groups-{{light,dark}}.svg")
     if not args.no_readme and args.readme.exists():
         filled = fill_readme(args.readme, readme_values(t, runs, date, args.model))
-        left = sorted(set(re.findall(r"\{\{(DA_[A-Z_]+)\}\}", args.readme.read_text())))
+        left = sorted(set(re.findall(r"\{\{(DA_[A-Z_]+)\}\}", args.readme.read_text(encoding='utf-8'))))
         print(f"README: filled {len(filled)} placeholders" + (f"; still open: {', '.join(left)}" if left else ""))
     return 0
 

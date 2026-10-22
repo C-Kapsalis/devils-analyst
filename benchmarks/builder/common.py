@@ -69,7 +69,7 @@ def write_case(
         shutil.rmtree(case)
     (case / "graders").mkdir(parents=True)
 
-    (case / "case.yaml").write_text(
+    (case / "case.yaml").write_text(encoding='utf-8', data=
         f'schema_version: "1.1"\nname: {name}\nruns: {runs}\n'
         "context:\n  scaffold_script: scaffold.sh\n"
     )
@@ -77,7 +77,7 @@ def write_case(
     save_line = REPORT_LINE if output == "report.md" else (
         f"Save {output} in the current working directory, not inside resources/."
     )
-    (case / "prompt.md").write_text(
+    (case / "prompt.md").write_text(encoding='utf-8', data=
         "---\nmax_turns: 40\ntimeout_seconds: 900\n"
         "allowed_tools: [Read, Glob, Grep, Skill, Write]\n---\n\n"
         f"{prompt.strip()}\n\n{save_line}\n"
@@ -94,15 +94,15 @@ def write_case(
         assert EOF_MARK not in text
         lines += [f"cat > {path} <<'{EOF_MARK}'", text.rstrip("\n"), EOF_MARK]
     scaffold = case / "scaffold.sh"
-    scaffold.write_text("\n".join(lines) + "\n")
+    scaffold.write_text(encoding='utf-8', data="\n".join(lines) + "\n")
     scaffold.chmod(0o755)
 
-    (case / "graders" / "skill-fired.md").write_text(
+    (case / "graders" / "skill-fired.md").write_text(encoding='utf-8', data=
         "---\ntype: tool_used\ntool: Skill\n"
         f"input_match: '{skill_match}'\n---\n"
     )
     for slug, weight, body in graders:
-        (case / "graders" / f"{slug}.md").write_text(
+        (case / "graders" / f"{slug}.md").write_text(encoding='utf-8', data=
             f"---\ntype: llm\nweight: {weight}\nfocus: {{ source: file, path: {output} }}\n---\n\n"
             f"{body.strip()}\n"
         )
@@ -110,7 +110,7 @@ def write_case(
 
 def fixture(case: str, path: str) -> str:
     """The text of one fixture file, read back from an existing case's scaffold.sh."""
-    text = (CASES / case / "scaffold.sh").read_text()
+    text = (CASES / case / "scaffold.sh").read_text(encoding='utf-8')
     m = re.search(rf"cat > {re.escape(path)} <<'{EOF_MARK}'\n(.*?)\n{EOF_MARK}\n", text, re.S)
     if not m:
         raise FileNotFoundError(f"{path} not in {case}/scaffold.sh")

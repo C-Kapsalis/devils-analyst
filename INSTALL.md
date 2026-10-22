@@ -27,11 +27,11 @@ with what happened, working or not.
 | Claude Code (CLI, Desktop Code tab) | `.claude-plugin/`, `skills/`, `hooks/` | Tested: `claude plugin validate`; first benchmark run: benchmarks/results/2026-10-17-breadth.md |
 | Claude (web and Desktop chat) | `dist/devils-analyst-plugin.zip`, skill zips | Zip structure checked locally; upload untested |
 | ChatGPT | `adapters/chatgpt/` | Untested |
-| Codex | `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | Untested |
+| Codex | `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json` | Plugin untested; skills installed with `npx skills add` (2026-10-22) |
 | GitHub Copilot CLI | `.github/plugin/`, `hooks/copilot-hooks.json` | Untested |
 | GitHub Copilot Chat (editor) | `.github/copilot-instructions.md` | Untested |
 | Gemini CLI | `gemini-extension.json`, `commands/*.toml` | Untested |
-| OpenCode | `AGENTS.md`, `.opencode/command/` | Untested |
+| OpenCode | `AGENTS.md`, `.opencode/command/` | Skills installed with `npx skills add` (2026-10-22) |
 | Cursor | `.cursor/rules/devils-analyst.mdc` | Untested |
 | Windsurf | `.windsurf/rules/devils-analyst.md` | Untested |
 | Cline | `.clinerules/devils-analyst.md` | Untested |
@@ -162,6 +162,20 @@ in favor of plugins, so this only fits a workspace that still allows them.
    example `04-audit.md`, `05-review.md`).
 3. Add your house rules to the project files, and start each analysis in
    that project.
+
+## Any agent that reads Agent Skills (`npx skills`)
+
+One command copies the 16 skills into the agents you choose (OpenCode, Codex,
+Cursor, Gemini CLI, Copilot, Goose and others). It needs Node.js:
+
+```
+npx skills add C-Kapsalis/devils-analyst
+```
+
+Add `-g` to install for your user rather than the project, or `-a opencode`
+(another agent's name) to pick the agent. This route installs the skills
+only: no session hook and no house-rules template. Checked on 2026-10-22 for
+OpenCode and Codex; the other agents are untested.
 
 ## Codex
 

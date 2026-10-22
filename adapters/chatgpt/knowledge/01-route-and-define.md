@@ -1164,7 +1164,7 @@ description: >-
   Use this skill whenever you compute a marketing metric from data, before writing the
   query or code: CTR, CTOR, open rate, conversion rate, CPA, CAC, ROAS, LTV, repeat rate,
   average position, users, sessions, reach, frequency, watch time, list size, retention,
-  churn, LTV, Core Web Vitals, keyword volume and spend, from GA4, Search Console,
+  churn, Core Web Vitals, keyword volume and spend, from GA4, Search Console,
   Google Ads, Meta, YouTube, Facebook pages, email platforms, HubSpot or other CRMs,
   Shopify, subscription billing, Lighthouse/CrUX or a warehouse. It holds the correct formula, the grain each metric is valid at and the trap
   that makes it lie (averaged rates, daily users summed into monthly users, unweighted

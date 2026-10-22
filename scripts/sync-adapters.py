@@ -138,12 +138,12 @@ def bundle(skills, where):
     for name in skills:
         root = REPO / "skills" / name
         skill_md = root / "SKILL.md"
-        parts.append(f"# Skill: {name}\n\n{unlink(skill_md.read_text().strip(), skill_md, where)}\n")
+        parts.append(f"# Skill: {name}\n\n{unlink(skill_md.read_text(encoding='utf-8').strip(), skill_md, where)}\n")
         for ref in sorted(root.rglob("*.md")):
             if ref.name == "SKILL.md":
                 continue
             rel = ref.relative_to(root)
-            parts.append(f"## File: {name}/{rel}\n\n{unlink(ref.read_text().strip(), ref, where)}\n")
+            parts.append(f"## File: {name}/{rel}\n\n{unlink(ref.read_text(encoding='utf-8').strip(), ref, where)}\n")
     return "\n---\n\n".join(parts)
 
 
@@ -154,7 +154,7 @@ def knowledge_copies():
         if fname.startswith("01-"):
             for extra in HOUSE_RULES_FILES:
                 src = REPO / "house-rules" / extra
-                body = unlink(src.read_text().strip(), src, where)
+                body = unlink(src.read_text(encoding='utf-8').strip(), src, where)
                 text += f"\n---\n\n## File: house-rules/{extra}\n\n{body}\n"
         yield KNOWLEDGE / fname, text
 
@@ -167,8 +167,8 @@ def chatgpt_copies(compact):
 
 def main() -> int:
     check = "--check" in sys.argv
-    body = (REPO / "AGENTS.md").read_text()
-    compact = WINDSURF_SRC.read_text()
+    body = (REPO / "AGENTS.md").read_text(encoding='utf-8')
+    compact = WINDSURF_SRC.read_text(encoding='utf-8')
     if len(compact) >= WINDSURF_LIMIT:
         print(f"too long: {WINDSURF_SRC.relative_to(REPO)} is {len(compact)} characters "
               f"(Windsurf limit {WINDSURF_LIMIT})")
@@ -186,11 +186,11 @@ def main() -> int:
     for path, want in targets:
         rel = path.relative_to(REPO)
         if check:
-            if not path.exists() or path.read_text() != want:
+            if not path.exists() or path.read_text(encoding='utf-8') != want:
                 stale.append(str(rel))
             continue
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(want)
+        path.write_text(encoding='utf-8', data=want)
         print(f"wrote {rel}")
     for rel in stale:
         print(f"stale: {rel} (run python3 scripts/sync-adapters.py)")
