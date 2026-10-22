@@ -113,6 +113,17 @@ definitions. Power BI stays the source of truth: if the user wants a metric the
 model lacks, propose the DAX (name, format, description) so it can be added to
 the model, rather than defining it only in the dashboard.
 
+## 8. Audit the measures you reuse
+
+Before you reuse a measure, run it past
+[references/power-bi-audit.md](references/power-bi-audit.md): averaged rates,
+summed snapshots, toggle defaults, stacked platform revenue, duplicate KPIs.
+Compare each measure with the formula, source and grain the
+`metric-definitions` skill gives for that metric (and with any house rule
+that overrides it), not with the measure's name. A wrong measure reused
+faithfully is still wrong: flag it, propose the corrected DAX, and let the
+model owner decide.
+
 ## Power BI developers in Claude Code
 
 If the user also maintains the model as PBIP in git, the companion command-line
