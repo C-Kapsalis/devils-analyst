@@ -1,8 +1,9 @@
 #!/bin/sh
 # Build the release assets into dist/ (attach them to a GitHub Release).
 #
-#   devils-analyst-plugin.zip    Claude plugin: .claude-plugin/plugin.json,
-#                                skills/, hooks/, house-rules/ at the zip root.
+#   devils-analyst-plugin.zip    Claude plugin: .claude-plugin/plugin.json and
+#                                icon.png, skills/, hooks/, house-rules/ at the
+#                                zip root.
 #                                Upload under Customize > Plugins in Claude
 #                                (web or Desktop).
 #   skills/devils-analyst-<skill>.zip
@@ -80,7 +81,7 @@ SKILLS=$(cd "$ROOT/skills" && for d in */; do printf '%s\n' "${d%/}"; done)
 # 1. Claude plugin
 P="$STAGE/plugin"
 mkdir -p "$P/.claude-plugin" "$P/hooks"
-cp "$ROOT/.claude-plugin/plugin.json" "$P/.claude-plugin/"
+cp "$ROOT/.claude-plugin/plugin.json" "$ROOT/.claude-plugin/icon.png" "$P/.claude-plugin/"
 cp -R "$ROOT/skills" "$ROOT/house-rules" "$P/"
 cp "$ROOT/hooks/claude-hooks.json" "$ROOT/hooks/core.md" "$P/hooks/"
 cp "$ROOT/LICENSE" "$ROOT/README.md" "$P/"
