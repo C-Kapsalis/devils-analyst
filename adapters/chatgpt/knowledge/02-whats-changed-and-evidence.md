@@ -43,7 +43,7 @@ A wrong comparison makes every insight after it wrong.
 
 Most good answers use two: a driver tree for the headline number, then mix vs
 rate or contribution on the driver that moved most. Formulas, edge cases and a
-fully worked example are in [references/decomposition.md](references/decomposition.md).
+fully worked example are in section "File: whats-changed/references/decomposition.md" in 02-whats-changed-and-evidence.md.
 Read it before computing; the formulas there are exact (the parts add up to the
 change) and the naive alternatives are not.
 

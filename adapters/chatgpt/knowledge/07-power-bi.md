@@ -87,7 +87,7 @@ in Sources. Only if no such connector exists, translate to warehouse SQL:
 
 ## 5. Otherwise, translate the measures to SQL, faithfully
 
-Follow [references/dax-to-sql.md](references/dax-to-sql.md). The rules that
+Follow section "File: power-bi-definitions/references/dax-to-sql.md" in 07-power-bi.md. The rules that
 break most translations: `CALCULATE` filters *replace* a slicer on the same
 column, ratios are computed from summed parts at the displayed grain, two fact
 tables are aggregated separately before they are joined, and BLANK is not zero.
@@ -118,7 +118,7 @@ the model, rather than defining it only in the dashboard.
 ## 8. Audit the measures you reuse
 
 Before you reuse a measure, run it past
-[references/power-bi-audit.md](references/power-bi-audit.md): averaged rates,
+section "File: power-bi-definitions/references/power-bi-audit.md" in 07-power-bi.md: averaged rates,
 summed snapshots, toggle defaults, stacked platform revenue, duplicate KPIs.
 Compare each measure with the formula, source and grain the
 `metric-definitions` skill gives for that metric (and with any house rule
@@ -131,7 +131,7 @@ model owner decide.
 If the user also maintains the model as PBIP in git, the companion command-line
 tools (model linting, building sample models from a spec, keeping client copies
 in sync, styling report charts) are described in
-[references/power-bi-tools.md](references/power-bi-tools.md). They need a local
+section "File: power-bi-definitions/references/power-bi-tools.md" in 07-power-bi.md. They need a local
 shell and `uv`; they do not run in claude.ai.
 
 ## Adversary pass
@@ -342,7 +342,7 @@ the stated definition; `SUMX` over a fact table of additive amounts.
 
 P10 is what `tmdl-drift-doctor` checks across client copies. P11 and P14 are
 `tmdl-preflight`: a read-only lint, mechanical fixes only, then a re-check
-from disk. Both are in [power-bi-tools.md](power-bi-tools.md) and need a
+from disk. Both are in section "File: power-bi-definitions/references/power-bi-tools.md" in 07-power-bi.md and need a
 local shell. P13 stays a human step: the tools prove the files pass their
 validators, not that Power BI Desktop opened them.
 
@@ -405,7 +405,7 @@ $T tmdl-preflight rules --json                 # the catalog: id, severity, fixa
 Turns a spec (a Python file with a module-level `SPEC` dict: tables, rows,
 calendar, measures, relationships) into an openable PBIP with sample data and a
 `handoff/SPEC.md` (data dictionary and Mermaid diagram) for data engineers.
-[../assets/email_campaigns_forge_spec.py](../assets/email_campaigns_forge_spec.py)
+[../assets/email_campaigns_forge_spec.py](https://github.com/C-Kapsalis/devils-analyst/blob/main/skills/power-bi-definitions/assets/email_campaigns_forge_spec.py)
 is a complete, passing example for email campaigns; copy it into the user's
 project before editing.
 

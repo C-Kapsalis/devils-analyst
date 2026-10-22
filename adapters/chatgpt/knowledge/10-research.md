@@ -47,14 +47,14 @@ proposes, the user disposes. Ask, do not assume:
 
 | The user wants | Go to | Reference |
 |---|---|---|
-| To know what to ask, or why something happens, questions still vague | Exploratory design | [design.md](references/design.md) |
-| How big, how many, who, what share: a snapshot | Descriptive, cross-sectional | [design.md](references/design.md) |
-| Change over time, who switches to whom | Descriptive, longitudinal; fixed panel for switching | [design.md](references/design.md) |
-| Proof that X causes Y | Causal design: plan here, judge results in evidence-check | [design.md](references/design.md) |
-| A questionnaire written or reviewed | Construction, error audit, coding | [questionnaire.md](references/questionnaire.md) |
-| A sample planned, sized or allocated | Sampling method and size | [sampling.md](references/sampling.md) |
-| Survey results turned into a population number | CI, bias correction, test vs break-even | [sampling.md](references/sampling.md) |
-| Awareness, attitude, feature importance, intent, share, loyalty | Measures and their traps | [measures.md](references/measures.md) |
+| To know what to ask, or why something happens, questions still vague | Exploratory design | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| How big, how many, who, what share: a snapshot | Descriptive, cross-sectional | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| Change over time, who switches to whom | Descriptive, longitudinal; fixed panel for switching | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| Proof that X causes Y | Causal design: plan here, judge results in evidence-check | design.md (section "File: research-design/references/design.md" in 10-research.md) |
+| A questionnaire written or reviewed | Construction, error audit, coding | questionnaire.md (section "File: research-design/references/questionnaire.md" in 10-research.md) |
+| A sample planned, sized or allocated | Sampling method and size | sampling.md (section "File: research-design/references/sampling.md" in 10-research.md) |
+| Survey results turned into a population number | CI, bias correction, test vs break-even | sampling.md (section "File: research-design/references/sampling.md" in 10-research.md) |
+| Awareness, attitude, feature importance, intent, share, loyalty | Measures and their traps | measures.md (section "File: research-design/references/measures.md" in 10-research.md) |
 
 ## 2. Check the data or plan
 
@@ -613,7 +613,7 @@ Configuration by available context (quant):
 
 Response history is non-negotiable for any survey run. Qual: start with
 Hybrid 3 (human guide and sample, LLM respondent and moderator); see
-[references/qual-interviews.md](references/qual-interviews.md).
+section "File: hybrid-research/references/qual-interviews.md" in 10-research.md.
 
 ## 3. Co-design the instrument
 
@@ -632,7 +632,7 @@ run every item through this table:
 | Construct | item does not measure what the brief needs (face validity) | rewrite or add the missing item |
 | Flow (A/B surveys) | anything between stimulus and outcome items; outcome items differ by arm | warm-up, stimulus, outcomes, characteristics, demographics; identical outcomes |
 
-Item rules, the A/B flow and outcome items: [references/instrument.md](references/instrument.md).
+Item rules, the A/B flow and outcome items: section "File: hybrid-research/references/instrument.md" in 10-research.md.
 
 ## 4. Build the persona matrix
 
@@ -663,7 +663,7 @@ Matrix checks:
 ## 5. Prompt, generate, validate, retry
 
 Prompt = context + system role (persona) + user role (question and format).
-Never skip the context. Templates: [references/quant-synthetic.md](references/quant-synthetic.md).
+Never skip the context. Templates: section "File: hybrid-research/references/quant-synthetic.md" in 10-research.md.
 
 Generation loop per persona, per question:
 
@@ -697,7 +697,7 @@ instrument, not to answer the business question.
 ## 7. Recovery against a human benchmark
 
 Compute on the same items, the same scale, and a demographically matched
-sample. Formulas and code: [references/recovery-metrics.md](references/recovery-metrics.md).
+sample. Formulas and code: section "File: hybrid-research/references/recovery-metrics.md" in 10-research.md.
 
 | Metric | Formula | Pass |
 |---|---|---|
@@ -733,7 +733,7 @@ validation repository.
   LLM-only themes are expansion hypotheses to test, not findings.
 - Similarity of LLM to human answers: embedding cosine >= .5 is high.
 
-Detail: [references/qual-interviews.md](references/qual-interviews.md).
+Detail: section "File: hybrid-research/references/qual-interviews.md" in 10-research.md.
 
 ## 9. Report
 

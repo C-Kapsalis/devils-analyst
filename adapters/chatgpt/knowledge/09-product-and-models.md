@@ -34,12 +34,12 @@ recommend; they decide.
 
 | The user asks | Do | Reference |
 |---|---|---|
-| Which concept wins, is there demand | Concept test read (section 2) | [concept-test.md](references/concept-test.md) |
-| How many will we sell | Q = N x A x P forecast (section 3) | [concept-test.md](references/concept-test.md) |
-| Which features, what price, premium version | Conjoint to WTP by segment (section 4) | [conjoint-wtp.md](references/conjoint-wtp.md) |
-| Our scoring or screening matrix picked X | Weights and sensitivity (section 5) | [concept-selection.md](references/concept-selection.md) |
-| Market size, NPV, break-even, keep funding, go/no-go | Business case (section 6) | [business-case.md](references/business-case.md) |
-| Which opportunity to pursue, will people adopt it, AI respondents, usability or pilot test | Screening and adoption | [opportunity-and-adoption.md](references/opportunity-and-adoption.md) |
+| Which concept wins, is there demand | Concept test read (section 2) | concept-test.md (section "File: product-decisions/references/concept-test.md" in 09-product-and-models.md) |
+| How many will we sell | Q = N x A x P forecast (section 3) | concept-test.md (section "File: product-decisions/references/concept-test.md" in 09-product-and-models.md) |
+| Which features, what price, premium version | Conjoint to WTP by segment (section 4) | conjoint-wtp.md (section "File: product-decisions/references/conjoint-wtp.md" in 09-product-and-models.md) |
+| Our scoring or screening matrix picked X | Weights and sensitivity (section 5) | concept-selection.md (section "File: product-decisions/references/concept-selection.md" in 09-product-and-models.md) |
+| Market size, NPV, break-even, keep funding, go/no-go | Business case (section 6) | business-case.md (section "File: product-decisions/references/business-case.md" in 09-product-and-models.md) |
+| Which opportunity to pursue, will people adopt it, AI respondents, usability or pilot test | Screening and adoption | opportunity-and-adoption.md (section "File: product-decisions/references/opportunity-and-adoption.md" in 09-product-and-models.md) |
 
 The data must contain: one row per respondent (survey), or one row per
 respondent x part-worth (conjoint), or a dated cash-flow plan (business case).
@@ -697,16 +697,16 @@ answer changes if it is wrong.
 
 | The question | Dependent variable / data | Method | Reference |
 |---|---|---|---|
-| Is this investment worth it? Max acquisition cost? Minimum retention? | Cash flows over time | NPV, IRR, CLV | [valuing.md](references/valuing.md) |
-| Is the price too high or too low? Best price? | Price, quantity, unit cost | Elasticity, PV ratio, P* | the `pricing-promotions` skill owns price and promotion decisions (promo controls, stock-up around price changes, test steps); use [pricing.md](references/pricing.md) only for the model fit itself |
-| Next period's sales; trend under seasonality | Time series | Moving average of order = cycle | [forecasting.md](references/forecasting.md) |
-| Constant % growth or decay (new product revenue, awareness after ads stop) | Series over time | Exponential, ln Y on t | [forecasting.md](references/forecasting.md) |
-| Unit cost vs cumulative volume; constant elasticity demand | Two variables, % to % | Power model, ln Y on ln X | [forecasting.md](references/forecasting.md) |
-| What drives a quantity? Does the effect differ by group? | Continuous Y | Linear regression, dummies, interactions, partial F | [regression.md](references/regression.md) |
-| Are two categorical variables related? Equal rates across groups? | Cross-tab of counts | Chi-square | [regression.md](references/regression.md) |
-| Will this case be 1 or 0, and what do we do? | Binary Y | Binary logit + cost-based classification + lift | [logit.md](references/logit.md) |
-| Which of 3+ options will each segment choose? | Choice among >2 | Multinomial logit | [logit.md](references/logit.md) |
-| Many correlated ratings; who belongs together | Ratings or part-worths per respondent | Factor analysis, then K-means on factor scores | [segmenting.md](references/segmenting.md) |
+| Is this investment worth it? Max acquisition cost? Minimum retention? | Cash flows over time | NPV, IRR, CLV | valuing.md (section "File: marketing-models/references/valuing.md" in 09-product-and-models.md) |
+| Is the price too high or too low? Best price? | Price, quantity, unit cost | Elasticity, PV ratio, P* | the `pricing-promotions` skill owns price and promotion decisions (promo controls, stock-up around price changes, test steps); use pricing.md (section "File: marketing-models/references/pricing.md" in 09-product-and-models.md) only for the model fit itself |
+| Next period's sales; trend under seasonality | Time series | Moving average of order = cycle | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| Constant % growth or decay (new product revenue, awareness after ads stop) | Series over time | Exponential, ln Y on t | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| Unit cost vs cumulative volume; constant elasticity demand | Two variables, % to % | Power model, ln Y on ln X | forecasting.md (section "File: marketing-models/references/forecasting.md" in 09-product-and-models.md) |
+| What drives a quantity? Does the effect differ by group? | Continuous Y | Linear regression, dummies, interactions, partial F | regression.md (section "File: marketing-models/references/regression.md" in 09-product-and-models.md) |
+| Are two categorical variables related? Equal rates across groups? | Cross-tab of counts | Chi-square | regression.md (section "File: marketing-models/references/regression.md" in 09-product-and-models.md) |
+| Will this case be 1 or 0, and what do we do? | Binary Y | Binary logit + cost-based classification + lift | logit.md (section "File: marketing-models/references/logit.md" in 09-product-and-models.md) |
+| Which of 3+ options will each segment choose? | Choice among >2 | Multinomial logit | logit.md (section "File: marketing-models/references/logit.md" in 09-product-and-models.md) |
+| Many correlated ratings; who belongs together | Ratings or part-worths per respondent | Factor analysis, then K-means on factor scores | segmenting.md (section "File: marketing-models/references/segmenting.md" in 09-product-and-models.md) |
 | Did B beat A? Did the change work? | Experiment or before/after | Not here: **evidence-check** | |
 
 Several categorical predictors at once: logit, not a stack of chi-square

@@ -37,13 +37,13 @@ Ask; do not assume. The user owns two things:
 
 | The user asks | Type | Go to | Depth |
 |---|---|---|---|
-| "Is our price right / should we raise it / what's our elasticity" | Price level | 3A | [elasticity-and-optimal-price](references/elasticity-and-optimal-price.md) |
+| "Is our price right / should we raise it / what's our elasticity" | Price level | 3A | elasticity-and-optimal-price (section "File: pricing-promotions/references/elasticity-and-optimal-price.md" in 08-pricing-channels-brand.md) |
 | "We changed the price, did it work / roll back?" | Price change read-out | 3B | same |
-| "How deep should the discount be / will X% off pay?" | Discount design | 3C | [promo-evaluation](references/promo-evaluation.md) |
+| "How deep should the discount be / will X% off pay?" | Discount design | 3C | promo-evaluation (section "File: pricing-promotions/references/promo-evaluation.md" in 08-pricing-channels-brand.md) |
 | "How did the sale / code / promo do, run it again?" | Promo read-out | 3D | same |
 | "We run lots of sales / lift keeps growing / more promos next year?" | Promo frequency | 3E | same |
-| "Bundle, tiers, free-shipping threshold, fees, how to show the price" | Price structure | 3F | [price-structure-and-psychology](references/price-structure-and-psychology.md) |
-| "Which channel makes money / Amazon vs store vs wholesale / retailer margin" | Channel economics | 3G | [channel-margins](references/channel-margins.md) |
+| "Bundle, tiers, free-shipping threshold, fees, how to show the price" | Price structure | 3F | price-structure-and-psychology (section "File: pricing-promotions/references/price-structure-and-psychology.md" in 08-pricing-channels-brand.md) |
+| "Which channel makes money / Amazon vs store vs wholesale / retailer margin" | Channel economics | 3G | channel-margins (section "File: pricing-promotions/references/channel-margins.md" in 08-pricing-channels-brand.md) |
 
 A read-out that claims a cause ("the sale worked") also goes through
 `evidence-check`. This skill owns the promo and price arithmetic; evidence-check
@@ -858,12 +858,12 @@ the primary conversion, the target audience. Never assume margin = revenue.
 
 | Question | Read first | Reference |
 |---|---|---|
-| Bids, budget, impression share, max CPC, Quality Score | Section 2 | [paid-search-economics.md](references/paid-search-economics.md) |
-| Display or video value, ad lift test, which segment or frequency worked | Section 3 | [ad-lift-segments.md](references/ad-lift-segments.md) |
-| Influencers: tiers, platforms, codes, rebooking | Section 4 | [influencer-roi.md](references/influencer-roi.md) |
-| SEO keywords, cannibalization, on-page, backlinks, local, AI answers | Section 5 | [seo-search-visibility.md](references/seo-search-visibility.md) |
-| Attribution model, channel credit, cutting a channel | Section 6 | [attribution-choice.md](references/attribution-choice.md) |
-| Site engagement, checkout drop-off, bounce, conversion by site type | Section 7 | [site-funnel.md](references/site-funnel.md) |
+| Bids, budget, impression share, max CPC, Quality Score | Section 2 | paid-search-economics.md (section "File: channel-audit/references/paid-search-economics.md" in 08-pricing-channels-brand.md) |
+| Display or video value, ad lift test, which segment or frequency worked | Section 3 | ad-lift-segments.md (section "File: channel-audit/references/ad-lift-segments.md" in 08-pricing-channels-brand.md) |
+| Influencers: tiers, platforms, codes, rebooking | Section 4 | influencer-roi.md (section "File: channel-audit/references/influencer-roi.md" in 08-pricing-channels-brand.md) |
+| SEO keywords, cannibalization, on-page, backlinks, local, AI answers | Section 5 | seo-search-visibility.md (section "File: channel-audit/references/seo-search-visibility.md" in 08-pricing-channels-brand.md) |
+| Attribution model, channel credit, cutting a channel | Section 6 | attribution-choice.md (section "File: channel-audit/references/attribution-choice.md" in 08-pricing-channels-brand.md) |
+| Site engagement, checkout drop-off, bounce, conversion by site type | Section 7 | site-funnel.md (section "File: channel-audit/references/site-funnel.md" in 08-pricing-channels-brand.md) |
 
 Basic test validity (sample ratio, power, novelty, Simpson's paradox,
 holdout maths) lives in the `evidence-check` skill; metric formulas and grain
@@ -1542,14 +1542,14 @@ brands in the file and treat 2024 as the baseline year: right?").
 
 | The user asks | Go to | Depth in |
 |---|---|---|
-| Is the brand getting stronger or weaker? | §3 scorecard, then §5 | [health-metrics](references/health-metrics.md) |
-| Are promotions or discounts hurting us? Promotions "work better than ever"? | §4 long view | [long-view](references/long-view.md) |
-| Brand vs performance budget, cut brand ads? | §4, then `evidence-check` §4 | [long-view](references/long-view.md) |
-| Brand score, NPS or preference flat or up, but sales or repeat down (or the reverse) | §5 per customer | [per-customer-equity](references/per-customer-equity.md) |
-| Search, mentions, sentiment, share of voice moved | §3 rows 4 to 8 | [health-metrics](references/health-metrics.md) |
-| Can we raise prices / is our premium safe? | §3 row 9, §4 | [long-view](references/long-view.md) |
-| Is this content, claim or campaign on-brand? Is our positioning clear? | §6 | [positioning-content](references/positioning-content.md) |
-| Extension, sub-brand, reposition, rebrand, milk/prune/sell, brand value | §7 | [architecture-moves](references/architecture-moves.md) |
+| Is the brand getting stronger or weaker? | §3 scorecard, then §5 | health-metrics (section "File: brand-health/references/health-metrics.md" in 08-pricing-channels-brand.md) |
+| Are promotions or discounts hurting us? Promotions "work better than ever"? | §4 long view | long-view (section "File: brand-health/references/long-view.md" in 08-pricing-channels-brand.md) |
+| Brand vs performance budget, cut brand ads? | §4, then `evidence-check` §4 | long-view (section "File: brand-health/references/long-view.md" in 08-pricing-channels-brand.md) |
+| Brand score, NPS or preference flat or up, but sales or repeat down (or the reverse) | §5 per customer | per-customer-equity (section "File: brand-health/references/per-customer-equity.md" in 08-pricing-channels-brand.md) |
+| Search, mentions, sentiment, share of voice moved | §3 rows 4 to 8 | health-metrics (section "File: brand-health/references/health-metrics.md" in 08-pricing-channels-brand.md) |
+| Can we raise prices / is our premium safe? | §3 row 9, §4 | long-view (section "File: brand-health/references/long-view.md" in 08-pricing-channels-brand.md) |
+| Is this content, claim or campaign on-brand? Is our positioning clear? | §6 | positioning-content (section "File: brand-health/references/positioning-content.md" in 08-pricing-channels-brand.md) |
+| Extension, sub-brand, reposition, rebrand, milk/prune/sell, brand value | §7 | architecture-moves (section "File: brand-health/references/architecture-moves.md" in 08-pricing-channels-brand.md) |
 
 ## 2. What the data must contain
 
@@ -1593,7 +1593,7 @@ on, after §5 has checked that no segment reverses it.
 ## 4. Short term vs long term (the long view)
 
 Run this whenever promotions, discounts or a brand-vs-performance budget
-are in the question. Full method in [long-view](references/long-view.md).
+are in the question. Full method in long-view (section "File: brand-health/references/long-view.md" in 08-pricing-channels-brand.md).
 
 1. Flag promo weeks (promo flag, or discount_amount > 0). Keep the 1 to 2
    weeks after each promotion separate (pull-forward, see `evidence-check`).
@@ -1638,11 +1638,11 @@ A single brand score averaged over all respondents is true of nobody.
    (one person's 6 is another's 4).
 6. Name which equity drives choice in this category (value, brand or
    relationship) before recommending a brand investment; see
-   [per-customer-equity](references/per-customer-equity.md).
+   per-customer-equity (section "File: brand-health/references/per-customer-equity.md" in 08-pricing-channels-brand.md).
 
 ## 6. Positioning and content checks
 
-Use [positioning-content](references/positioning-content.md) when the
+Use positioning-content (section "File: brand-health/references/positioning-content.md" in 08-pricing-channels-brand.md) when the
 question is "is this on-brand", "why are we known but not chosen", or a
 claim review. In order:
 
@@ -1661,7 +1661,7 @@ claim review. In order:
 
 ## 7. Architecture and growth moves
 
-Use [architecture-moves](references/architecture-moves.md). Decision rules:
+Use architecture-moves (section "File: brand-health/references/architecture-moves.md" in 08-pricing-channels-brand.md). Decision rules:
 
 | Move | Decide on | Rule |
 |---|---|---|

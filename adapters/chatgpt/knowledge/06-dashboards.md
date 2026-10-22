@@ -28,7 +28,7 @@ Ask only what you cannot infer, in one message:
 
 - **Question**: "how did paid search do last month", "why are leads down",
   "weekly marketing pulse". Map it to one or more sections of
-  [references/questions.md](references/questions.md); each section lists the
+  section "File: marketing-dashboard/references/questions.md" in 06-dashboards.md; each section lists the
   questions a good analyst answers for that discipline and the cut that answers
   each.
 - **Reader**: an executive (5 numbers, what changed, what to do), a channel
@@ -44,7 +44,7 @@ Ask only what you cannot infer, in one message:
 ## 2. Inventory the data
 
 List which sources are connected and what each can answer.
-[references/connectors.md](references/connectors.md) gives, per source, the
+section "File: marketing-dashboard/references/connectors.md" in 06-dashboards.md gives, per source, the
 tables to request, their grain, and what each cannot tell you (GA4 has no cost,
 ad platforms have no margin, Search Console has no conversions). If a source the
 question needs is missing, say which, and either proceed with what exists
@@ -80,7 +80,7 @@ reads.
 
 When the output is a Claude Dashboard (asked for by name, chosen from the
 Output menu, or built from the Dashboards template), read
-[references/claude-dashboards.md](references/claude-dashboards.md) before writing
+section "File: marketing-dashboard/references/claude-dashboards.md" in 06-dashboards.md before writing
 any dataset. It maps every Devil's Analyst rule onto the dashboard's datasets,
 descriptions and calculations, and gives tested SQL that makes the "what
 changed" analysis a live, clickable part of the dashboard instead of a pasted
@@ -89,9 +89,9 @@ continue below.
 
 ## 7. Lay it out
 
-Pick the layout for the question from [references/layouts.md](references/layouts.md)
-and follow the design rules in [references/design.md](references/design.md).
-Write every title, finding and note by [references/writing.md](references/writing.md).
+Pick the layout for the question from section "File: marketing-dashboard/references/layouts.md" in 06-dashboards.md
+and follow the design rules in section "File: marketing-dashboard/references/design.md" in 06-dashboards.md.
+Write every title, finding and note by section "File: marketing-dashboard/references/writing.md" in 06-dashboards.md.
 The skeleton every layout shares:
 
 1. **Title that states the answer**, not the topic: "Paid search held revenue

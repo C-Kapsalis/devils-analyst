@@ -12,12 +12,16 @@ Sources (edit these, never the copies):
   skills/*/                          the ChatGPT knowledge bundles
   house-rules/README.md, TEMPLATE.md
 
+Relative links in the knowledge copies are rewritten: to the knowledge file
+and section that carries the target, or to the file on GitHub.
+
   python3 scripts/sync-adapters.py          # write the copies
   python3 scripts/sync-adapters.py --check  # exit 1 if any copy is stale
 
 Stdlib only.
 """
 
+import re
 import sys
 from pathlib import Path
 
@@ -86,25 +90,71 @@ the export, or for the house rules as text.
 """
 
 
-def bundle(skills):
+GITHUB = "https://github.com/C-Kapsalis/devils-analyst/blob/main/"
+LINK = re.compile(r"(?<!!)\[([^\]]*)\]\(([^)\s]+)\)")
+HOUSE_RULES_FILES = ("README.md", "TEMPLATE.md")
+
+
+def sections():
+    """{repo-relative path: (knowledge file, section title)} for every file
+    the knowledge bundles carry."""
+    where = {}
+    for fname, skills in BUNDLES.items():
+        for name in skills:
+            root = REPO / "skills" / name
+            for ref in sorted(root.rglob("*.md")):
+                rel = ref.relative_to(REPO).as_posix()
+                title = f"Skill: {name}" if ref.name == "SKILL.md" else f"File: {name}/{ref.relative_to(root).as_posix()}"
+                where[rel] = (fname, title)
+        if fname.startswith("01-"):
+            for extra in HOUSE_RULES_FILES:
+                where[f"house-rules/{extra}"] = (fname, f"File: house-rules/{extra}")
+    return where
+
+
+def unlink(text, source, where):
+    """Relative links do not resolve in an uploaded knowledge file: point each
+    one at the knowledge file and section that carries the target, or at the
+    file on GitHub."""
+    def fix(m):
+        label, target = m.group(1), m.group(2)
+        if re.match(r"[a-z][a-z0-9+.-]*:|#", target):
+            return m.group(0)
+        path = (source.parent / target.split("#")[0]).resolve()
+        try:
+            rel = path.relative_to(REPO).as_posix()
+        except ValueError:
+            return label
+        if rel in where:
+            fname, title = where[rel]
+            ref = f'section "{title}" in {fname}'
+            return ref if label.strip("`") == target else f"{label} ({ref})"
+        return f"[{label}]({GITHUB}{rel})"
+    return LINK.sub(fix, text)
+
+
+def bundle(skills, where):
     parts = []
     for name in skills:
         root = REPO / "skills" / name
-        parts.append(f"# Skill: {name}\n\n{(root / 'SKILL.md').read_text().strip()}\n")
+        skill_md = root / "SKILL.md"
+        parts.append(f"# Skill: {name}\n\n{unlink(skill_md.read_text().strip(), skill_md, where)}\n")
         for ref in sorted(root.rglob("*.md")):
             if ref.name == "SKILL.md":
                 continue
             rel = ref.relative_to(root)
-            parts.append(f"## File: {name}/{rel}\n\n{ref.read_text().strip()}\n")
+            parts.append(f"## File: {name}/{rel}\n\n{unlink(ref.read_text().strip(), ref, where)}\n")
     return "\n---\n\n".join(parts)
 
 
 def knowledge_copies():
+    where = sections()
     for fname, skills in BUNDLES.items():
-        text = bundle(skills)
+        text = bundle(skills, where)
         if fname.startswith("01-"):
-            for extra in ("README.md", "TEMPLATE.md"):
-                body = (REPO / "house-rules" / extra).read_text().strip()
+            for extra in HOUSE_RULES_FILES:
+                src = REPO / "house-rules" / extra
+                body = unlink(src.read_text().strip(), src, where)
                 text += f"\n---\n\n## File: house-rules/{extra}\n\n{body}\n"
         yield KNOWLEDGE / fname, text
 

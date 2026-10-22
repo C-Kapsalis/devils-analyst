@@ -166,7 +166,7 @@ Fill every slot. When the user did not say, pick the default below and state it:
 
 Per-connector tools, parameters, defaults, row limits and traps (ad platforms,
 GA4, Search Console, CRMs, email, e-commerce, warehouses, Power BI and Fabric)
-are in [references/connectors.md](references/connectors.md).
+are in section "File: route-question/references/connectors.md" in 01-route-and-define.md.
 
 When the connector lets you choose these, choose them in the request; do not
 pull everything and fix it afterwards.
@@ -1209,11 +1209,11 @@ and show it with the dashboard (as a "Definitions" panel):
 | CTR % | unique clicks / delivered | Klaviyo campaign report | per send, summed | campaigns only, no flows | 0.0% | not clicks / opens; that is CTOR |
 | CAC | paid acquisition spend / new customers | Google Ads + Meta spend; Shopify first orders | month | excludes brand search | $0 | platform spend, no agency fees |
 
-Take formulas and caveats from [references/catalog.md](references/catalog.md),
+Take formulas and caveats from section "File: metric-definitions/references/catalog.md" in 01-route-and-define.md,
 the per-platform export traps from
-[references/source-traps.md](references/source-traps.md), CRM and lifecycle
-definitions from [references/crm-lifecycle.md](references/crm-lifecycle.md), and organic
-social goals and KPIs from [references/organic-social.md](references/organic-social.md).
+section "File: metric-definitions/references/source-traps.md" in 01-route-and-define.md, CRM and lifecycle
+definitions from section "File: metric-definitions/references/crm-lifecycle.md" in 01-route-and-define.md, and organic
+social goals and KPIs from section "File: metric-definitions/references/organic-social.md" in 01-route-and-define.md.
 If the team has a Power BI model, its definitions win over this catalog
 (house rules still win over both): use the `power-bi-definitions` skill. If the user or a Claude Project already has a
 metric dictionary, use it and say so.
@@ -1298,7 +1298,7 @@ spreadsheet, any connector.
 
 ## 3. Query with the safe patterns
 
-[references/sql-patterns.md](references/sql-patterns.md) has tested shapes for
+section "File: metric-definitions/references/sql-patterns.md" in 01-route-and-define.md has tested shapes for
 the cases that go wrong most: rates from parts, two sources joined after
 aggregation, period over period with explicit date ranges, impression-weighted
 position, the cohort triangle, new vs returning, budget pacing, and
@@ -2103,14 +2103,14 @@ number came from.
 
 ## Writing one
 
-Copy [TEMPLATE.md](TEMPLATE.md) to `house-rules/HR-<number>-<short-name>.md`
+Copy section "File: house-rules/TEMPLATE.md" in 01-route-and-define.md to `house-rules/HR-<number>-<short-name>.md`
 in your own project, one rule per file. The fields are the same columns as the
 shipped audit tables (what to check, where to look, the red flag, why it costs
 money, the fix), plus a source, an owner and a date. Two examples:
 
-- [HR-001](examples/HR-001-revenue-of-record.md) replaces a shipped default:
+- [HR-001](https://github.com/C-Kapsalis/devils-analyst/blob/main/house-rules/examples/HR-001-revenue-of-record.md) replaces a shipped default:
   ROAS is computed on finance net revenue, not store gross revenue.
-- [HR-002](examples/HR-002-checkout-domain-referrals.md) adds a check the
+- [HR-002](https://github.com/C-Kapsalis/devils-analyst/blob/main/house-rules/examples/HR-002-checkout-domain-referrals.md) adds a check the
   shipped GA4 checks cannot know: the team's payment domain showing up as a
   referral source.
 
@@ -2129,12 +2129,12 @@ rate steps down more than 5 points in a week with no change in users" is.
   rule wrong without anyone noticing, and the agent flags such rules to their
   owner instead of applying them.
 - **Upstream.** A rule that would hold for most teams (not just yours) belongs
-  in the shipped checks. [CONTRIBUTING.md](../CONTRIBUTING.md) says how to
+  in the shipped checks. [CONTRIBUTING.md](https://github.com/C-Kapsalis/devils-analyst/blob/main/CONTRIBUTING.md) says how to
   propose it, with a benchmark case that plants the problem.
 
 A planned, optional loop that proposes house-rule changes from your own past
 analyses, one at a time and only with your approval, is described in
-[docs/self-improving.md](../docs/self-improving.md). It is not built yet.
+[docs/self-improving.md](https://github.com/C-Kapsalis/devils-analyst/blob/main/docs/self-improving.md). It is not built yet.
 
 ---
 
