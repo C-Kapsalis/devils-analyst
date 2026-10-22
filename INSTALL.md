@@ -181,7 +181,10 @@ copilot plugin marketplace add C-Kapsalis/devils-analyst
 copilot plugin install devils-analyst@devils-analyst
 ```
 
-The command is namespaced by plugin: `/devils-analyst:devils-analyst`.
+The plugin loads the skills and the session hook. It has no slash command
+for Copilot CLI: GitHub's plugin reference does not document the format of
+a plugin command file, so I have not shipped one. Name the job in your
+message instead ("audit our GA4 setup").
 
 ## GitHub Copilot Chat (VS Code, JetBrains, Visual Studio)
 
