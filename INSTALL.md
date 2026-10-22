@@ -75,6 +75,19 @@ on). Upload the ones you need in Customize > Skills; start with
 `route-question` and `metric-definitions`. Each zip holds one folder with its
 `SKILL.md` and `references/`.
 
+Skills hand over to each other by name, and one reads another's files, so
+upload these together:
+
+| If you upload | Also upload | Why |
+|---|---|---|
+| any skill | `route-question`, `metric-definitions` | every analysis starts with routing and definitions |
+| `audit` | `review` | audit's dashboard checks use review's `references/chart-checks.md` |
+| `power-bi-definitions` | `marketing-dashboard` | it hands the translated metrics to marketing-dashboard to build |
+
+Each single-skill zip is renamed `devils-analyst-<skill>`, so the relative
+links between skills that work in the plugin do not resolve there; the skill
+names do. If you want every cross-reference to work, use route a or b.
+
 The session hook does not run in chat. A skill loads when your message
 matches its description, so name the job: "Audit our Google Ads export",
 "Is this September report right?". Anthropic's help article on custom skills

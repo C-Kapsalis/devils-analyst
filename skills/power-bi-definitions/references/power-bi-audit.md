@@ -4,11 +4,10 @@ Read every measure the reports use, the disconnected tables (toggles and
 selectors) and the relationships. Evaluate suspicious measures at two grains
 (a day and a month, a campaign and the total); a correct ratio gives the same
 answer as a DIVIDE of sums at each grain. The agreed formula, source and
-grain for each metric come from the `metric-definitions` skill
-([../../metric-definitions/SKILL.md](../../metric-definitions/SKILL.md)) or the
+grain for each metric come from the `metric-definitions` skill or the
 team's house rules: compare each measure with that, not with its name. The
 same checks, with the same ids, are the Power BI area of the `audit` skill
-([../../audit/references/power-bi.md](../../audit/references/power-bi.md)).
+(its `references/power-bi.md`).
 
 ## Measure checks
 

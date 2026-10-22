@@ -2,9 +2,10 @@
 
 For a single report or deck, use the `review` skill. This list is what an
 audit of the reporting setup looks for (the dashboards a team relies on
-every week). The chart checks in
-[../../review/references/chart-checks.md](../../review/references/chart-checks.md)
-apply to each page.
+every week). The chart checks of the `review` skill
+([../../review/references/chart-checks.md](../../review/references/chart-checks.md),
+or `references/chart-checks.md` in the installed review skill) apply to each
+page.
 
 | # | Look at | Red flag | Why it costs money | Fix | Tier |
 |---|---|---|---|---|---|
