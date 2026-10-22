@@ -125,7 +125,7 @@ the same judgement through every step of an analysis:
    ranked by money at stake, each cause labelled as a hypothesis until
    tested, each action paired with a check. Correct things are left alone.
 
-**An adversary for every move.** Each skill ends with a table: the move,
+**An adversary for every move.** Each skill has a table: the move,
 what the adversary asks ("what else would produce this number?"), the check
 that settles it, and what to do if it fails.
 

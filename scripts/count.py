@@ -24,7 +24,7 @@ DESC_LIMIT = 1024  # Agent Skills: description, at most 1,024 characters
 def description(skill_md: Path) -> str:
     """The frontmatter description: a plain or quoted line, or a folded
     (>, >-) or literal (|, |-) block. Enough YAML for SKILL.md files."""
-    lines = skill_md.read_text().splitlines()
+    lines = skill_md.read_text(encoding='utf-8').splitlines()
     if not lines or lines[0].strip() != "---":
         return ""
     for i, line in enumerate(lines[1:], 1):
@@ -48,7 +48,7 @@ def description(skill_md: Path) -> str:
 
 
 def rows(path: Path) -> int:
-    return len(ROW.findall(path.read_text()))
+    return len(ROW.findall(path.read_text(encoding='utf-8')))
 
 
 def main() -> int:
