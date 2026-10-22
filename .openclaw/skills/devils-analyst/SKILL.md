@@ -107,10 +107,15 @@ shifted to a better segment is mix, not improvement.
 
 - **A/B tests**, in order, stop at the first failure: sample ratio
   (chi-square against the planned split; above 10.8 means p < 0.001 and the
-  test is broken); significance (two-proportion z-test, report the p-value);
-  power (if the lift is under the minimum detectable effect, the test is
-  inconclusive: do not project revenue); novelty (lift by week, new vs
-  returning); segments (one significant cut out of many is chance).
+  test is broken); significance (two-proportion z-test, report the p-value
+  and the confidence interval of the lift, and judge the test on those: a
+  significant lift smaller than the planned minimum detectable effect is
+  still significant but likely overstated, so report its interval with a
+  caution; a non-significant result is inconclusive unless the interval
+  rules out every effect that matters); power (the minimum detectable effect
+  is for sizing a test before it runs, and for saying how many users an
+  inconclusive test would need); novelty (lift by week, new vs returning);
+  segments (one significant cut out of many is chance).
 - **Before and after**: a control group, regression to the mean for units
   picked as worst or best, seasonality, and category demand vs your share.
 - **Different mixes**: compare within segments and at a common mix
