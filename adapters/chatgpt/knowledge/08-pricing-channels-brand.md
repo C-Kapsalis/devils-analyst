@@ -1497,19 +1497,17 @@ email. Conversion: landing pages, checkout, remarketing to known contacts.
 ---
 name: brand-health
 description: >-
-  Use this skill when the question is about the brand rather than one campaign: "is our
-  brand getting stronger or weaker", "is our brand healthy", brand awareness, consideration
-  or preference from a tracker or survey, brand search or branded search volume, direct
-  traffic as a brand signal, share of voice or share of search against competitors, social
-  mentions and sentiment, "are promotions hurting the brand", baseline sales, how much of
-  revenue comes from discounts, price premium or "can we raise prices", "should we cut
-  brand ads and put it into performance", brand vs performance budget, a brand equity or
-  brand score that stayed flat, NPS or preference up but repeat purchase down, "should we
-  launch [product] under our brand", line or category extension, sub-brand or new brand,
-  repositioning, rebrand, "milk or kill this brand", brand valuation, and whether content
-  is on-brand (positioning, personality, archetype). It measures brand health from the
-  data, separates short-term sales from long-term equity, checks per segment instead of on
-  averages, and turns the result into a decision with a way to verify it.
+  Use this skill when the question is about the brand rather than one campaign: "is
+  our brand getting stronger or weaker", "is our brand healthy", awareness,
+  consideration or preference from a tracker or survey, brand search volume, direct
+  traffic as a brand signal, share of voice or share of search, social mentions and
+  sentiment, "are promotions hurting the brand", baseline sales, price premium or "can
+  we raise prices", "should we cut brand ads and put it into performance", a flat
+  brand score, NPS up but repeat purchase down, "should we launch [product] under our
+  brand", line or category extension, sub-brand, repositioning, rebrand, "milk or kill
+  this brand", brand valuation, and whether content is on-brand. It measures brand
+  health from the data, separates short-term sales from long-term equity, checks per
+  segment, and turns the result into a decision with a way to verify it.
 ---
 
 # brand-health

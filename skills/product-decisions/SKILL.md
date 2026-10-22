@@ -8,12 +8,11 @@ description: >-
   "should we offer a premium version", "our scoring matrix says A, is that right",
   "how big is the market", "TAM SAM SOM", "is the business case positive", "NPV",
   "break-even", "should we keep funding this product", "we already spent a lot on it",
-  "go or no-go", "which idea should we invest in", "can we test the concept with AI
-  respondents". It reads purchase-intent surveys correctly (paired tests, top-box
-  calibration, intent-to-trial gap), turns conjoint part-worths into willingness to pay
-  per segment, checks scoring-matrix robustness, sizes markets both ways, and runs NPV
-  and break-even against a realistic share of the market before recommending go,
-  conditional go or no-go with kill conditions.
+  "go or no-go", "can we test the concept with AI respondents". It calibrates purchase
+  intent, turns conjoint part-worths into willingness to pay per segment, checks
+  scoring-matrix robustness, sizes markets both ways, and runs NPV and break-even on a
+  realistic share before recommending go, conditional go or no-go with kill
+  conditions.
 ---
 
 # product-decisions

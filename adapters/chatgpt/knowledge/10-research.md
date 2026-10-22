@@ -3,22 +3,18 @@
 ---
 name: research-design
 description: >-
-  Use this skill when a marketer plans, reads or relies on research about customers or a
-  market: "should we run a survey or focus groups", "write or review our questionnaire",
-  "is this question biased", "how many people do we need to survey", "how many responses
-  for a ±3% margin", "can I trust these survey results", "only 10% answered our survey",
-  "our survey was sent to our Instagram followers / newsletter list", "what share of
-  customers would buy or sign up", "would people pay for this", "how aware are people of
-  our brand", "measure brand awareness before and after the campaign", "is this above our
-  break-even", "is the difference between these groups real", "who competes with whom",
-  "which brand has the most loyal buyers", "what features matter most to customers",
-  "conjoint", "which concept will win share", "how big is the market", "what is our market
-  share". Chooses the design (exploratory, descriptive, causal; cross-sectional or panel),
-  the instrument (question forms, scales, attitude and conjoint), the sample (method, size,
-  allocation) and the inference (confidence intervals, tests against a break-even, bias
-  correction for non-response and non-coverage), and says what the data can and cannot
-  support. Judging whether a test or change worked: use evidence-check. Fitting models to
-  the data: use marketing-models.
+  Use this skill when a marketer plans, reads or relies on research about customers or
+  a market: "should we run a survey or focus groups", "write or review our
+  questionnaire", "is this question biased", "how many people do we need to survey",
+  "how many responses for a ±3% margin", "can I trust these survey results", "only 10%
+  answered our survey", "our survey went to our followers / newsletter list", "what
+  share of customers would buy", "would people pay for this", "how aware are people of
+  our brand", "measure awareness before and after the campaign", "is this above our
+  break-even", "is the difference between these groups real", "which brand has the
+  most loyal buyers", "what features matter most", "conjoint", "what is our market
+  share". Chooses the design, the instrument, the sample and the inference, and says
+  what the data can and cannot support. Whether a test or change worked: use
+  evidence-check. Fitting models: use marketing-models.
 ---
 
 # research-design
@@ -556,20 +552,18 @@ groups (weights belong to estimating one population).
 ---
 name: hybrid-research
 description: >-
-  Use this skill when a marketer wants to run research with an AI in the loop: "can we use
-  AI respondents / synthetic personas / a synthetic panel instead of a survey", "simulate
-  how customers would answer", "test our concepts with ChatGPT personas", "draft a survey
-  or questionnaire", "write an interview or discussion guide", "pilot our survey before we
-  field it", "how many respondents do we need", "does our synthetic data match the real
-  survey", "is this AI panel good enough", "run AI interviews", "summarise these interview
-  transcripts into themes", or any request to use LLM-generated answers as evidence for a
-  launch, price, positioning or budget decision. It decides when synthetic respondents are
-  and are not acceptable, reviews the instrument (double-barrelled, leading, binary,
-  ranking items), builds the persona matrix and prompts, generates responses with
-  validation and retry, runs the backward pilot, scores recovery against a human benchmark
-  (mean, variance, correlation, distribution) and the self-moderation probe loop, and keeps
-  the question and the decision with the human. Synthetic data informs; it never replaces
-  real evidence for high-stakes decisions.
+  Use this skill when a marketer wants to run research with an AI in the loop: "can we
+  use AI respondents / synthetic personas / a synthetic panel instead of a survey",
+  "simulate how customers would answer", "test our concepts with ChatGPT personas",
+  "draft a survey or questionnaire", "write an interview or discussion guide", "pilot
+  our survey before we field it", "how many respondents do we need", "does our
+  synthetic data match the real survey", "is this AI panel good enough", "run AI
+  interviews", "summarise these interview transcripts into themes", or any use of
+  LLM-generated answers as evidence for a launch, price, positioning or budget
+  decision. It decides when synthetic respondents are acceptable, reviews the
+  instrument, builds personas and prompts, runs the backward pilot, scores recovery
+  against a human benchmark, and keeps the question and the decision with the human.
+  Synthetic data informs; it never replaces real evidence for high-stakes decisions.
 ---
 
 # hybrid-research

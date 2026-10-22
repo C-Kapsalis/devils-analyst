@@ -1,20 +1,18 @@
 ---
 name: review
 description: >-
-  Use this skill when someone hands over a marketing report, deck, dashboard,
-  analysis or agency write-up that someone else made and wants it checked:
-  "review this report", "review this dashboard", "review this deck", "can you check
-  this before I send it to my boss", "is this right", "check my numbers", "sanity
-  check this", "does this hold up", "what's wrong with this analysis", "would you
-  sign off on this", "the agency sent us this, is it fair". Works on markdown, HTML,
-  a pasted deck, a screenshot description or a spreadsheet, with or without the
-  data behind it. It recomputes every number it can, checks definitions, charts,
-  comparisons, causal claims and recommendations, leaves correct things alone, and
-  returns a verdict plus findings ranked Must fix, Should fix, Nice to have, each
-  with what it says, what is wrong (with the recomputation), the fix and what it
-  costs to skip. Auditing a whole account or setup export: use audit. Building a
-  new report: use marketing-dashboard. Email copy itself (subject, body,
-  CTA) is out of scope.
+  Use this skill when someone hands over a marketing report, deck, dashboard, analysis
+  or agency write-up that someone else made and wants it checked: "review this
+  report", "review this dashboard", "review this deck", "can you check this before I
+  send it to my boss", "is this right", "check my numbers", "sanity check this", "does
+  this hold up", "what's wrong with this analysis", "would you sign off on this", "the
+  agency sent us this, is it fair". Works on markdown, HTML, a pasted deck, a
+  screenshot description or a spreadsheet, with or without the data behind it. It
+  recomputes every number it can, checks definitions, charts, comparisons, causal
+  claims and recommendations, leaves correct things alone, and returns a verdict plus
+  findings ranked Must fix, Should fix, Nice to have. Auditing a whole account or
+  setup: use audit. Building a new report: use marketing-dashboard. Email copy itself
+  is out of scope.
 ---
 
 # review
