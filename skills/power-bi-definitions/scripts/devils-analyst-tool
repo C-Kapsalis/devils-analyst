@@ -11,7 +11,7 @@
 # Override the tag with DEVILS_ANALYST_TOOLS_VERSION (default below).
 set -euo pipefail
 
-TOOLS_VERSION="${DEVILS_ANALYST_TOOLS_VERSION:-v1.2.0}"
+TOOLS_VERSION="${DEVILS_ANALYST_TOOLS_VERSION:-v1.2.1}"
 GH_OWNER="C-Kapsalis"
 
 if [[ $# -lt 1 ]]; then

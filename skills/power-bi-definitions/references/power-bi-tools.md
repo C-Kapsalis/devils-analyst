@@ -7,10 +7,10 @@ installed globally):
 
 ```
 T="${CLAUDE_SKILL_DIR}/scripts/devils-analyst-tool"
-$T tmdl-preflight --version        # prints "tmdl-preflight 1.2.0" when ready; exit 127 = install uv first
+$T tmdl-preflight --version        # prints "tmdl-preflight 1.2.1" when ready; exit 127 = install uv first
 ```
 
-The wrapper pins tag `v1.2.0`. To pin another tag, set
+The wrapper pins tag `v1.2.1`. To pin another tag, set
 `DEVILS_ANALYST_TOOLS_VERSION` (for example `DEVILS_ANALYST_TOOLS_VERSION=v1.1.0 $T ...`);
 `DEVILS_ANALYST_USE_LOCAL=1` prefers tools already on PATH.
 
@@ -18,13 +18,13 @@ The wrapper is a bash script. On Windows without Git Bash or WSL, run a tool
 through `uvx` directly in PowerShell, with the same arguments:
 
 ```powershell
-uvx --from git+https://github.com/C-Kapsalis/tmdl-preflight@v1.2.0 tmdl-preflight --version
-uvx --from git+https://github.com/C-Kapsalis/pbip-model-forge@v1.2.0 pbip-forge --version
-uvx --from git+https://github.com/C-Kapsalis/tmdl-drift-doctor@v1.2.0 drift-doctor --version
-uvx --from git+https://github.com/C-Kapsalis/pbi-plot-styler@v1.2.0 pbi-plot-styler --version
+uvx --from git+https://github.com/C-Kapsalis/tmdl-preflight@v1.2.1 tmdl-preflight --version
+uvx --from git+https://github.com/C-Kapsalis/pbip-model-forge@v1.2.1 pbip-forge --version
+uvx --from git+https://github.com/C-Kapsalis/tmdl-drift-doctor@v1.2.1 drift-doctor --version
+uvx --from git+https://github.com/C-Kapsalis/pbi-plot-styler@v1.2.1 pbi-plot-styler --version
 ```
 
-At `v1.2.0`, each tool's own listing gives: `tmdl-preflight rules --json`
+At `v1.2.1`, each tool's own listing gives (the same as at `v1.2.0`): `tmdl-preflight rules --json`
 119 rules, 25 of them auto-fixable; `pbip-forge --help` 8 commands and
 `pbip-forge rules` 22 spec rules; `drift-doctor --help` 20 commands;
 `pbi-plot-styler --help` 6 commands. Quote the counts the build you run
@@ -40,13 +40,13 @@ instead of describing them.
 ```
 $T tmdl-preflight check <path> --format json   # 0 clean, 1 violations, 2 usage error
 $T tmdl-preflight fix <path>                   # auto-fixes, then re-checks from disk
-$T tmdl-preflight rules --json                 # the catalog: id, severity, fixable, options (119 rules at v1.2.0)
+$T tmdl-preflight rules --json                 # the catalog: id, severity, fixable, options (119 rules at v1.2.1)
 ```
 
 `fix` edits files: if the folder is not under git, ask first or copy it. CI:
 `baseline <path>` then `check --baseline <path>/.tmdl-preflight-baseline.json`;
 `--format github` or `--format sarif`; pre-commit hook id `tmdl-preflight` from
-`https://github.com/c-kapsalis/tmdl-preflight`, rev `v1.2.0`.
+`https://github.com/c-kapsalis/tmdl-preflight`, rev `v1.2.1`.
 
 ## pbip-model-forge: a model from a spec
 
