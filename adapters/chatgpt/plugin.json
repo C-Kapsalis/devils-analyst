@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "devils-analyst",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Devil's Analyst: the devil's advocate on your marketing team. It argues with the marketing data your agent pulls through its connectors (GA4, Google Ads, Meta, Search Console, email platforms, CRMs, Shopify, warehouses, Power BI) before you act on it: numbered checks for each area, an adversary for every move, and routing that reshapes the question to the data available. The model knows the questions; this writes all of them down, to ask every time.",
   "author": {
     "name": "Christoforos Kapsalis",
@@ -19,5 +19,26 @@
     "search-console",
     "email-marketing",
     "crm"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Devil's Analyst",
+        "shortDescription": "Marketing claims, checked",
+        "longDescription": "Challenge marketing conclusions before acting. Devil's Analyst routes each question to available data, defines the metrics, checks the evidence and asks what could disprove the recommendation. It works with data sources the user already has access to; it does not connect to external services or run its own data collection.",
+        "developerName": "Christoforos Kapsalis",
+        "category": "Data",
+        "capabilities": ["Instructions", "Marketing analytics", "Data analysis"],
+        "websiteURL": "https://github.com/C-Kapsalis/devils-analyst",
+        "supportURL": "https://github.com/C-Kapsalis/devils-analyst/issues",
+        "defaultPrompt": [
+          "How did paid search do last month, and what should we change?",
+          "Our analyst says September was a record month. Is it?",
+          "Audit our GA4 setup and tell me what to fix first."
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
 }

@@ -98,8 +98,9 @@ done
 
 # 3. ChatGPT plugin: skills only, no hooks
 C="$STAGE/chatgpt"
-mkdir -p "$C/skills"
+mkdir -p "$C/skills" "$C/assets"
 cp "$ROOT/adapters/chatgpt/plugin.json" "$C/"
+cp "$ROOT/.claude-plugin/icon.png" "$C/assets/icon.png"
 for s in $SKILLS; do
   copy_skill "$s" "$C/skills/devils-analyst-$s" "devils-analyst-$s"
 done

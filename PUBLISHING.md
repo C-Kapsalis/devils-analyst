@@ -2,8 +2,7 @@
 
 How Devil's Analyst gets into the public plugin directories. Nothing here has
 been submitted yet. Each step is something the maintainer does by hand; the
-requirements below are what the vendors' docs said on 2026-10-17, and they
-change.
+requirements change. Last checked 2026-10-28.
 
 ## Before any submission
 
@@ -67,7 +66,7 @@ Review: every version gets automated validation and a security scan; a
 person reviews a new listing, and a version can be held for a reviewer. The
 limit is 10 submissions per organization per 24 hours.
 
-## ChatGPT Plugin Directory
+## OpenAI plugin directory (ChatGPT and Codex)
 
 Source: <https://developers.openai.com/plugins/build/plugins>,
 <https://developers.openai.com/plugins/deploy/submission> and
@@ -76,14 +75,14 @@ help center (<https://help.openai.com/en/articles/8798878>) describes the
 retirement of custom GPTs in favor of plugins.
 
 Devil's Analyst is a skills-only plugin: no MCP server, no app. It relies
-on whatever data connectors the user already has. That is the
-simpler review path; the MCP materials (server URL, domain verification,
-test cases, demo video) do not apply.
+on whatever data connectors the user already has. The ZIP excludes lifecycle
+hooks and contains a portable `plugin.json`, listing metadata and icon.
 
 Package: `dist/devils-analyst-chatgpt.zip`, built by `scripts/package.sh`:
 
 ```
 plugin.json                                # adapters/chatgpt/plugin.json
+assets/icon.png                            # listing icon
 skills/devils-analyst-route-question/SKILL.md   # + references/
 skills/devils-analyst-<skill>/SKILL.md         # one folder per skill
 LICENSE
@@ -95,8 +94,10 @@ LICENSE
 the portal also accepts a Claude plugin zip and converts it, as long as the
 hooks are removed; the dedicated zip avoids that step.
 
-Who can submit: an organization owner, or a member with Apps Management
-write access, after identity verification.
+The public directory is shared by ChatGPT and Codex. The maintainer must use
+a verified publisher identity, review the metadata and skill scan, complete
+the required policy attestations, submit for review and publish after
+approval. Package validation does not guarantee approval.
 
 Steps:
 
@@ -104,7 +105,7 @@ Steps:
 2. Upload `devils-analyst-chatgpt.zip`.
 3. Fill in the listing (name, description, links: use the GitHub repo for
    the website and support).
-4. Submit for review. After approval, you choose when to publish.
+4. Submit for review. After approval, choose when to publish.
 
 Before submitting, read the skills once for wording that assumes a specific
 host. Some do: `marketing-dashboard` has a guide to Claude Dashboards, and
