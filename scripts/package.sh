@@ -82,6 +82,7 @@ SKILLS=$(cd "$ROOT/skills" && for d in */; do printf '%s\n' "${d%/}"; done)
 P="$STAGE/plugin"
 mkdir -p "$P/.claude-plugin" "$P/hooks"
 cp "$ROOT/.claude-plugin/plugin.json" "$ROOT/.claude-plugin/icon.png" "$P/.claude-plugin/"
+cp "$ROOT/package.json" "$P/package.json"
 cp -R "$ROOT/skills" "$ROOT/house-rules" "$P/"
 cp "$ROOT/hooks/claude-hooks.json" "$ROOT/hooks/core.md" "$P/hooks/"
 cp "$ROOT/LICENSE" "$ROOT/README.md" "$P/"

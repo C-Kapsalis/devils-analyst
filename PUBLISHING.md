@@ -4,6 +4,18 @@ How Devil's Analyst gets into the public plugin directories. Nothing here has
 been submitted yet. Each step is something the maintainer does by hand; the
 requirements change. Last checked 2026-10-28.
 
+## ClawHub / OpenClaw bundle
+
+The OpenClaw listing is a bundle plugin in `claude` format with host target `openclaw`.
+The root `package.json` supplies npm-safe package metadata; `scripts/package.sh` includes it
+in `devils-analyst-plugin.zip`. Keep its version aligned with `.claude-plugin/plugin.json`.
+Validate the bundle against OpenClaw 2026.10.8 before publishing:
+
+```sh
+sh scripts/package.sh
+clawhub package validate dist/devils-analyst-plugin.zip --openclaw-version 2026.10.8
+```
+
 ## Before any submission
 
 1. The GitHub repo `C-Kapsalis/devils-analyst` is public.
