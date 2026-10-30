@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://github.com/C-Kapsalis/devils-analyst/stargazers"><img src="https://img.shields.io/github/stars/C-Kapsalis/devils-analyst?style=flat-square&label=Stars" alt="GitHub stars"></a>
   <a href="https://github.com/C-Kapsalis"><img src="https://img.shields.io/github/followers/C-Kapsalis?style=flat-square&label=Follow%20C-Kapsalis" alt="Follow C-Kapsalis on GitHub"></a>
+  <a href="https://skills.sh/C-Kapsalis/devils-analyst"><img src="https://skills.sh/b/C-Kapsalis/devils-analyst" alt="skills.sh installs"></a>
   <img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license">
   <img src="https://img.shields.io/badge/checks-229%20numbered-111111?style=flat-square" alt="229 numbered checks">
   <img src="https://img.shields.io/badge/benchmark-110%20cases%2C%2036%20run%2C%2017%20spot--checked-111111?style=flat-square" alt="110 benchmark cases, 36 run, 17 spot-checked">
