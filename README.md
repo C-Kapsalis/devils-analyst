@@ -9,6 +9,11 @@
   <img src="https://img.shields.io/badge/benchmark-110%20cases%2C%2036%20run%2C%2017%20spot--checked-111111?style=flat-square" alt="110 benchmark cases, 36 run, 17 spot-checked">
 </p>
 
+<p align="center">
+  <a href="https://youtu.be/fmI0iJArt3o"><img src="https://img.youtube.com/vi/fmI0iJArt3o/maxresdefault.jpg" width="640" alt="Video walkthrough: I Built an AI Marketing Analyst and Tested If It Actually Helped"></a><br>
+  <sub>▶ <a href="https://youtu.be/fmI0iJArt3o">Watch the video walkthrough</a></sub>
+</p>
+
 Teams now act on numbers their agents pull through connectors: GA4, Google
 Ads, Meta, Search Console, an email platform, a CRM, Shopify, a warehouse, a
 Power BI model. A current model knows most of the marketing judgement
