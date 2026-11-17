@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">Market or company? Check before blaming the channel</title><desc id="d">A diagnostic flow compares category demand, competitors and prior-year periods before deciding whether a volume decline is market-wide or specific to the company's own series.</desc>
+<rect width="1200" height="675" fill="#f8fafc"/>
+<text x="64" y="78" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="700" fill="#0f172a">Market or company? Check before blaming the channel</text>
+<text x="64" y="118" font-family="Inter,Arial,sans-serif" font-size="21" fill="#475569">Devil's Analyst · acquisition diagnosis</text>
+<rect x="64" y="185" width="280" height="110" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="94" y="230" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#1e40af">Acquisition falls</text>
+<text x="94" y="266" font-family="Inter,Arial,sans-serif" font-size="18" fill="#334155">A measured movement</text>
+<path d="M344 240 H410" stroke="#64748b" stroke-width="4"/><path d="M400 229 L412 240 L400 251" stroke="#64748b" stroke-width="4" fill="none"/>
+<rect x="414" y="185" width="320" height="110" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+<text x="444" y="230" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#075985">Compare the market</text>
+<text x="444" y="266" font-family="Inter,Arial,sans-serif" font-size="18" fill="#334155">Category · competitors · last year</text>
+<path d="M574 295 V350 H340 V388" stroke="#64748b" stroke-width="4" fill="none"/><path d="M329 378 L340 390 L351 378" stroke="#64748b" stroke-width="4" fill="none"/>
+<path d="M574 295 V350 H860 V388" stroke="#64748b" stroke-width="4" fill="none"/><path d="M849 378 L860 390 L871 378" stroke="#64748b" stroke-width="4" fill="none"/>
+<rect x="64" y="392" width="520" height="148" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+<text x="94" y="436" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="700" fill="#065f46">Market fell; share held</text>
+<text x="94" y="476" font-family="Inter,Arial,sans-serif" font-size="19" fill="#0f172a">Lead hypothesis: lower category demand.</text>
+<text x="94" y="510" font-family="Inter,Arial,sans-serif" font-size="18" fill="#047857">Verify with the same period and demand data.</text>
+<rect x="616" y="392" width="520" height="148" rx="18" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="646" y="436" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="700" fill="#9a3412">Only your series fell</text>
+<text x="646" y="476" font-family="Inter,Arial,sans-serif" font-size="19" fill="#0f172a">Check tracking, site and channel changes.</text>
+<text x="646" y="510" font-family="Inter,Arial,sans-serif" font-size="18" fill="#9a3412">Keep causes as hypotheses until confirmed.</text>
+<text x="64" y="610" font-family="Inter,Arial,sans-serif" font-size="18" fill="#64748b">A dashboard movement is the start of diagnosis, not its conclusion.</text>
+</svg>
