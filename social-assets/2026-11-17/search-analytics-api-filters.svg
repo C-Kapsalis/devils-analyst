@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">Search Analytics API: three new slices</title><desc id="d">Google's 16 November 2026 update adds branded query classification, web multimodal reporting, and multi-country and multi-device filters to the Search Analytics API.</desc>
+<rect width="1200" height="675" fill="#f8fafc"/>
+<text x="64" y="78" font-family="Inter,Arial,sans-serif" font-size="40" font-weight="700" fill="#0f172a">Search Analytics API: three new slices</text>
+<text x="64" y="118" font-family="Inter,Arial,sans-serif" font-size="21" fill="#475569">Google Search Central · 16 November 2026</text>
+<rect x="64" y="180" width="330" height="330" rx="20" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+<text x="94" y="230" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e40af">Branded queries</text>
+<text x="94" y="282" font-family="Inter,Arial,sans-serif" font-size="21" fill="#0f172a">brandedClassification</text>
+<text x="94" y="336" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Brand vs non-brand</text>
+<text x="94" y="384" font-family="Inter,Arial,sans-serif" font-size="18" fill="#9a3412">Eligible properties only</text>
+<text x="94" y="438" font-family="Inter,Arial,sans-serif" font-size="18" fill="#64748b">Ineligible properties return</text>
+<text x="94" y="466" font-family="Inter,Arial,sans-serif" font-size="18" fill="#64748b">no rows for this dimension.</text>
+<rect x="435" y="180" width="330" height="330" rx="20" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+<text x="465" y="230" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#065f46">Web multimodal</text>
+<text x="465" y="282" font-family="Inter,Arial,sans-serif" font-size="21" fill="#0f172a">type=webMultimodal</text>
+<text x="465" y="336" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Google Lens</text>
+<text x="465" y="374" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Circle to Search</text>
+<text x="465" y="412" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Image uploads in Search</text>
+<rect x="806" y="180" width="330" height="330" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="836" y="230" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#9a3412">Filter lists</text>
+<text x="836" y="282" font-family="Inter,Arial,sans-serif" font-size="21" fill="#0f172a">filterLists</text>
+<text x="836" y="336" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Several countries</text>
+<text x="836" y="374" font-family="Inter,Arial,sans-serif" font-size="20" fill="#334155">Several devices</text>
+<text x="836" y="412" font-family="Inter,Arial,sans-serif" font-size="18" fill="#64748b">One API request</text>
+<text x="64" y="590" font-family="Inter,Arial,sans-serif" font-size="19" fill="#475569">The API now exposes more of the Performance report's existing segmentation for automated reporting.</text>
+</svg>
