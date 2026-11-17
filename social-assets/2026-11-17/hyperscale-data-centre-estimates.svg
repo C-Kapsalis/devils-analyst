@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">403 hyperscale data centres: estimated footprint</title><desc id="d">A Nature Sustainability study estimated 82 terawatt-hours of electricity and 25.7 million tonnes of attributable carbon dioxide for 403 US hyperscale data centres from May 2024 to April 2025. The electricity range was 68 to 99 terawatt-hours.</desc>
+<rect width="1200" height="675" fill="#f8fafc"/>
+<text x="64" y="78" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="700" fill="#0f172a">403 hyperscale data centres: estimated footprint</text>
+<text x="64" y="118" font-family="Inter,Arial,sans-serif" font-size="21" fill="#475569">Nature Sustainability · published 16 November 2026 · US, May 2024-April 2025</text>
+<rect x="64" y="180" width="520" height="300" rx="20" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+<text x="98" y="236" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#1e40af">Electricity use</text>
+<text x="98" y="328" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="700" fill="#1d4ed8">82 TWh</text>
+<text x="98" y="374" font-family="Inter,Arial,sans-serif" font-size="23" fill="#334155">Central estimate · about 1.8% of US use</text>
+<text x="98" y="426" font-family="Inter,Arial,sans-serif" font-size="20" fill="#64748b">Scenario range: 68-99 TWh</text>
+<rect x="616" y="180" width="520" height="300" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+<text x="650" y="236" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#9a3412">Attributable CO2</text>
+<text x="650" y="328" font-family="Inter,Arial,sans-serif" font-size="70" font-weight="700" fill="#c2410c">25.7 Mt</text>
+<text x="650" y="374" font-family="Inter,Arial,sans-serif" font-size="23" fill="#334155">Central estimate</text>
+<text x="650" y="426" font-family="Inter,Arial,sans-serif" font-size="20" fill="#64748b">About 54% fossil-fuel generation</text>
+<rect x="64" y="520" width="1072" height="72" rx="14" fill="#0f172a"/>
+<text x="96" y="565" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700" fill="#ffffff">Estimated facility loads and regional averages, not site-level meter readings.</text>
+</svg>
