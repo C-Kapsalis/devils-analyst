@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#0b1220"/>
+<rect x="32" y="32" width="1136" height="611" rx="28" fill="#101b2d" stroke="#2b3d55" stroke-width="2"/>
+<text x="76" y="100" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="700">An audit needs three evidence states</text>
+<text x="78" y="145" fill="#a9b9ce" font-family="Inter,Arial,sans-serif" font-size="23">Do not force an unanswered question into a yes/no verdict.</text>
+<rect x="76" y="210" width="320" height="280" rx="20" fill="#16243a" stroke="#f28b82" stroke-width="3"/>
+<rect x="76" y="210" width="12" height="280" rx="6" fill="#f28b82"/>
+<text x="110" y="268" fill="#f28b82" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">FINDING</text>
+<text x="110" y="322" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Evidence supports</text>
+<text x="110" y="368" fill="#b9c7d8" font-family="Inter,Arial,sans-serif" font-size="22">A problem is demonstrated</text><rect x="440" y="210" width="320" height="280" rx="20" fill="#16243a" stroke="#69d6c4" stroke-width="3"/>
+<rect x="440" y="210" width="12" height="280" rx="6" fill="#69d6c4"/>
+<text x="474" y="268" fill="#69d6c4" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">CHECKED & FINE</text>
+<text x="474" y="322" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Evidence clears</text>
+<text x="474" y="368" fill="#b9c7d8" font-family="Inter,Arial,sans-serif" font-size="22">No issue found in scope</text><rect x="804" y="210" width="320" height="280" rx="20" fill="#16243a" stroke="#f3c46b" stroke-width="3"/>
+<rect x="804" y="210" width="12" height="280" rx="6" fill="#f3c46b"/>
+<text x="838" y="268" fill="#f3c46b" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">NOT CHECKED</text>
+<text x="838" y="322" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">Evidence missing</text>
+<text x="838" y="368" fill="#b9c7d8" font-family="Inter,Arial,sans-serif" font-size="22">Request the missing data</text>
+<line x1="76" y1="590" x2="1124" y2="590" stroke="#2b3d55" stroke-width="2"/>
+<text x="78" y="625" fill="#a9b9ce" font-family="Inter,Arial,sans-serif" font-size="19">Missing evidence is not a finding. It is not a pass either.</text>
+</svg>
