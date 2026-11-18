@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#0b1220"/>
+<rect x="32" y="32" width="1136" height="611" rx="28" fill="#101b2d" stroke="#2b3d55" stroke-width="2"/>
+<text x="76" y="100" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="700">Paid traffic value in the study</text>
+<text x="78" y="145" fill="#a9b9ce" font-family="Inter,Arial,sans-serif" font-size="23">Revenue per US session · 102 advertisers with complete financial tracking</text>
+<g font-family="Inter,Arial,sans-serif">
+   <text x="105" y="235" fill="#b9c7d8" font-size="22">Paid ChatGPT</text>
+   <rect x="105" y="258" width="280" height="58" rx="12" fill="#f3c46b"/>
+   <text x="410" y="300" fill="#f4f7fb" font-size="34" font-weight="700">$0.89</text>
+   <text x="105" y="390" fill="#b9c7d8" font-size="22">Paid Google Search</text>
+   <rect x="105" y="413" width="770" height="58" rx="12" fill="#69d6c4"/>
+   <text x="900" y="455" fill="#f4f7fb" font-size="34" font-weight="700">$2.45</text>
+   <rect x="1010" y="255" width="110" height="216" rx="14" fill="#16243a" stroke="#49617f" stroke-width="2"/>
+   <text x="1065" y="310" text-anchor="middle" fill="#8eabff" font-size="20" font-weight="700">US</text>
+   <text x="1065" y="350" text-anchor="middle" fill="#b9c7d8" font-size="17">traffic</text>
+   <text x="1065" y="390" text-anchor="middle" fill="#b9c7d8" font-size="17">only</text>
+  </g>
+<line x1="76" y1="590" x2="1124" y2="590" stroke="#2b3d55" stroke-width="2"/>
+<text x="78" y="625" fill="#a9b9ce" font-family="Inter,Arial,sans-serif" font-size="19">Under-review preprint. Advertiser entry was self-selected; descriptive, not a randomized channel test.</text>
+</svg>
