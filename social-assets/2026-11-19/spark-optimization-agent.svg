@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-<title id="title">Optimize a completed Spark run</title><desc id="desc">AWS introduced the Spark Optimization Agent for Glue ETL on 18 November 2026. Completed run: Start with a finished AWS Glue job; Evidence: Configuration, logs and Spark telemetry; Objective: Choose cost or performance; Recommendation: Deterministic engine with regression limits A recommendation workflow for completed jobs, not a live auto-tuner.</desc>
+<title id="title">Optimize a completed Spark run</title><desc id="desc">AWS introduced the Spark Optimization Agent for Glue ETL and EMR Serverless on 18 November 2026. Completed run: Start with a completed Glue or EMR run; Evidence: Configuration, logs and Spark telemetry; Objective: Choose cost or performance; Recommendation: Deterministic engine with regression limits A recommendation workflow for completed jobs, not a live auto-tuner.</desc>
 <rect width="1200" height="675" fill="#f5f3ed"/>
 <rect x="0" y="0" width="14" height="675" fill="#245a57"/>
 <text x="70" y="62" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5" fill="#9a6b2f">FIELD NOTE  /  19 NOV 2026</text>
