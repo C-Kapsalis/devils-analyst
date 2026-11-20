@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Five buckets of brand health</title>
+<desc id="desc">Five separate dimensions of brand health: awareness and salience, attitudes and associations, behaviour, relationship quality, and financial performance. The key point is that awareness measures potential while repeat behaviour signals realised equity.</desc>
+<rect width="1200" height="675" fill="#F4F2EC"/>
+<text x="64" y="78" fill="#14283F" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="3">DEVIL'S ANALYST · BRAND HEALTH</text>
+<text x="64" y="145" fill="#14283F" font-family="Arial, sans-serif" font-size="48" font-weight="700">Brand health is not one score.</text>
+<text x="64" y="188" fill="#526273" font-family="Arial, sans-serif" font-size="24">Five buckets answer five different questions.</text>
+<g>
+<rect x="64" y="246" width="205" height="228" rx="16" fill="#FFFFFF" stroke="#CBD3D8" stroke-width="2"/>
+<rect x="64" y="246" width="205" height="12" rx="6" fill="#2C7A7B"/>
+<text x="86" y="302" fill="#2C7A7B" font-family="Arial, sans-serif" font-size="17" font-weight="700">01</text>
+<text x="86" y="347" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">Awareness</text>
+<text x="86" y="380" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">and salience</text>
+<text x="86" y="430" fill="#526273" font-family="Arial, sans-serif" font-size="19">Do people</text>
+<text x="86" y="456" fill="#526273" font-family="Arial, sans-serif" font-size="19">remember us?</text>
+<rect x="288" y="246" width="205" height="228" rx="16" fill="#FFFFFF" stroke="#CBD3D8" stroke-width="2"/>
+<rect x="288" y="246" width="205" height="12" rx="6" fill="#55728A"/>
+<text x="310" y="302" fill="#55728A" font-family="Arial, sans-serif" font-size="17" font-weight="700">02</text>
+<text x="310" y="347" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">Attitudes</text>
+<text x="310" y="380" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">and meaning</text>
+<text x="310" y="430" fill="#526273" font-family="Arial, sans-serif" font-size="19">What comes</text>
+<text x="310" y="456" fill="#526273" font-family="Arial, sans-serif" font-size="19">to mind?</text>
+<rect x="512" y="246" width="205" height="228" rx="16" fill="#FFFFFF" stroke="#CBD3D8" stroke-width="2"/>
+<rect x="512" y="246" width="205" height="12" rx="6" fill="#D28B46"/>
+<text x="534" y="302" fill="#D28B46" font-family="Arial, sans-serif" font-size="17" font-weight="700">03</text>
+<text x="534" y="347" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">Behaviour</text>
+<text x="534" y="397" fill="#526273" font-family="Arial, sans-serif" font-size="19">Do they buy,</text>
+<text x="534" y="423" fill="#526273" font-family="Arial, sans-serif" font-size="19">repeat and</text>
+<text x="534" y="449" fill="#526273" font-family="Arial, sans-serif" font-size="19">recommend?</text>
+<rect x="736" y="246" width="205" height="228" rx="16" fill="#FFFFFF" stroke="#CBD3D8" stroke-width="2"/>
+<rect x="736" y="246" width="205" height="12" rx="6" fill="#8B779D"/>
+<text x="758" y="302" fill="#8B779D" font-family="Arial, sans-serif" font-size="17" font-weight="700">04</text>
+<text x="758" y="347" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">Relationship</text>
+<text x="758" y="380" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">quality</text>
+<text x="758" y="430" fill="#526273" font-family="Arial, sans-serif" font-size="19">Is trust</text>
+<text x="758" y="456" fill="#526273" font-family="Arial, sans-serif" font-size="19">holding?</text>
+<rect x="960" y="246" width="176" height="228" rx="16" fill="#FFFFFF" stroke="#CBD3D8" stroke-width="2"/>
+<rect x="960" y="246" width="176" height="12" rx="6" fill="#2F596D"/>
+<text x="982" y="302" fill="#2F596D" font-family="Arial, sans-serif" font-size="17" font-weight="700">05</text>
+<text x="982" y="347" fill="#14283F" font-family="Arial, sans-serif" font-size="25" font-weight="700">Financial</text>
+<text x="982" y="397" fill="#526273" font-family="Arial, sans-serif" font-size="19">Does it earn</text>
+<text x="982" y="423" fill="#526273" font-family="Arial, sans-serif" font-size="19">a premium?</text>
+</g>
+<line x1="64" y1="520" x2="1136" y2="520" stroke="#CBD3D8" stroke-width="2"/>
+<text x="64" y="572" fill="#14283F" font-family="Arial, sans-serif" font-size="30" font-weight="700">Awareness signals potential.</text>
+<text x="64" y="615" fill="#2C7A7B" font-family="Arial, sans-serif" font-size="30" font-weight="700">Repeat behaviour signals realised equity.</text>
+</svg>
