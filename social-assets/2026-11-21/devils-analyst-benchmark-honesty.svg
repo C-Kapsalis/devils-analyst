@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">A benchmark that did not prove uplift</title>
+<desc id="desc">Synthetic benchmark results for Devil's Analyst: mean score 0.94 with the skill and 0.93 without it, a difference of 0.01 within noise across 36 cases and three runs per case per arm.</desc>
+<rect width="1200" height="675" fill="#F6F5F1"/>
+<rect x="54" y="48" width="8" height="76" rx="4" fill="#B36A3E"/>
+<text x="86" y="82" font-family="Arial, sans-serif" font-size="20" letter-spacing="3" fill="#77675D">DEVIL'S ANALYST · EVALUATION NOTE</text>
+<text x="86" y="142" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#292724">A benchmark that did not prove uplift</text>
+<text x="86" y="184" font-family="Arial, sans-serif" font-size="21" fill="#6A625B">36 synthetic report cases · 3 runs per case per arm · Claude Haiku 5.5</text>
+<text x="86" y="260" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#77675D">MEAN SCORE (0–1)</text>
+<line x1="330" y1="295" x2="1030" y2="295" stroke="#D7D0C8" stroke-width="2"/>
+<line x1="330" y1="295" x2="330" y2="470" stroke="#BEB6AD" stroke-width="2"/>
+<line x1="330" y1="470" x2="1030" y2="470" stroke="#BEB6AD" stroke-width="2"/>
+<text x="330" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#8A8178">0</text>
+<text x="680" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#8A8178">0.5</text>
+<text x="1030" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#8A8178">1.0</text>
+<text x="86" y="342" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#292724">With skill</text>
+<rect x="330" y="314" width="658" height="48" rx="8" fill="#B36A3E"/>
+<text x="1008" y="347" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#292724">0.94</text>
+<text x="86" y="432" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#292724">Without</text>
+<rect x="330" y="404" width="651" height="48" rx="8" fill="#A8A39C"/>
+<text x="1000" y="437" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#292724">0.93</text>
+<rect x="76" y="530" width="1048" height="80" rx="16" fill="#F0E8E1"/>
+<text x="108" y="565" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#5D3B2A">Difference: +0.01 — within noise at three runs per arm.</text>
+<text x="108" y="594" font-family="Arial, sans-serif" font-size="19" fill="#6A5143">This test does not establish a general performance gain.</text>
+<text x="76" y="651" font-family="Arial, sans-serif" font-size="15" fill="#8A8178">Synthetic benchmark. Results are limited to this model, harness and case set.</text>
+</svg>
