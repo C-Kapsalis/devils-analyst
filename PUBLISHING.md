@@ -1,8 +1,27 @@
 # Publishing
 
-How Devil's Analyst gets into the public plugin directories. Nothing here has
-been submitted yet. Each step is something the maintainer does by hand; the
-requirements change. Last checked 2026-10-28.
+How Devil's Analyst gets into the public plugin directories. Each step is
+something the maintainer does by hand; requirements change. Last checked
+2026-10-28.
+
+## ClawHub OpenClaw bundle
+
+The ClawHub bundle is built from the same root plugin archive as the Claude
+plugin, with an npm-safe `package.json` at the archive root. The source metadata
+is maintained in `clawhub-package.json`; `scripts/package.sh` copies it into
+`devils-analyst-plugin.zip`. Keep its version aligned with the platform plugin
+manifests when cutting a release. The package contains skills, house rules, and
+Claude lifecycle hooks; OpenClaw consumes the skill instructions, while the
+Claude-only hooks are not required by OpenClaw.
+
+Build the archive and validate it against the target OpenClaw release before
+publishing:
+
+```sh
+sh scripts/package.sh
+unzip -q dist/devils-analyst-plugin.zip -d /tmp/devils-analyst-plugin
+clawhub package validate /tmp/devils-analyst-plugin --openclaw-version 2026.10.8
+```
 
 ## Before any submission
 

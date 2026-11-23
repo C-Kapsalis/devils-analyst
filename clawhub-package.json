@@ -1,0 +1,19 @@
+{
+  "name": "devils-analyst",
+  "version": "0.1.2",
+  "description": "Marketing analytics skills that route questions to available data, define metrics, check evidence, and challenge recommendations.",
+  "license": "MIT",
+  "homepage": "https://github.com/C-Kapsalis/devils-analyst",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/C-Kapsalis/devils-analyst.git"
+  },
+  "keywords": [
+    "marketing-analytics",
+    "analytics",
+    "ga4",
+    "google-ads",
+    "attribution",
+    "power-bi"
+  ]
+}

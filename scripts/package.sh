@@ -83,6 +83,7 @@ P="$STAGE/plugin"
 mkdir -p "$P/.claude-plugin" "$P/hooks"
 cp "$ROOT/.claude-plugin/plugin.json" "$ROOT/.claude-plugin/icon.png" "$P/.claude-plugin/"
 cp -R "$ROOT/skills" "$ROOT/house-rules" "$P/"
+cp "$ROOT/clawhub-package.json" "$P/package.json"
 cp "$ROOT/hooks/claude-hooks.json" "$ROOT/hooks/core.md" "$P/hooks/"
 cp "$ROOT/LICENSE" "$ROOT/README.md" "$P/"
 find "$P" \( -name '.DS_Store' -o -name '__pycache__' \) -prune -exec rm -rf {} +
