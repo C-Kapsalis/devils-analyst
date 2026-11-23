@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="t d">
+<title id="t">Read the experiment before the result</title>
+<desc id="d">A five-step A/B test audit checks sample ratio, significance and confidence interval, minimum detectable effect and power, novelty, and segment stability before a decision.</desc>
+<rect width="1200" height="675" fill="#101820"/>
+<text x="72" y="82" fill="#F3F6F8" font-family="Inter,Arial,sans-serif" font-size="40" font-weight="700">Read the experiment before the result</text>
+<text x="72" y="126" fill="#A9B8C5" font-family="Inter,Arial,sans-serif" font-size="21">A significant p-value is not the first validity check.</text>
+<g font-family="Inter,Arial,sans-serif">
+<rect x="72" y="190" width="200" height="235" rx="16" fill="#3B2428" stroke="#D77D82" stroke-width="2"/>
+<text x="100" y="235" fill="#F09A9F" font-size="16" font-weight="700">01</text>
+<text x="100" y="284" fill="#F3F6F8" font-size="22" font-weight="700">Sample</text>
+<text x="100" y="314" fill="#F3F6F8" font-size="22" font-weight="700">ratio</text>
+<text x="100" y="365" fill="#F3C2C5" font-size="16">Mismatch?</text>
+<text x="100" y="393" fill="#F3C2C5" font-size="16">Stop and fix.</text>
+<path d="M280 307 H305" stroke="#9DB3C3" stroke-width="4"/><path d="M292 295 L306 307 L292 319" stroke="#9DB3C3" stroke-width="4" fill="none"/>
+<rect x="318" y="190" width="200" height="235" rx="16" fill="#1D2A35" stroke="#4C6070" stroke-width="2"/>
+<text x="346" y="235" fill="#9DB3C3" font-size="16" font-weight="700">02</text>
+<text x="346" y="284" fill="#F3F6F8" font-size="22" font-weight="700">Effect &amp;</text>
+<text x="346" y="314" fill="#F3F6F8" font-size="22" font-weight="700">interval</text>
+<text x="346" y="365" fill="#C5D0D8" font-size="16">Estimate,</text>
+<text x="346" y="393" fill="#C5D0D8" font-size="16">not p-value alone.</text>
+<path d="M526 307 H551" stroke="#9DB3C3" stroke-width="4"/><path d="M538 295 L552 307 L538 319" stroke="#9DB3C3" stroke-width="4" fill="none"/>
+<rect x="564" y="190" width="200" height="235" rx="16" fill="#1D2A35" stroke="#4C6070" stroke-width="2"/>
+<text x="592" y="235" fill="#9DB3C3" font-size="16" font-weight="700">03</text>
+<text x="592" y="284" fill="#F3F6F8" font-size="22" font-weight="700">MDE &amp;</text>
+<text x="592" y="314" fill="#F3F6F8" font-size="22" font-weight="700">power</text>
+<text x="592" y="365" fill="#C5D0D8" font-size="16">Was the test</text>
+<text x="592" y="393" fill="#C5D0D8" font-size="16">sized in advance?</text>
+<path d="M772 307 H797" stroke="#9DB3C3" stroke-width="4"/><path d="M784 295 L798 307 L784 319" stroke="#9DB3C3" stroke-width="4" fill="none"/>
+<rect x="810" y="190" width="200" height="235" rx="16" fill="#1D2A35" stroke="#4C6070" stroke-width="2"/>
+<text x="838" y="235" fill="#9DB3C3" font-size="16" font-weight="700">04</text>
+<text x="838" y="284" fill="#F3F6F8" font-size="22" font-weight="700">Novelty &amp;</text>
+<text x="838" y="314" fill="#F3F6F8" font-size="22" font-weight="700">segments</text>
+<text x="838" y="365" fill="#C5D0D8" font-size="16">Does the lift</text>
+<text x="838" y="393" fill="#C5D0D8" font-size="16">persist?</text>
+<path d="M1018 307 H1043" stroke="#9DB3C3" stroke-width="4"/><path d="M1030 295 L1044 307 L1030 319" stroke="#9DB3C3" stroke-width="4" fill="none"/>
+<rect x="1056" y="190" width="72" height="235" rx="16" fill="#17362F" stroke="#63C8B4" stroke-width="2"/>
+<text x="1092" y="275" fill="#83DCCB" font-size="16" font-weight="700" text-anchor="middle">05</text>
+<text x="1092" y="325" fill="#F3F6F8" font-size="18" font-weight="700" text-anchor="middle">DECIDE</text>
+<rect x="72" y="470" width="1056" height="90" rx="16" fill="#1D2A35"/>
+<text x="108" y="525" fill="#F3F6F8" font-size="23" font-weight="700">Two-arm sample-ratio check</text>
+<text x="475" y="525" fill="#F09A9F" font-size="21" font-weight="700">χ² &gt; 10.8  →  p &lt; 0.001  →  investigate assignment or logging</text>
+<text x="72" y="635" fill="#718596" font-size="14">Devil's Analyst • audit/experiments reference • thresholds are specific to the documented two-arm check</text>
+</g>
+</svg>
