@@ -23,7 +23,7 @@
  <rect x="100" y="390" width="340" height="28" rx="14" fill="#DDE8E5"/><rect x="100" y="390" width="340" height="28" rx="14" fill="#2C8A73"/>
  <text x="100" y="454" class="label">3 / 3 graders passed</text>
  <rect x="636" y="192" width="500" height="290" rx="22" fill="#FFFFFF" stroke="#C9D5E3" stroke-width="2"/>
- <text x="672" y="238" class="k">WITHOUT THE SKILL</text><text x="672" y="304" class="label">Proposed 3 changes</text><text x="672" y="352" class="body">Two were unsupported findings</text>
+ <text x="672" y="238" class="k">WITHOUT THE SKILL</text><text x="672" y="304" class="label">Flagged 3 unsourced claims</text><text x="672" y="352" class="body">All 3 were flagged as unsourced</text>
  <rect x="672" y="390" width="340" height="28" rx="14" fill="#E8E3E1"/><rect x="672" y="390" width="113" height="28" rx="14" fill="#C97855"/>
  <text x="672" y="454" class="label">1 / 3 graders passed</text>
  <text x="64" y="535" class="small">Synthetic fixture · Claude Haiku · one run per arm · authored and graded by the project author.</text>
