@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">A good review can recommend no changes</title><desc id="desc">One synthetic clean-control case · one run per arm · author-graded.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#EEF2F7"/></linearGradient>
+  <style>
+    .h{font:700 42px Inter,Arial,sans-serif;fill:#152238}
+    .sub{font:400 23px Inter,Arial,sans-serif;fill:#536176}
+    .k{font:700 17px Inter,Arial,sans-serif;letter-spacing:2px;fill:#60718A}
+    .label{font:700 24px Inter,Arial,sans-serif;fill:#17263C}
+    .body{font:400 20px Inter,Arial,sans-serif;fill:#4D5C70}
+    .small{font:400 16px Inter,Arial,sans-serif;fill:#65758B}
+    .mono{font:600 18px ui-monospace,Menlo,Consolas,monospace;fill:#24364E}
+  </style>
+</defs>
+<rect width="1200" height="675" fill="url(#bg)"/>
+<rect x="48" y="42" width="8" height="86" rx="4" fill="#2C7A78"/>
+<text x="82" y="83" class="h">A good review can recommend no changes</text>
+<text x="82" y="122" class="sub">One synthetic clean-control case · one run per arm · author-graded.</text>
+
+ <rect x="64" y="192" width="500" height="290" rx="22" fill="#FFFFFF" stroke="#C9D5E3" stroke-width="2"/>
+ <text x="100" y="238" class="k">WITH DEVIL'S ANALYST</text><text x="100" y="304" class="label">Verdict: send it</text><text x="100" y="352" class="body">No false findings proposed</text>
+ <rect x="100" y="390" width="340" height="28" rx="14" fill="#DDE8E5"/><rect x="100" y="390" width="340" height="28" rx="14" fill="#2C8A73"/>
+ <text x="100" y="454" class="label">3 / 3 graders passed</text>
+ <rect x="636" y="192" width="500" height="290" rx="22" fill="#FFFFFF" stroke="#C9D5E3" stroke-width="2"/>
+ <text x="672" y="238" class="k">WITHOUT THE SKILL</text><text x="672" y="304" class="label">Proposed 3 changes</text><text x="672" y="352" class="body">Two were unsupported findings</text>
+ <rect x="672" y="390" width="340" height="28" rx="14" fill="#E8E3E1"/><rect x="672" y="390" width="113" height="28" rx="14" fill="#C97855"/>
+ <text x="672" y="454" class="label">1 / 3 graders passed</text>
+ <text x="64" y="535" class="small">Synthetic fixture · Claude Haiku · one run per arm · authored and graded by the project author.</text>
+ <text x="64" y="565" class="small">Illustrative case result, not a general performance estimate.</text>
+ 
+<line x1="64" y1="615" x2="1136" y2="615" stroke="#D7DFE9" stroke-width="2"/>
+<text x="66" y="649" class="k">DEVIL'S ANALYST · BENCHMARK CASE</text>
+<text x="1135" y="649" text-anchor="end" class="small">1200 × 675</text>
+</svg>
