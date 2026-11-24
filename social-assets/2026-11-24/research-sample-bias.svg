@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">More responses do not remove bias</title><desc id="desc">Sample size controls random error, not who gets represented.</desc>
+<rect width="1200" height="675" fill="#0B1422"/>
+<rect x="54" y="48" width="8" height="82" rx="4" fill="#7BD3C6"/>
+<text x="86" y="70" fill="#7BD3C6" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">FIELD NOTES / 24 NOV 2026</text>
+<text x="86" y="119" fill="#F4F7FB" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700">More responses do not remove bias</text>
+<text x="86" y="159" fill="#B9C5D4" font-family="Inter,Arial,sans-serif" font-size="21">Sample size controls random error, not who gets represented.</text>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#71839A"/></marker></defs>
+      <rect x="60" y="245" width="500" height="250" rx="18" fill="#162338" stroke="#334963" stroke-width="2"/>
+<rect x="60" y="245" width="8" height="250" rx="4" fill="#7BD3C6"/>
+<text x="86" y="299" fill="#7BD3C6" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1.2">RANDOM SAMPLING ERROR</text><text x="86" y="340" fill="#D6DFE9" font-family="Inter,Arial,sans-serif" font-size="21">Falls as n increases</text><text x="86" y="374" fill="#D6DFE9" font-family="Inter,Arial,sans-serif" font-size="21">Precision improves with more responses</text>
+      <rect x="640" y="245" width="500" height="250" rx="18" fill="#162338" stroke="#334963" stroke-width="2"/>
+<rect x="640" y="245" width="8" height="250" rx="4" fill="#E58C72"/>
+<text x="666" y="299" fill="#E58C72" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1.2">SELECTION / NON-RESPONSE BIAS</text><text x="666" y="340" fill="#D6DFE9" font-family="Inter,Arial,sans-serif" font-size="21">Does not disappear as n grows</text><text x="666" y="374" fill="#D6DFE9" font-family="Inter,Arial,sans-serif" font-size="21">The same people can keep dominating</text>
+      <text x="600" y="556" text-anchor="middle" fill="#F4F7FB" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="600">Ask who could answer — and why they did.</text>
+<line x1="54" y1="612" x2="1146" y2="612" stroke="#314157" stroke-width="2"/>
+<text x="60" y="646" fill="#91A0B3" font-family="Inter,Arial,sans-serif" font-size="15" letter-spacing="1.1">DEVIL'S ANALYST · RESEARCH-DESIGN PRINCIPLE</text>
+</svg>
