@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">What the benchmark actually ran</title>
+<desc id="desc">Devil's Analyst · published method and scope 110 cases The full benchmark suite|contains 110 cases.|Not all were executed.. 36 executed Breadth group: 3 runs|per case, per arm.|216 runs total.. 17 spot-checked A separate, weaker|one-run-per-arm review.|Not comparable to the main run. Mean 0.94 vs 0.93 (+0.01): the method says this is within noise.</desc>
+<rect width="1200" height="675" fill="#0b1220"/>
+<rect x="60" y="48" width="7" height="145" rx="3" fill="#72d7c8"/>
+<text x="88" y="73" fill="#8ea4ba" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">FIELD NOTE · 25 NOV 2026</text>
+<text x="88" y="132" fill="#f5f7fb" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="700"><tspan x="88" dy="0">What the benchmark actually ran</tspan></text>
+<text x="88" y="190" fill="#b8c6d8" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="400"><tspan x="88" dy="0">Devil's Analyst · published method and scope</tspan></text>
+<g>
+      <rect x="60" y="252" width="335" height="245" rx="18" fill="#172337" stroke="#344861" stroke-width="2"/>
+      <circle cx="95" cy="292" r="18" fill="#214d59"/>
+      <text x="95" y="299" text-anchor="middle" fill="#a9f0e5" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700">01</text>
+      <text x="88" y="346" fill="#f3f6fb" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700"><tspan x="88" dy="0">110 cases</tspan></text>
+      <text x="88" y="408" fill="#c0ccda" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="400"><tspan x="88" dy="0">The full benchmark suite</tspan><tspan x="88" dy="28">contains 110 cases.</tspan><tspan x="88" dy="28">Not all were executed.</tspan></text>
+    </g><g>
+      <rect x="425" y="252" width="335" height="245" rx="18" fill="#172337" stroke="#344861" stroke-width="2"/>
+      <circle cx="460" cy="292" r="18" fill="#214d59"/>
+      <text x="460" y="299" text-anchor="middle" fill="#a9f0e5" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700">02</text>
+      <text x="453" y="346" fill="#f3f6fb" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700"><tspan x="453" dy="0">36 executed</tspan></text>
+      <text x="453" y="408" fill="#c0ccda" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="400"><tspan x="453" dy="0">Breadth group: 3 runs</tspan><tspan x="453" dy="28">per case, per arm.</tspan><tspan x="453" dy="28">216 runs total.</tspan></text>
+    </g><g>
+      <rect x="790" y="252" width="335" height="245" rx="18" fill="#172337" stroke="#344861" stroke-width="2"/>
+      <circle cx="825" cy="292" r="18" fill="#214d59"/>
+      <text x="825" y="299" text-anchor="middle" fill="#a9f0e5" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700">03</text>
+      <text x="818" y="346" fill="#f3f6fb" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700"><tspan x="818" dy="0">17 spot-checked</tspan></text>
+      <text x="818" y="408" fill="#c0ccda" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="400"><tspan x="818" dy="0">A separate, weaker</tspan><tspan x="818" dy="28">one-run-per-arm review.</tspan><tspan x="818" dy="28">Not comparable to the main run.</tspan></text>
+    </g>
+<rect x="60" y="535" width="1080" height="82" rx="16" fill="#163a42" stroke="#2b6670" stroke-width="2"/>
+<text x="88" y="585" fill="#d8f5f0" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700"><tspan x="88" dy="0">Mean 0.94 vs 0.93 (+0.01): the method says this is within noise.</tspan></text>
+<text x="60" y="650" fill="#71859a" font-family="Inter,Arial,sans-serif" font-size="14">Independent editorial explainer · source and scope are stated in the accompanying post</text>
+</svg>
